@@ -1,0 +1,36 @@
+[
+  {
+    "page": "login.html",
+    "title": "制冷机零件缺陷检测系统 · 登录",
+    "errors": [],
+    "networkFailures": [],
+    "formAction": null,
+    "afterSubmitUrl": "http://127.0.0.1:40839/prototype.html?user=%E5%BC%A0%E5%B7%A5&role=L3",
+    "afterSubmitTitle": "Error response"
+  },
+  {
+    "page": "a.html",
+    "title": "制冷机零件缺陷检测系统 · 原型",
+    "errors": [],
+    "networkFailures": [],
+    "cameraTiles": 7,
+    "recipeVisible": true,
+    "recipeClosed": true
+  },
+  {
+    "page": "data-view.html",
+    "title": "制冷机零件缺陷检测系统 · 数据展示",
+    "errors": [],
+    "networkFailures": [],
+    "returnLink": "prototype.html",
+    "reportVisible": true,
+    "firstPartId": "L46-6886",
+    "secondPartId": "L40-4806"
+  },
+  {
+    "page": "a.html external network blocked",
+    "errors": [
+      "lucide is not defined"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="backend/src/Inspection.Domain/Inspection.Domain.csproj" />
+    <Project Path="backend/src/Inspection.Application/Inspection.Application.csproj" />
+    <Project Path="backend/src/Inspection.Host/Inspection.Host.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="backend/tests/Inspection.Domain.Tests/Inspection.Domain.Tests.csproj" />
+    <Project Path="backend/tests/Inspection.Host.Tests/Inspection.Host.Tests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,82 @@
+[
+  {
+    "path": "原型/a.html",
+    "bytes": 40148,
+    "sha256": "9351e7f10ad776f92159840670d8f4ee20942321bbd932973235b991bab4ebb6"
+  },
+  {
+    "path": "原型/assets/读码参数.png",
+    "bytes": 4038,
+    "sha256": "111c5a2851c5ee81ffa452fb1afce0c44049d86e8b6f2f539edceec82a141bb4"
+  },
+  {
+    "path": "原型/assets/环面点状凹坑.jpg",
+    "bytes": 1766552,
+    "sha256": "fddfcd1e438e598bffeb5e815c300496bcd9e554e9061619a0f37d97dc016c80"
+  },
+  {
+    "path": "原型/assets/环面划痕.jpg",
+    "bytes": 1942548,
+    "sha256": "42a85bf8e9729a4287f74e3a30da7d789aab7dd8c4004ed7c122a074eac9e45e"
+  },
+  {
+    "path": "原型/assets/环面划痕1.jpg",
+    "bytes": 1751723,
+    "sha256": "636f488f8d38f7e0e511fdf2b611ce3e143ff566afe2609f5cd7dff74fa79776"
+  },
+  {
+    "path": "原型/assets/孔底刀纹异常.jpg",
+    "bytes": 9274148,
+    "sha256": "6181cf9faa7553faa5c9704ffedcc55b05e53dcdfb5cd2a0d7d961006c40b816"
+  },
+  {
+    "path": "原型/assets/孔底点状凹坑+带判定刀纹异常.jpg",
+    "bytes": 7134506,
+    "sha256": "0899d5d3002c48fb7afc037cd671fe92f813063b7ee4cdd2af8203005b5ae5c4"
+  },
+  {
+    "path": "原型/assets/孔底异物.jpg",
+    "bytes": 1707751,
+    "sha256": "017e703bff5023f454a52404f7d071bfe4694a07404c4265d2bec8c1f22fce61"
+  },
+  {
+    "path": "原型/assets/来料状态2D检测.png",
+    "bytes": 87882,
+    "sha256": "67735528c5abdf85b67bfcd3a7b8dcbcad6b670a5c2592f11a5a30c3f756b53e"
+  },
+  {
+    "path": "原型/assets/来料状态3D检测.png",
+    "bytes": 71081,
+    "sha256": "4774754c74df8d478a5e50ef56ce308553d0d404ed18092dff5b3610bb72628f"
+  },
+  {
+    "path": "原型/assets/密封面环面检测1.jpg",
+    "bytes": 26215478,
+    "sha256": "817bea856e0e71e9085536a1b28e41fcd7306036f8918d78e3476c6dc540b650"
+  },
+  {
+    "path": "原型/assets/密封面环面检测2.jpg",
+    "bytes": 26215478,
+    "sha256": "2d1b64641b493b2e2f6bc23b92827c9a1537e84286382ea536e8a0f63b42a382"
+  },
+  {
+    "path": "原型/assets/密封面孔底检测1.jpg",
+    "bytes": 26215478,
+    "sha256": "737ceee7fb55b8c12fcc38340365e70947d9d46d2eb6e3954a3dc43e690ab67b"
+  },
+  {
+    "path": "原型/assets/密封面孔底检测2.jpg",
+    "bytes": 26215478,
+    "sha256": "aa26e284798674c86c103edf35ddc971fbabc64ad4ab02d84128d429e576fd0d"
+  },
+  {
+    "path": "原型/data-view.html",
+    "bytes": 27526,
+    "sha256": "d4b2feb858018acccc2e63704aab6e553f5121e464c2714647a4d0f53992d444"
+  },
+  {
+    "path": "原型/login.html",
+    "bytes": 7962,
+    "sha256": "f258210cbbb485fa0bf0fd2be802f0712630e9b48e258ee760f96aa2b36f78a8"
+  }
+]
