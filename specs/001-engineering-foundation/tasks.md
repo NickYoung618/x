@@ -40,7 +40,7 @@
 ## Phase 6: Validation and Delivery
 
 - [x] T013 按 quickstart 本地执行锁定还原、构建、测试与真实进程存活检查，结果写入 specs/001-engineering-foundation/validation.md（FR-002；SC-001/002/003）。
-- [ ] T014 在 README.md 说明运行、职责和下一步；提交并推送已检查基线，核对 GitHub 两平台结果与测试产物，更新 validation.md（FR-001/002；SC-001/004）。
+- [x] T014 在 README.md 说明运行、职责和下一步；提交并推送已检查基线，核对 GitHub 两平台结果与测试产物，更新 validation.md（FR-001/002；SC-001/004）。
 
 ## User Scope Update 2026-09-15
 

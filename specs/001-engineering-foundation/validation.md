@@ -1,6 +1,7 @@
 # 验证记录：工程基础与原型/Windows 测试准备
 
-日期：2026-09-15。实际平台：Ubuntu 24.04 x64，.NET SDK 10.0.401 / Runtime 10.0.12。
+实施日期：2026-09-15；记录更新：2026-09-16。
+本地平台：Ubuntu 24.04 x64，.NET SDK 10.0.401 / Runtime 10.0.12。
 
 ## 实际完成
 
@@ -26,7 +27,15 @@
 
 ## GitHub / 自有 Windows
 
-首次提交前本地验证完成；GitHub 运行结果将在推送后核对并补充。
+首次提交 `3e46d4e03fcfa201e55510e017a9aafed44ffea2` 已推送 main。
+[Core CI 34991611511](https://github.com/NickYoung618/x/actions/runs/34991611511) 成功：
+
+- ubuntu-24.04：15 条领域测试 + 4 条 HTTP 契约测试全部通过，发布后的真实进程检查成功。
+- windows-2022：同一组 19 条测试全部通过，发布后的真实进程检查成功。
+- 已下载并核对两个平台的 4 份 TRX，无失败/跳过；这是 19 个用例在两个平台执行，不是38个不同用例。
+- 产物：两个平台各一份 `test-evidence-*` 和 `foundation-host-*`，均上传成功。
+- 结构化记录见 `ci-test-summary.json`。本次后续提交只更新文档/验证记录，代码与 workflow 不变。
+
 自有 Windows runner 尚未注册；Windows staging workflow 未触发，未在该服务器执行本次新程序。
 
 ## 不在本次通过范围

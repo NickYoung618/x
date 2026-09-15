@@ -4,7 +4,7 @@
 
 **Created**: 2026-09-15
 
-**Status**: Ready for implementation
+**Status**: Implemented — engineering foundation only; see validation.md
 
 **Input**: 用户要求以 yyh V1.3 使用 Spec Kit 开始开发，在 Linux 开发、Windows 部署、GitHub 测试。
 首版演示先普通零件整盘多面全虚拟闭环，随后真实算法与特殊零件。
