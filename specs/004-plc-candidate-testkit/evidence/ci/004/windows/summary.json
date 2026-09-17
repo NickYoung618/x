@@ -1,0 +1,80 @@
+{
+  "runId": "20260917T043402Z-bbda910d",
+  "platform": "Windows-2022Server-10.0.20348-SP0",
+  "contract": "legacy-v6-u16-snapshot-20260917",
+  "build": "PASS",
+  "coreTests": {
+    "status": "PASS",
+    "passed": 42,
+    "assemblies": 4,
+    "byAssembly": {
+      "Inspection.Domain.Tests": {
+        "passed": 15,
+        "total": 15,
+        "report": "runneradmin_runnervmbkp6f_2026-09-17_04_34_30_net10.0.trx"
+      },
+      "Inspection.Application.Tests": {
+        "passed": 12,
+        "total": 12,
+        "report": "runneradmin_runnervmbkp6f_2026-09-17_04_34_30_net10.0[1].trx"
+      },
+      "Inspection.Host.Tests": {
+        "passed": 4,
+        "total": 4,
+        "report": "runneradmin_runnervmbkp6f_2026-09-17_04_34_30_net10.0[2].trx"
+      },
+      "Inspection.Infrastructure.Tests": {
+        "passed": 11,
+        "total": 11,
+        "report": "runneradmin_runnervmbkp6f_2026-09-17_04_34_31_net10.0.trx"
+      }
+    }
+  },
+  "legacy": "PASS 13/13 (old protocol and old policy only)",
+  "integration": [
+    {
+      "name": "normal",
+      "status": "PASS",
+      "outcome": "Completed",
+      "completedMoves": 2,
+      "submittedMoves": 2
+    },
+    {
+      "name": "reconnect-stale",
+      "status": "PASS",
+      "outcome": "RecoveryRequired",
+      "completedMoves": 0,
+      "submittedMoves": 0
+    },
+    {
+      "name": "device-failure",
+      "status": "PASS",
+      "outcome": "Failed",
+      "completedMoves": 0,
+      "submittedMoves": 1
+    },
+    {
+      "name": "action-timeout",
+      "status": "PASS",
+      "outcome": "Unknown",
+      "completedMoves": 0,
+      "submittedMoves": 1
+    },
+    {
+      "name": "reconnect-unknown",
+      "status": "PASS",
+      "outcome": "RecoveryRequired",
+      "completedMoves": 0,
+      "submittedMoves": 0
+    }
+  ],
+  "v13FullContract": "NOT RUN - interface decisions deferred to device owner",
+  "fullTray": "NOT RUN - framework increment only",
+  "verdict": "PASS - framework/legacy integration only",
+  "simulatorUnderTest": "repository snapshot",
+  "buildScope": "repository solution including simulator under test",
+  "sdk": "10.0.401",
+  "commit": "f369617ae6b771bf88d9df9004b772998dd610e0",
+  "workingTreeDirty": false,
+  "processesStopped": true
+}

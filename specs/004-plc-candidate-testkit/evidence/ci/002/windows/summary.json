@@ -1,0 +1,56 @@
+{
+  "runId": "20260917T043349Z-d4b1be2c",
+  "platform": "Windows-2022Server-10.0.20348-SP0",
+  "contract": "legacy-v6-u16-snapshot-20260917",
+  "build": "PASS",
+  "coreTests": {
+    "status": "PASS",
+    "passed": 30,
+    "assemblies": 3
+  },
+  "legacy": "PASS 13/13 (old protocol and old policy only)",
+  "integration": [
+    {
+      "name": "normal",
+      "status": "PASS",
+      "outcome": "Completed",
+      "completedMoves": 2,
+      "submittedMoves": 2
+    },
+    {
+      "name": "reconnect-stale",
+      "status": "PASS",
+      "outcome": "RecoveryRequired",
+      "completedMoves": 0,
+      "submittedMoves": 0
+    },
+    {
+      "name": "device-failure",
+      "status": "PASS",
+      "outcome": "Failed",
+      "completedMoves": 0,
+      "submittedMoves": 1
+    },
+    {
+      "name": "action-timeout",
+      "status": "PASS",
+      "outcome": "Unknown",
+      "completedMoves": 0,
+      "submittedMoves": 1
+    },
+    {
+      "name": "reconnect-unknown",
+      "status": "PASS",
+      "outcome": "RecoveryRequired",
+      "completedMoves": 0,
+      "submittedMoves": 0
+    }
+  ],
+  "v13FullContract": "NOT RUN - interface decisions deferred to device owner",
+  "fullTray": "NOT RUN - framework increment only",
+  "verdict": "PASS - framework/legacy integration only",
+  "sdk": "10.0.401",
+  "commit": "d88533cf3d5452346c50ffd093e5c27e24489bd6",
+  "workingTreeDirty": false,
+  "processesStopped": true
+}
