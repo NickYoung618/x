@@ -8,7 +8,7 @@
 | Linux 解决方案 | PASS | `dotnet test Gaode.slnx -c Release --no-restore`：Domain 15、Application 37、Infrastructure 11、Host 13，合计 76/76、跳过 0；含旧 003 流程回归 |
 | S01 调用侧定向 | PASS | Application 25/25、Host 5/5，合计 30/30、跳过 0；TRX 保存在本机 `/tmp/gaode-station01-current/`，CI 作业另存 artifact；这些测试使用测试端口替身，不是设备独立进程 |
 | 旧 V6 协议与旧模拟器 | PASS，独立计数 | `scripts/validate-virtual-plc.py` 的 [最终本地证据](../../simulator/artifacts/20260917T090346Z-36f3c31e/summary.json)：核心 76/76、原 13/13、旧双进程 5/5；合同为 `legacy-v6-u16-snapshot-20260917`，不能替代 S01/V1.3 |
-| GitHub Ubuntu/Windows S01 调用侧 | 待本轮 PR head CI | 新增 `S01 upper-port contract` 两平台作业，强制 Application/Host 两份 TRX 且用例数非零；CI 结果按实际提交补充 |
+| GitHub Ubuntu/Windows S01 调用侧 | PASS（提交 `7d2eabc`） | [CI 运行 35203413415](https://github.com/NickYoung618/x/actions/runs/35203413415) 八作业成功；两平台 S01 Application 25/25、Host 5/5。此结果只覆盖该提交，后续提交须重跑 CI |
 | 独立 PLC + 3D 设备接口双进程 S01 | BLOCKED | 下位机同学 D1/D2/D2b/D3 尚未交付；当前 Host 不注册设备端口，启用工程开关也返回 `ST01_PROVIDER_UNAVAILABLE` |
 | V1.3 真正点表、3D SDK/标定、实际 Windows、完整整盘 | NOT RUN | 接口/设备/现场与后续工位尚未齐备，旧协议及端口测试不折算通过 |
 
