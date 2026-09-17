@@ -1,0 +1,53 @@
+{
+  "outerSource": "/home/ubuntu/disk/yyh/架构设计.zip",
+  "outerSha256": "cc5250a9b1e322979e1def987f19ff1c01cd5f4894e93f6152118c726aba0452",
+  "nestedArchive": "架构设计/上下位机对接.zip",
+  "nestedSha256": "cdbf8add6e477d8075c8fc756c28683545dc80eb443c4db539edb4b7ed10973a",
+  "extractedFiles": [
+    {
+      "file": "上下位机职责边界图.svg",
+      "sha256": "8c7d79fa1f5d82888f0c74d27e38ac0efd2a7746b3cee7fce055a806c9a8d603"
+    },
+    {
+      "file": "分拣动作单独闭环图.svg",
+      "sha256": "942ed189c0a48a8f61a7e945b7a88ab731928c98bc541ee4a0294ebb3e9bab96"
+    },
+    {
+      "file": "单零件检测闭环图.svg",
+      "sha256": "db676b1f1fb467e50f7b04eb461bcc926d0ae4eeb417e454ce1bb49c51c00b8e"
+    },
+    {
+      "file": "安全与实体按钮处理流程图.svg",
+      "sha256": "c7a36922c187faddf70edd4ffc6f4c85190787723887a147d09c0e943895501f"
+    },
+    {
+      "file": "总时序图.svg",
+      "sha256": "9d72f80f209baf12b40aebf6fe8c38373d236330e05c7f0e93a77b2587458612"
+    },
+    {
+      "file": "整体流程图.svg",
+      "sha256": "be6a642636a72a34bbc6e28309ca8f8ea73f341625a5455601be6fdf821fb5d5"
+    },
+    {
+      "file": "特殊零件单个检测闭环图.svg",
+      "sha256": "decb79aa3679b711e16a89c3495272353d8648f951f6cc6d952350ddfe1fee3e"
+    },
+    {
+      "file": "特殊零件单个闭环流程.svg",
+      "sha256": "26f2478284b6aee16192b315aa507875efc70fc83539752c3fa5d670eb66f844"
+    },
+    {
+      "file": "特殊零件类型判断图.svg",
+      "sha256": "b68687c38e3c83ceba4ab65d41e61d32e06c86bf0c8d796af8bd408d7d79f06a"
+    },
+    {
+      "file": "相机与轴组关系图.svg",
+      "sha256": "e981e3e3a8d54b3b0f99d0cfa72f3f9f30ea4f01a2825d025fc84fe6680f5250"
+    },
+    {
+      "file": "采集动作逻辑图.svg",
+      "sha256": "3294bd7b8b3265f834d091cf3b0c06196dfdf7716422afd7469c72b94d5f7e2a"
+    }
+  ],
+  "note": "SVG files copied byte-for-byte; PNG duplicates omitted."
+}
