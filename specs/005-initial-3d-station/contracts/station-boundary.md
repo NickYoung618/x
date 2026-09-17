@@ -2,7 +2,7 @@
 
 本合同描述中台、前端、运动和 3D 端口边界。它不是双方已冻结的 Modbus 点表；正式设备编码仍以 `docs/contracts/virtual-plc-alignment.md` 对齐。
 
-3D 独立模拟的请求/结果字段及未定传输见 [定位调用侧合同](placement-port-v0.1-draft.md)。
+3D 相机独立模拟与中台定位结果端口的两层请求/结果字段及未定传输见 [定位调用侧合同](placement-port-v0.1-draft.md)。下方时序中的 `Locate3D` 是中台封装的调用：触发设备模拟器得到合成采集帧，再由中台定位器生成 `PlacementResult`。
 
 ## 交互顺序
 

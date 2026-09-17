@@ -1,14 +1,13 @@
-# S01 3D 定位调用侧合同 v0.1（待下位机同学确认传输方式）
+# S01 3D 定位调用侧合同 v0.1（相机传输待签认）
 
-此合同描述中台 `IPlacementLocator` 与下位机同学交付的**独立 3D 设备接口模拟进程**之间的语义。它不是已确认的 HTTP/Modbus/SDK 线路协议；传输、端点、错误码映射和版本由双方签认后实现。中台目前只实现端口消费和受限 Host 入口，未把测试替身当独立设备联调。
+用户指定的[《上下位机对接》总时序图](../../../docs/process-diagrams/upper-lower-v13/总时序图.svg)是：PLC 到 3D 位 → **上位机触发相机** → 相机返回点云/深度数据 → **上位机完成定位**。因此现有 `IPlacementLocator` 是中台工作流收到的**定位结果端口**，不是下位机同学交付的 3D 相机模拟进程的线路协议。中台目前只实现这个上层端口的消费与测试替身，未实现两层真实跨进程调用。
 
-| 方向 | 必填字段 | 约束 |
+| 层 | 请求/结果 | 负责人及边界 |
 | --- | --- | --- |
-| 请求 | RequestId、TrayRunId、ProposedEpoch、Initial、ExpectedSource | RequestId 唯一，首次 Epoch=1；只有匹配的 MoveTo3D 完成后发一次 |
-| 成功结果 | 原 RequestId、TrayRunId、CoordinateEpoch、Source、Frame、Unit、AcquiredAtUtc、Slots | `synthetic` 结果给稳定 SlotId/PositionRef，结果来源不得伪装 `real`；真实结果另需 CalibrationVersion 与有限的毫米位置 |
-| 槽位 | SlotId、PositionRef；真实结果增加 X/Y/Z | SlotId 唯一且非空；坐标批次属于本盘；不以 PositionRef 代替真实毫米坐标 |
-| 错误 | 原 RequestId、稳定错误类别、设备侧时间及详情 | 超时、断线、旧/错 ID、空/重复/坏槽可确定性触发；中台必须保留设备侧与 Host 双轨迹 |
+| 独立 3D 相机接口模拟 | 到位后接收本盘 `RequestId`、`TrayRunId`、`ProposedEpoch` 和合成来源；返回匹配 ID、采集时间、设备版本、**可读取的固定合成点云/深度帧或引用**，也可确定性返回超时、断线、坏帧/错 ID | 下位机同学交付进程、固定数据、故障注入和实际触发轨迹；不直接给槽位、业务状态或质量判定。真实传输、帧格式、时钟与 SDK 仍待双方定版 |
+| 中台合成定位器 | 读取该合成帧/引用，确定性生成两个槽位 `s1/s2` 的位置引用；可注入空/重复/无效槽等定位失败 | 中台负责 fixture 解读、槽位/姿态推导、来源与批次校验；此替身只验证流程，不证明真实 3D 精度 |
+| `IPlacementLocator` 结果端口 | `PlacementScan(RequestId, Metadata(TrayRunId, CoordinateEpoch, Source, Frame, Unit, AcquiredAtUtc), Slots)` | 工作流只接受本盘、本请求、下一批次和可信来源；`synthetic` 槽位要有唯一 `SlotId/PositionRef`，`real` 还须有效标定和有限毫米坐标 |
 
-固定正常样例为 `tray-1`、首次 Epoch=1、两个合成槽位 `s1/s2`。模拟器不自行推进中台业务状态；其控制/故障设置接口只改变设备事实，业务请求必须经中台调用端口。设备侧轨迹至少记录请求 ID、源、接收/返回时间、场景、槽位计数、实际触发次数和错误类别。回调晚于超时、另一盘、错批次或错来源都不得推进本次任务。
+固定正常样例仍为 `tray-1`、首次 Epoch=1、两个合成槽位 `s1/s2`，但设备模拟进程返回的是合成采集数据/引用，槽位由中台合成定位器产生。设备侧轨迹至少记录 RequestId、盘次、设备版本、帧/引用、接收与返回时间、实际触发次数和设备错误；中台另记录 fixture 到槽位的转换及错误。只有同时保留两侧轨迹，才能区分采集故障和定位/身份故障。模拟器控制端口只设置设备事实，业务请求必须从中台调用侧发出。
 
-签认前待定：传输与端点、进程启动/健康检查、超时和断线表现、错误码映射、时间戳时钟约定、是否回传原始点云引用以及真实 SDK 的版本/标定取得方式。不得从旧 V6 PLC 点表推导这些字段。联调通过需在 Linux 与 GitHub Windows 上启动独立进程，逐行对照 [S01 矩阵](../test-matrix.md)的 N01、S01–S04b；只有内存 fake 的测试单列为调用侧测试。
+签认前待定：进程传输和端点、合成帧的可读取格式与基准样例、超时/断线/错 ID 表示、设备时间戳、错误码映射及真实 SDK/标定。不能从旧 V6 PLC 点表推导这些字段。跨进程联调需在 Linux 和 GitHub Windows 启动 Host、独立 PLC、独立 3D 相机模拟器，逐行对照 [S01 矩阵](../test-matrix.md)；仅内存 `IPlacementLocator` 替身的测试继续单列为中台调用侧。
