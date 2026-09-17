@@ -3,7 +3,7 @@
 ## 2026-09-17 / S01 上位机首增量与设备模拟责任修正
 
 - 唯一主要问题：按用户最新分工启动第一工位；独立 PLC 和 3D 设备接口模拟均由下位机同学负责，中台需完成不依赖其交付的调用侧流程、Host 和可定位错误，同时避免用测试替身冒充双进程联调。
-- 原始证据：`backend/src/Inspection.Application/Workflow/{WorkflowContracts,TrayWorkflow}.cs` 的 Ready 后直接扫描、Host 501、`MotionExecutionLane`、S01 Spec Kit 规格/矩阵/任务、V1.3 §5.2/§7/§13–14、Draft PR #6；基线为干净的 `0bc0ddc`。
+- 原始证据：`backend/src/Inspection.Application/Workflow/{WorkflowContracts,TrayWorkflow}.cs` 的 Ready 后直接扫描、Host 501、`MotionExecutionLane`、S01 Spec Kit 规格/矩阵/任务、V1.3 §5.2/§7/§13–14、当时尚未合并的 Draft PR #6；基线为干净的 `0bc0ddc`。
 - 预期改变：新鲜 Ready/夹紧/互锁 → MoveTo3D Accepted+Completed → 3D → WaitingTrayCode；来源/ID/坐标校验、稳定错误与结构化轨迹；工程入口默认关闭且只认合成端口。为同学补充 D2b 3D 独立模拟派任和调用侧合同。
 - 失败条件：只收到 Accepted 就扫描；错盘/旧 ID/迟到结果建坐标；Unknown 自动重发；实际设备接入工程测试入口；日志失败仍报告成功；旧 V6 或内存端口替身测试当 V1.3 独立联调通过。
 - 前置/案例/预算：已读 S01 规格、计划、任务、检查表、V1.3 对应章节、现有工作流/Host/Motion 和旧协议验证；固定双槽、前置失败、移动拒绝/未知、扫描坏结果/超时、诊断失败。无付费模型/硬件动作，费用 0 元。Spec Kit 检查表 8/11 已勾，余 3 项是实现和真机验收；用户明确开工，继续已授权的软件实现，未把外部依赖打勾。
@@ -13,7 +13,7 @@
 - 已确认：独立 3D 设备接口模拟改由下位机同学负责；正式中台仍无已注入的 PLC/3D Provider，生产入口 501。中台测试端口替身只用于规则验证。
 - 实际修改：Application 的 MoveTo3D 状态/关联/错误及工程 Runner、Host 受限入口和进程内重复盘次保护、Contracts DTO、30 个 S01 定向调用侧用例、双平台 S01 调用侧 CI 作业；修正 S01 Spec Kit、D2b 派任及 3D 调用侧草案。修改和证据详见 `specs/005-initial-3d-station/validation.md`。
 - 本机结果：锁定还原 PASS；.NET 10 全解决方案 76/76、跳过 0；S01 定向 Application 25/25、Host 5/5；旧 V6 13/13 和旧双进程 5/5，最终本地证据 `simulator/artifacts/20260917T090346Z-36f3c31e/summary.json`。初次 Host 新测试曾因 record 内列表引用相等断言失败，修正为字段/序列比较后 13/13；失败记录未当正式设备失败。S01 独立双进程、V1.3 真正点表、3D SDK、Windows 真机、整盘均未运行。
-- 未决：D1 点表/握手、D2 独立 PLC、D2b 独立 3D 接口及传输签认、D3 真正 Modbus 调用适配/双边轨迹，生产持久化/重启对账、真实相机 SDK/标定与现场。下一增量接同学交付的模拟进程跑 G2/G3；PR #6 在此之前保持 Draft，不声称 S01 交付。
+- 未决：D1 点表/握手、D2 独立 PLC、D2b 独立 3D 接口及传输签认、D3 真正 Modbus 调用适配/双边轨迹，生产持久化/重启对账、真实相机 SDK/标定与现场。工作中发现 PR #6 已于 `0bc0ddc` 的文档版本合并；代码另开 `station-01-upper-implementation` Draft PR #7。下一增量接同学交付的模拟进程跑 G2/G3；PR #7 在此之前保持 Draft，不声称 S01 交付。
 
 ## 2026-09-17 / S01 3D 自行模拟与 SDK 接入边界
 

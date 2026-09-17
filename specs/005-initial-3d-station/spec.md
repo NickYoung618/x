@@ -1,6 +1,6 @@
 # Feature Specification: 首工位——初始 3D 定位
 
-**Feature Branch**: 开工准备已由 `station-01-initial-3d` 的 PR #4 合并；实现续作分支为 `station-01-implementation`
+**Feature Branch**: 开工准备由 PR #4 合并，方案/派任文档由 PR #6 合并；当前实现分支 `station-01-upper-implementation`，Draft PR #7
 **Created**: 2026-09-17
 **Status**: 实现方案待执行；PR #4 仅合并准备文档，首工位尚未通过
 **Input**: 用户要求按工位逐阶段 PR，先完成首工位开工准备；V1.3 §5.1–5.2、§7、§13–14、§18。

@@ -1,6 +1,6 @@
 # Implementation Plan: 首工位——初始 3D 定位
 
-**Implementation branch**: `station-01-implementation` from main `1519cfc` | **Date**: 2026-09-17 | **Spec**: [spec.md](spec.md). PR #4 merged preparation documents only; the implementation needs its own PR.
+**Implementation branch**: `station-01-upper-implementation` from merged PR #6/main `99730a4` | **Date**: 2026-09-17 | **Spec**: [spec.md](spec.md). PR #4/#6 merged preparation documents; actual code is in Draft PR #7.
 
 ## Summary
 

@@ -6,7 +6,7 @@
 
 **协作方**：中台负责人、设备供方、现场设备操作员
 
-**对应增量**：[S01 初始 3D 定位](../../specs/005-initial-3d-station/spec.md)，[主草稿 PR #6](https://github.com/NickYoung618/x/pull/6)
+**对应增量**：[S01 初始 3D 定位](../../specs/005-initial-3d-station/spec.md)，[实现草稿 PR #7](https://github.com/NickYoung618/x/pull/7)；PR #6 已合并的是准备文档
 **当前状态**：本单为待执行任务；旧 V6 模拟器兼容测试已通过，正式 V1.3 点表、S01 联调和真机验收均未通过。
 
 ## 一、目标和边界
@@ -27,7 +27,7 @@
 
 ## 三、提交与联调规则
 
-1. 从最新 main 建下位机工作分支；为保留“一工位一个主 PR”，可向 `station-01-implementation` 提交独立子 PR，经中台审查后纳入 [S01 主 PR #6](https://github.com/NickYoung618/x/pull/6)。PR 写明所用合同版本、修改文件、复现命令、每项 PASS/FAIL/NOT RUN、模拟器独立轨迹与尚未实现的接口。不覆盖或删除旧协议报告。
+1. 从最新 main 建下位机工作分支；为保留首工位一个实现 PR，可向 `station-01-upper-implementation` 提交独立子 PR，经中台审查后纳入 [S01 实现 PR #7](https://github.com/NickYoung618/x/pull/7)。PR 写明所用合同版本、修改文件、复现命令、每项 PASS/FAIL/NOT RUN、模拟器独立轨迹与尚未实现的接口。不覆盖或删除旧协议报告。
 2. 端口和场景使用隔离配置。固定种子、可配置监听地址/端口，CI 不依赖生产 PLC 或固定现场 IP；测试进程结束后仅清理自己创建的状态。生产配置不得在设备失败时自动切换为模拟成功。
 3. 执行未知、通信超时或重启时先读真实状态并对账；无法确认则保持 `RecoveryRequired`，不自动补发动作。PLC/电气互锁仍在下位机负责，上位机的软件判断不能取代实体安全保护。
 4. D4 使用[现场规程](../../specs/005-initial-3d-station/windows-real-device.md)；当前仓库没有自有 Windows runner，先由现场人员在可交互 Windows 电脑手动运行同包测试。D1、D2、D3 未通过或 3D SDK/标定未就绪时，不发真实运动命令。

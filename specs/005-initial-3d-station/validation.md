@@ -1,6 +1,6 @@
 # S01 首次上位机实现验证（2026-09-17）
 
-本记录只验收**中台调用侧第一增量**，不验收下位机同学尚未交付的独立 PLC/3D 接口模拟、正式 V1.3 点表或 Windows 真机。基线为 `station-01-implementation` 的 `0bc0ddc`；本轮实际修改见该分支后续提交及 PR #6。测试前工作区含本轮代码，旧协议脚本证据中的 `workingTreeDirty=true` 为真实状态。
+本记录只验收**中台调用侧第一增量**，不验收下位机同学尚未交付的独立 PLC/3D 接口模拟、正式 V1.3 点表或 Windows 真机。基线为 `station-01-implementation` 的 `0bc0ddc`；该文档 PR #6 已合并至 main，实际实现另见 `station-01-upper-implementation` 的 [Draft PR #7](https://github.com/NickYoung618/x/pull/7)。测试前工作区含本轮代码，旧协议脚本证据中的 `workingTreeDirty=true` 为真实状态。
 
 | 层级 | 实际结果 | 证据与边界 |
 | --- | --- | --- |
@@ -18,4 +18,4 @@
 
 ## 未通过与下一增量
 
-现有测试端口替身没有独立设备轨迹，因此不覆盖实际 Modbus 编解码、3D 模拟进程调用、真实重连时序或跨重启去重。下位机同学需按[派任书](../../docs/assignments/s01-plc-work-order-20260917.md)提交 D1–D3（含 D2b）；中台随后实现已签认的调用适配、以真实中台入口跑完整 [矩阵](test-matrix.md)，核对设备侧/Host 两份轨迹并生成 S01 Windows 候选包。完成前 PR #6 保持 Draft，G2/G3 不判通过。
+现有测试端口替身没有独立设备轨迹，因此不覆盖实际 Modbus 编解码、3D 模拟进程调用、真实重连时序或跨重启去重。下位机同学需按[派任书](../../docs/assignments/s01-plc-work-order-20260917.md)提交 D1–D3（含 D2b）；中台随后实现已签认的调用适配、以真实中台入口跑完整 [矩阵](test-matrix.md)，核对设备侧/Host 两份轨迹并生成 S01 Windows 候选包。完成前 PR #7 保持 Draft，G2/G3 不判通过。
