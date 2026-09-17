@@ -1,6 +1,6 @@
 # Validation: PLC 接口按 9 月 11 日协议对齐
 
-**状态**：Linux 本机接口框架验证完成；正式新版虚拟 PLC、Windows 真机与整盘仍未验收。提交和 GitHub CI 待补。
+**状态**：Linux 本机接口框架验证完成；独立分支 `plc-protocol-20260911-alignment`，首提交 `6bfa1de`，[Draft PR #9](https://github.com/NickYoung618/x/pull/9)。正式新版虚拟 PLC、Windows 真机与整盘仍未验收；PR CI 待复核。
 
 | 层级 | 当前事实 |
 | --- | --- |

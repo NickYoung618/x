@@ -30,6 +30,6 @@
 
 - [x] T012 在 `docs/contracts/plc-upper-20260911.md` 和 `docs/contracts/virtual-plc-alignment.md` 完成点表/时序差异、签认清单和测试分层。
 - [x] T013 在 `specs/009-plc-protocol-alignment/validation.md` 记录锁定还原、全解构建/测试、旧 V6 回归、新协议虚拟/真机/整盘结果。
-- [ ] T014 在 `docs/update-goals.md` 登记本次实际结果与后续范围，提交并推送独立分支。
+- [x] T014 在 `docs/update-goals.md` 登记本次实际结果与后续范围，提交并推送独立分支。
 
 依赖：T001–T004 → T005–T011 → T012–T014。US1 可独立只读验收；US2 仅隔离虚拟服务可验；US3 的阻断可无需设备验。下位机正式模拟器和真机签认属于下一增量，不将其任务假装勾选。
