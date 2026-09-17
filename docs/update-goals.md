@@ -14,7 +14,8 @@
 
 - 已确认：源表 SHA-256 `2d3d0494b960fe04dab5fc997bdb7a2d9b9c6406d3cfe23b060d32e5592657c3`；有表头 B:T 区域包含 9 型号、3 场景、100 个“有”的候选组合，X:AA 的额外“有”无可读表头。源表不是完整配方目录，也未给出特殊模板映射。
 - 实际修改：新增 `docs/fullsim-coverage-plan.md` 与 100 行来源清单 `docs/coverage/model-scenario-material.csv`；修订 `docs/testing.md`、`docs/ordinary-tray-roadmap.md`、`docs/decisions.md`，将 2×2×AB 明确为开发切片、P1 明确为全类型/已发布配方/适用故障验收。
-- 验证：CSV 100 行与 100 个不同源单元格，型号分布 12×5+10×4，场景分布 50/28/22；`git diff --check` 通过。本轮只改文档/清单，未运行 .NET/设备/完整整盘测试；旧协议、V1.3、全盘状态沿用 004 实测结论。
+- 验证：CSV 100 行与 100 个不同源单元格，型号分布 12×5+10×4，场景分布 50/28/22；`git diff --check` 通过。本轮只改文档/清单，本地未重跑 .NET；CI 重跑既有框架检查，V1.3/完整整盘未运行。
+- 远端：`005-fullsim-coverage-strategy` 已推送，草稿 PR #3 指向 004；首提交 `d060273` 的 [CI 运行](https://github.com/NickYoung618/x/actions/runs/35183581811) 四个 Ubuntu/Windows Core 与 Virtual PLC framework 作业均 PASS，仍仅验证既有旧协议和框架，非 V1.3/全配方测试。
 - 未解决：正式配方集、源表 X:AA 含义、型号/物料到模板映射、类型 4 步骤、下位机 V1.3 接口与真实算法/现场验收。缺失项不得计入通过。
 - 费用与下一目标：无外部或付费模型调用，0 元。下一增量按覆盖计划完善正式配方目录/用例索引和业务执行端口；下位机接口确认后独立补正式协议测试。
 
