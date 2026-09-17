@@ -12,4 +12,4 @@
 - [x] 当前基础增量跑 Host 与新版模拟器独立进程只读/夹紧/Float32/人工区故障/未定义命令拒绝，保存两端报文。
 - [ ] 跑真实 Modbus TCP 双进程及 S01 三进程正常/故障矩阵，保留原始报文、设备轨迹和执行次数。
 - [ ] 分别报告 Windows 真机与完整整盘的实际状态，更新 `docs/update-goals.md` 和验证记录。
-- [ ] 提交功能分支并创建以 `plc-protocol-20260911-alignment` 为 base 的 Draft PR。
+- [x] 提交合同和基础模拟器，创建以 `plc-protocol-20260911-alignment` 为 base 的 [Draft PR #10](https://github.com/NickYoung618/x/pull/10)；后续能力与复测继续推送，保持 Draft 且不合并。

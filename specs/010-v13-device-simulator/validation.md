@@ -13,3 +13,5 @@
 | 9 月 11 日独立 Modbus TCP 运动正常与故障 | NOT RUN | 待确认虚拟扩展并实施 |
 | Host/PLC/3D 三进程 S01 | NOT RUN | 待确认虚拟扩展和 3D 传输 |
 | Windows 真机、完整整盘 | NOT RUN | 无现场设备或完整业务证据 |
+
+远端：[Draft PR #10](https://github.com/NickYoung618/x/pull/10) 已建立，base 为 `plc-protocol-20260911-alignment`，未合并；GitHub CI 在建立时运行中，结果未据此记 PASS。
