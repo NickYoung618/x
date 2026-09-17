@@ -5,6 +5,7 @@
 
 当前具备可运行后端、普通零件整盘计划预览、旧协议独立虚拟PLC最小联调、进程内流程框架及候选测试入口。
 **尚未实现正式V1.3设备接入、完整检测闭环、WPF、算法和业务保存；生产就绪为 false。**
+V1.3 先交付[整体框架](docs/architecture/v13-framework-map.md)和[架构书测试映射](docs/architecture/v13-acceptance-map.md)，后续每个工位独立实现、测试、修正并提交 PR。框架 Host 只报告模块/能力状态，未实现的任务准备请求明确拒绝，不会启动设备。
 
 ## 开发与测试
 
@@ -17,7 +18,7 @@ dotnet test Gaode.slnx -c Release --no-build
 dotnet run --project backend/src/Inspection.Host --no-launch-profile
 ```
 
-访问 `http://127.0.0.1:5000/health/live`、`/api/system/status`、`/api/engineering/demo-plan`。
+访问 `http://127.0.0.1:5000/health/live`、`/api/system/status`、`/api/engineering/demo-plan`；`POST /api/jobs/prepare` 在框架期返回 501 和 `CAPABILITY_NOT_IMPLEMENTED`。
 默认 2 件、2 面、每面 A/B 各一张，在 Host/appsettings.json 可替换；仅计划预览，不执行动作。
 
 详见 [运行指南](specs/001-engineering-foundation/quickstart.md)、
