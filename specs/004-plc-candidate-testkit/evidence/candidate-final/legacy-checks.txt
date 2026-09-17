@@ -1,0 +1,17 @@
+["/home/ubuntu/.local/share/gaode-dotnet-10.0.401/dotnet", "/home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T042649Z-9e242fe2/driver/VirtualPlc.SystemValidation.dll", "--http", "http://127.0.0.1:39469", "--modbus-port", "35697", "--repo-root", "/home/ubuntu/dzk/gaode/repo/simulator", "--json-output", "/home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T042649Z-9e242fe2/legacy.json", "--markdown-output", "/home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T042649Z-9e242fe2/legacy.md", "--sdk-version", "10.0.401", "--execution-target", "net10.0", "--mode", "candidate-legacy", "--production-gate-status", "NOT RUN", "--production-gate-reason", "External candidate source build is not verified by this entrypoint."]
+PASS HTTP-01 HTTP 健康、监控和非法参数
+PASS MAP-01 29 点 CSV/HTTP/state 一致性
+PASS MODBUS-01 六个 Modbus 功能码成功路径
+PASS MODBUS-02 Modbus 异常码、方向和多写原子性
+PASS FLOW-01 心跳、区域配置和托盘锁握手
+PASS ACTION-01 移动、重触发和 Retry_Cmd
+PASS ACTION-02 翻转和分拣正常流程
+PASS LOCK-01 就绪、配置、软停和动作互斥
+PASS FAULT-01 六种一次性动作故障
+PASS FAULT-02 急停、人工介入和心跳超时
+PASS POLICY-01 十一类流程决策
+PASS RESET-01 复位清除故障、PC 值和动作状态
+PASS EVIDENCE-01 单命令、目录边界、报告判定和生产目标门禁
+VALIDATION PASS: 13 passed, 0 failed
+JSON: /home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T042649Z-9e242fe2/legacy.json
+Markdown: /home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T042649Z-9e242fe2/legacy.md

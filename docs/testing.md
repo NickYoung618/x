@@ -98,3 +98,15 @@ DB-008 Host 无法启动、无设备：独立部署工具仍可核查/恢复，�
 
 新CI在两平台运行统一入口，主程序构建与发布实际成功才运行行为检查；检查数、TRX及退出码校验阻止NOT RUN假通过。
 脚本只清理本次子进程；所有尝试分别存simulator/artifacts/。实际本轮结论见[验证记录](../specs/002-virtual-plc-integration/validation.md)，不能把CI配置存在当CI已通过。
+
+## 003 普通整盘中台流程框架
+
+新`Inspection.Application.Tests`测试准备顺序、分面采集、翻面重扫/CoordinateEpoch、旧反馈、普通缺帧、算法乱序与截止、单运动通道及动作超时。执行仍为**接口级状态机与假设备**；不等于真实PLC与扫码/3D/相机/算法连通。
+本轮实测与失败尝试见[003验证](../specs/003-ordinary-workflow-foundation/validation.md)。Host默认保持计划预览，未提供生产任务启动入口；方案冻结、技术终态可在内存框架中检查，但质量判定、必要保存、分拣和放行尚未实现。
+
+## 004 下位机候选测试包
+
+`scripts/validate-virtual-plc.py`现在按`Gaode.slnx`枚举当前测试工程，逐份TRX核对程序集身份、非零用例、全通过、无重复或遗漏；旧的固定3份门禁已不适用于003新增的Application测试。下位机同学可用显式`--candidate-dll`和`--contract legacy-v6-u16-snapshot-20260917`运行其独立发布的旧协议模拟器；脚本记录DLL及发布目录哈希，只在回环地址启动该候选，仍由Host真实Modbus客户端执行。候选源码构建记录由提供者附上。
+
+正向结果、负向门禁和未覆盖边界见[004验证](../specs/004-plc-candidate-testkit/validation.md)。候选兼容测试通过只证明该旧协议档案；正式V1.3点表与完整整盘另建用例，保持NOT RUN。
+草稿PR #2的[Core CI运行](https://github.com/NickYoung618/x/actions/runs/35182357122)已在Ubuntu/Windows各完成42项测试、旧13组和5个双进程场景；候选DLL参数模式仅在本地Linux实测，真实Windows桌面尚未执行。

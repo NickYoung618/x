@@ -1,0 +1,17 @@
+["/home/ubuntu/.local/share/gaode-dotnet-10.0.401/dotnet", "build", "Gaode.slnx", "-c", "Release", "--no-restore"]
+  VirtualPlc.SystemValidation -> /home/ubuntu/dzk/gaode/repo/simulator/VirtualPlc/tests/VirtualPlc.SystemValidation/bin/Release/net10.0/VirtualPlc.SystemValidation.dll
+  Inspection.Domain -> /home/ubuntu/dzk/gaode/repo/backend/src/Inspection.Domain/bin/Release/net10.0/Inspection.Domain.dll
+  VirtualPlc -> /home/ubuntu/dzk/gaode/repo/simulator/VirtualPlc/src/VirtualPlc/bin/Release/net10.0/VirtualPlc.dll
+  Inspection.Application -> /home/ubuntu/dzk/gaode/repo/backend/src/Inspection.Application/bin/Release/net10.0/Inspection.Application.dll
+  Inspection.Infrastructure -> /home/ubuntu/dzk/gaode/repo/backend/src/Inspection.Infrastructure/bin/Release/net10.0/Inspection.Infrastructure.dll
+  Inspection.Infrastructure.Tests -> /home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/bin/Release/net10.0/Inspection.Infrastructure.Tests.dll
+  Inspection.Application.Tests -> /home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Application.Tests/bin/Release/net10.0/Inspection.Application.Tests.dll
+  Inspection.Domain.Tests -> /home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll
+  Inspection.Host -> /home/ubuntu/dzk/gaode/repo/backend/src/Inspection.Host/bin/Release/net10.0/Inspection.Host.dll
+  Inspection.Host.Tests -> /home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Host.Tests/bin/Release/net10.0/Inspection.Host.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.01

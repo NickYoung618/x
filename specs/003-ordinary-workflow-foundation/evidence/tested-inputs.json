@@ -1,0 +1,16 @@
+{
+  "baseCommit": "85dafc3",
+  "note": "Final tested Application inputs, recorded after successful 42-test run",
+  "files": {
+    "backend/src/Inspection.Application/Inspection.Application.csproj": "e388d1d5a390b05781858f9b3ddbacf097c0304aa14bd26e52dbed1ff9892271",
+    "backend/src/Inspection.Application/packages.lock.json": "74df8c9f95d31d555a82ea3700637551aee817242229164243429f6d5c6b5233",
+    "backend/src/Inspection.Application/Motion/MotionExecutionLane.cs": "4d89c455bc376ef9252f45571bc3990ba98d42c4e463f24b5782a0a4f5a98aa2",
+    "backend/src/Inspection.Application/Engineering/DemoPlanService.cs": "62049323fe534aad3e9f74f697c1fce4a8170e1b1c106dcba77d8e8d7d14f534",
+    "backend/src/Inspection.Application/Workflow/WorkflowContracts.cs": "2712c7c8ea83b4e30ef394fabceb83578507a7b18d8e9523b219a195dab4faac",
+    "backend/src/Inspection.Application/Workflow/TrayWorkflow.cs": "a4df83d300c95ecfe4f5a6bc3bdc05463eff820bbad17475aad476c7c6931987",
+    "backend/tests/Inspection.Application.Tests/TrayWorkflowTests.cs": "87dc3a7012dd712b955a703a5bd38d93fbcc3d99ebf5a3bceb11701d34252a5a",
+    "backend/tests/Inspection.Application.Tests/packages.lock.json": "bae469cd912fee96578338dd16a1457968a61579f1c9446ed6c8e21f38b00ed3",
+    "backend/tests/Inspection.Application.Tests/Inspection.Application.Tests.csproj": "3a6c5c31582e686427020edd4807b704f1345f0cf0800048badf29654c2062d2",
+    "backend/tests/Inspection.Application.Tests/MotionExecutionLaneTests.cs": "210a368e3077855951ca2a42308d5051efb05f2f10a263bf5e7cf8a8f09959a2"
+  }
+}

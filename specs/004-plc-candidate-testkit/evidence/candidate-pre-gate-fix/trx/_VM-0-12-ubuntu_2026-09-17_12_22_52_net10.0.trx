@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="103f5837-af5e-4499-ab06-51c1f0e9382d" name="@VM-0-12-ubuntu 2026-09-17 12:22:52" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-17T12:22:52.5728711+08:00" queuing="2026-09-17T12:22:52.5728711+08:00" start="2026-09-17T12:22:48.7475907+08:00" finish="2026-09-17T12:22:52.5865337+08:00" />
+  <TestSettings name="default" id="a7188420-ace0-4cb3-9791-6cac256a7d70">
+    <Deployment runDeploymentRoot="_VM-0-12-ubuntu_2026-09-17_12_22_52" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="d88142ce-13e1-49e8-a633-cf6c735fb34b" testId="25f863f5-c00b-f79c-c492-3bcd5d7f1509" testName="Inspection.Host.Tests.HostContractTests.Demo_query_returns_eight_captures_without_executing_them" computerName="VM-0-12-ubuntu" duration="00:00:00.1255361" startTime="2026-09-17T12:22:52.1688838+08:00" endTime="2026-09-17T12:22:52.2675752+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d88142ce-13e1-49e8-a633-cf6c735fb34b" />
+    <UnitTestResult executionId="77d52289-7f74-4805-b43a-70dcaa0d9fe1" testId="fb17721e-66a3-c8a8-fb7c-882561687322" testName="Inspection.Host.Tests.HostContractTests.Status_explicitly_reports_unavailable_production_capabilities" computerName="VM-0-12-ubuntu" duration="00:00:00.7831238" startTime="2026-09-17T12:22:51.3181237+08:00" endTime="2026-09-17T12:22:52.1340204+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77d52289-7f74-4805-b43a-70dcaa0d9fe1" />
+    <UnitTestResult executionId="79bf25e9-f5f2-4564-bbbf-de4e54176e9a" testId="f4f98c95-32ac-dcff-bd91-5d674f53d221" testName="Inspection.Host.Tests.HostContractTests.Live_does_not_claim_production_readiness" computerName="VM-0-12-ubuntu" duration="00:00:00.0162345" startTime="2026-09-17T12:22:52.3042026+08:00" endTime="2026-09-17T12:22:52.3219827+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="79bf25e9-f5f2-4564-bbbf-de4e54176e9a" />
+    <UnitTestResult executionId="04f14143-2091-4fe8-9b5d-64351c089fa4" testId="2a8f7648-ef84-6e37-0f57-0e38966b2e99" testName="Inspection.Host.Tests.HostContractTests.Unimplemented_production_commands_are_not_accepted" computerName="VM-0-12-ubuntu" duration="00:00:00.0325101" startTime="2026-09-17T12:22:52.2695238+08:00" endTime="2026-09-17T12:22:52.3039144+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="04f14143-2091-4fe8-9b5d-64351c089fa4" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Inspection.Host.Tests.HostContractTests.Demo_query_returns_eight_captures_without_executing_them" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.host.tests/bin/release/net10.0/inspection.host.tests.dll" id="25f863f5-c00b-f79c-c492-3bcd5d7f1509">
+      <Execution id="d88142ce-13e1-49e8-a633-cf6c735fb34b" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Host.Tests/bin/Release/net10.0/Inspection.Host.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Host.Tests.HostContractTests" name="Demo_query_returns_eight_captures_without_executing_them" />
+    </UnitTest>
+    <UnitTest name="Inspection.Host.Tests.HostContractTests.Live_does_not_claim_production_readiness" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.host.tests/bin/release/net10.0/inspection.host.tests.dll" id="f4f98c95-32ac-dcff-bd91-5d674f53d221">
+      <Execution id="79bf25e9-f5f2-4564-bbbf-de4e54176e9a" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Host.Tests/bin/Release/net10.0/Inspection.Host.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Host.Tests.HostContractTests" name="Live_does_not_claim_production_readiness" />
+    </UnitTest>
+    <UnitTest name="Inspection.Host.Tests.HostContractTests.Status_explicitly_reports_unavailable_production_capabilities" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.host.tests/bin/release/net10.0/inspection.host.tests.dll" id="fb17721e-66a3-c8a8-fb7c-882561687322">
+      <Execution id="77d52289-7f74-4805-b43a-70dcaa0d9fe1" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Host.Tests/bin/Release/net10.0/Inspection.Host.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Host.Tests.HostContractTests" name="Status_explicitly_reports_unavailable_production_capabilities" />
+    </UnitTest>
+    <UnitTest name="Inspection.Host.Tests.HostContractTests.Unimplemented_production_commands_are_not_accepted" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.host.tests/bin/release/net10.0/inspection.host.tests.dll" id="2a8f7648-ef84-6e37-0f57-0e38966b2e99">
+      <Execution id="04f14143-2091-4fe8-9b5d-64351c089fa4" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Host.Tests/bin/Release/net10.0/Inspection.Host.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Host.Tests.HostContractTests" name="Unimplemented_production_commands_are_not_accepted" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="25f863f5-c00b-f79c-c492-3bcd5d7f1509" executionId="d88142ce-13e1-49e8-a633-cf6c735fb34b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb17721e-66a3-c8a8-fb7c-882561687322" executionId="77d52289-7f74-4805-b43a-70dcaa0d9fe1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f4f98c95-32ac-dcff-bd91-5d674f53d221" executionId="79bf25e9-f5f2-4564-bbbf-de4e54176e9a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2a8f7648-ef84-6e37-0f57-0e38966b2e99" executionId="04f14143-2091-4fe8-9b5d-64351c089fa4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="4" executed="4" passed="4" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.02] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 10.0.12)
+[xUnit.net 00:00:00.56]   Discovering: Inspection.Host.Tests
+[xUnit.net 00:00:00.74]   Discovered:  Inspection.Host.Tests
+[xUnit.net 00:00:00.89]   Starting:    Inspection.Host.Tests
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ubuntu/dzk/gaode/repo/backend/src/Inspection.Host
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+[xUnit.net 00:00:02.17]   Finished:    Inspection.Host.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

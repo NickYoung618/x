@@ -1,0 +1,9 @@
+MSBUILD : error MSB4166: Child node "2" exited prematurely. Shutting down. Diagnostic information may be found in files in "/tmp/MSBuildTempJSJif9/" and will be named MSBuild_*.failure.txt. This location can be changed by setting the MSBUILDDEBUGPATH environment variable to a different directory.
+
+Build FAILED.
+
+MSBUILD : error MSB4166: Child node "2" exited prematurely. Shutting down. Diagnostic information may be found in files in "/tmp/MSBuildTempJSJif9/" and will be named MSBuild_*.failure.txt. This location can be changed by setting the MSBUILDDEBUGPATH environment variable to a different directory.
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:05.37

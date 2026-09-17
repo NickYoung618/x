@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="4a5d110c-4a5f-4a21-b800-ca9baed3efa3" name="runneradmin@runnervmbkp6f 2026-09-17 04:34:30" runUser="runnervmbkp6f\runneradmin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-17T04:34:30.3438865+00:00" queuing="2026-09-17T04:34:30.3438866+00:00" start="2026-09-17T04:34:29.1388619+00:00" finish="2026-09-17T04:34:30.6860539+00:00" />
+  <TestSettings name="default" id="30cfcd5d-cb77-4a8d-809f-1cb13cff4cb6">
+    <Deployment runDeploymentRoot="runneradmin_runnervmbkp6f_2026-09-17_04_34_30" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="9252d09b-b5b8-423d-a066-a407594bd124" testId="188ba48f-fdef-42a4-17a1-4f8078b364b5" testName="Inspection.Application.Tests.TrayWorkflowTests.Invalid_motion_outcome_cannot_be_treated_as_completion" computerName="runnervmbkp6f" duration="00:00:00.0023516" startTime="2026-09-17T04:34:30.2042482+00:00" endTime="2026-09-17T04:34:30.2043402+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9252d09b-b5b8-423d-a066-a407594bd124" />
+    <UnitTestResult executionId="02835e19-0f2b-49dc-abfe-3efcb1a5a02c" testId="80f8c926-da83-72e7-48b5-e424f1cd214a" testName="Inspection.Application.Tests.TrayWorkflowTests.Old_algorithm_can_finish_after_motion_failure_and_deadline_closes_rest" computerName="runnervmbkp6f" duration="00:00:00.0066072" startTime="2026-09-17T04:34:30.2045429+00:00" endTime="2026-09-17T04:34:30.2046374+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="02835e19-0f2b-49dc-abfe-3efcb1a5a02c" />
+    <UnitTestResult executionId="67e0d148-0e94-4e45-8aa3-c30fb1d06246" testId="aac43464-20b7-afa9-4a52-a456e1f2b613" testName="Inspection.Application.Tests.TrayWorkflowTests.Mixed_missing_frame_and_algorithm_failure_finish_as_technical_facts" computerName="runnervmbkp6f" duration="00:00:00.0122459" startTime="2026-09-17T04:34:30.2052464+00:00" endTime="2026-09-17T04:34:30.2138652+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67e0d148-0e94-4e45-8aa3-c30fb1d06246" />
+    <UnitTestResult executionId="6de5b09e-acfd-4fc5-9c5d-8e530f4a6f94" testId="60ab4128-0842-8361-7791-50dec1411ebf" testName="Inspection.Application.Tests.TrayWorkflowTests.Motion_acceptance_is_not_completion_and_unknown_never_retries" computerName="runnervmbkp6f" duration="00:00:00.0591117" startTime="2026-09-17T04:34:30.1067593+00:00" endTime="2026-09-17T04:34:30.1845500+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6de5b09e-acfd-4fc5-9c5d-8e530f4a6f94" />
+    <UnitTestResult executionId="312ceeb8-9c62-4195-81fb-8fb34d4552dd" testId="a7b6c916-12e9-aabb-43ee-a87909c17cde" testName="Inspection.Application.Tests.TrayWorkflowTests.Missing_frame_marks_dependency_failure_but_next_safe_capture_continues" computerName="runnervmbkp6f" duration="00:00:00.0072130" startTime="2026-09-17T04:34:30.2140924+00:00" endTime="2026-09-17T04:34:30.2292448+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="312ceeb8-9c62-4195-81fb-8fb34d4552dd" />
+    <UnitTestResult executionId="52134b87-1506-4229-8266-738112e9ede6" testId="70b406b4-de7b-c1b2-7ae3-2a708c4d62b3" testName="Inspection.Application.Tests.TrayWorkflowTests.Preparation_requires_fresh_3d_f_code_and_unique_recipe" computerName="runnervmbkp6f" duration="00:00:00.0014822" startTime="2026-09-17T04:34:30.2048643+00:00" endTime="2026-09-17T04:34:30.2049744+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="52134b87-1506-4229-8266-738112e9ede6" />
+    <UnitTestResult executionId="03bf6c3d-3d70-4d9c-96ad-71d33c23cf27" testId="0f9858e2-5f49-cc2a-dacd-447f9692b775" testName="Inspection.Application.Tests.TrayWorkflowTests.Rescan_missing_original_slot_stops_before_next_face_motion" computerName="runnervmbkp6f" duration="00:00:00.0112499" startTime="2026-09-17T04:34:30.2028256+00:00" endTime="2026-09-17T04:34:30.2029737+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03bf6c3d-3d70-4d9c-96ad-71d33c23cf27" />
+    <UnitTestResult executionId="ecf27076-7b23-44d0-bed1-efcc25e84867" testId="89699f93-7b7d-1478-eaeb-64879945495d" testName="Inspection.Application.Tests.MotionExecutionLaneTests.Single_lane_runs_only_one_device_action_and_unknown_blocks_queued_action" computerName="runnervmbkp6f" duration="00:00:00.0051319" startTime="2026-09-17T04:34:30.5034372+00:00" endTime="2026-09-17T04:34:30.5085405+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ecf27076-7b23-44d0-bed1-efcc25e84867" />
+    <UnitTestResult executionId="890683be-f598-4961-bfce-f6d92cdfb920" testId="87295e7e-6907-9497-82e2-2da81b5af718" testName="Inspection.Application.Tests.MotionExecutionLaneTests.Lost_event_sink_stops_admitting_motion_and_exposes_failure" computerName="runnervmbkp6f" duration="00:00:00.1599408" startTime="2026-09-17T04:34:30.1095063+00:00" endTime="2026-09-17T04:34:30.2815445+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="890683be-f598-4961-bfce-f6d92cdfb920" />
+    <UnitTestResult executionId="ce11f189-7d09-4cb4-a1ea-9ce058571b03" testId="9f7e0c76-a174-1a15-c890-e689cb5115b4" testName="Inspection.Application.Tests.TrayWorkflowTests.Full_framework_order_preserves_part_identity_and_blocks_old_coordinates" computerName="runnervmbkp6f" duration="00:00:00.0262299" startTime="2026-09-17T04:34:30.2294572+00:00" endTime="2026-09-17T04:34:30.2504669+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ce11f189-7d09-4cb4-a1ea-9ce058571b03" />
+    <UnitTestResult executionId="41091d65-02e0-4835-94ad-f00ac6950c4f" testId="2631571b-f4a5-a7e9-674c-ef62523eb36d" testName="Inspection.Application.Tests.MotionExecutionLaneTests.Two_completed_actions_are_serial_and_report_acceptance_before_completion" computerName="runnervmbkp6f" duration="00:00:00.0287742" startTime="2026-09-17T04:34:30.3016641+00:00" endTime="2026-09-17T04:34:30.3360142+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="41091d65-02e0-4835-94ad-f00ac6950c4f" />
+    <UnitTestResult executionId="a0b92813-47a4-46c3-a623-2f1c948d2303" testId="1b09d7ab-b19d-6e54-75a9-c87188a48f88" testName="Inspection.Application.Tests.MotionExecutionLaneTests.Motion_deadline_marks_unknown_without_replaying_device_command" computerName="runnervmbkp6f" duration="00:00:00.1656955" startTime="2026-09-17T04:34:30.3366271+00:00" endTime="2026-09-17T04:34:30.5029387+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a0b92813-47a4-46c3-a623-2f1c948d2303" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Inspection.Application.Tests.MotionExecutionLaneTests.Single_lane_runs_only_one_device_action_and_unknown_blocks_queued_action" storage="d:\a\x\x\backend\tests\inspection.application.tests\bin\release\net10.0\inspection.application.tests.dll" id="89699f93-7b7d-1478-eaeb-64879945495d">
+      <Execution id="ecf27076-7b23-44d0-bed1-efcc25e84867" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Application.Tests\bin\Release\net10.0\Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.MotionExecutionLaneTests" name="Single_lane_runs_only_one_device_action_and_unknown_blocks_queued_action" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Rescan_missing_original_slot_stops_before_next_face_motion" storage="d:\a\x\x\backend\tests\inspection.application.tests\bin\release\net10.0\inspection.application.tests.dll" id="0f9858e2-5f49-cc2a-dacd-447f9692b775">
+      <Execution id="03bf6c3d-3d70-4d9c-96ad-71d33c23cf27" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Application.Tests\bin\Release\net10.0\Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Rescan_missing_original_slot_stops_before_next_face_motion" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Old_algorithm_can_finish_after_motion_failure_and_deadline_closes_rest" storage="d:\a\x\x\backend\tests\inspection.application.tests\bin\release\net10.0\inspection.application.tests.dll" id="80f8c926-da83-72e7-48b5-e424f1cd214a">
+      <Execution id="02835e19-0f2b-49dc-abfe-3efcb1a5a02c" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Application.Tests\bin\Release\net10.0\Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Old_algorithm_can_finish_after_motion_failure_and_deadline_closes_rest" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.MotionExecutionLaneTests.Two_completed_actions_are_serial_and_report_acceptance_before_completion" storage="d:\a\x\x\backend\tests\inspection.application.tests\bin\release\net10.0\inspection.application.tests.dll" id="2631571b-f4a5-a7e9-674c-ef62523eb36d">
+      <Execution id="41091d65-02e0-4835-94ad-f00ac6950c4f" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Application.Tests\bin\Release\net10.0\Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.MotionExecutionLaneTests" name="Two_completed_actions_are_serial_and_report_acceptance_before_completion" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Invalid_motion_outcome_cannot_be_treated_as_completion" storage="d:\a\x\x\backend\tests\inspection.application.tests\bin\release\net10.0\inspection.application.tests.dll" id="188ba48f-fdef-42a4-17a1-4f8078b364b5">
+      <Execution id="9252d09b-b5b8-423d-a066-a407594bd124" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Application.Tests\bin\Release\net10.0\Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Invalid_motion_outcome_cannot_be_treated_as_completion" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Preparation_requires_fresh_3d_f_code_and_unique_recipe" storage="d:\a\x\x\backend\tests\inspection.application.tests\bin\release\net10.0\inspection.application.tests.dll" id="70b406b4-de7b-c1b2-7ae3-2a708c4d62b3">
+      <Execution id="52134b87-1506-4229-8266-738112e9ede6" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Application.Tests\bin\Release\net10.0\Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Preparation_requires_fresh_3d_f_code_and_unique_recipe" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Motion_acceptance_is_not_completion_and_unknown_never_retries" storage="d:\a\x\x\backend\tests\inspection.application.tests\bin\release\net10.0\inspection.application.tests.dll" id="60ab4128-0842-8361-7791-50dec1411ebf">
+      <Execution id="6de5b09e-acfd-4fc5-9c5d-8e530f4a6f94" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Application.Tests\bin\Release\net10.0\Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Motion_acceptance_is_not_completion_and_unknown_never_retries" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.MotionExecutionLaneTests.Lost_event_sink_stops_admitting_motion_and_exposes_failure" storage="d:\a\x\x\backend\tests\inspection.application.tests\bin\release\net10.0\inspection.application.tests.dll" id="87295e7e-6907-9497-82e2-2da81b5af718">
+      <Execution id="890683be-f598-4961-bfce-f6d92cdfb920" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Application.Tests\bin\Release\net10.0\Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.MotionExecutionLaneTests" name="Lost_event_sink_stops_admitting_motion_and_exposes_failure" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Missing_frame_marks_dependency_failure_but_next_safe_capture_continues" storage="d:\a\x\x\backend\tests\inspection.application.tests\bin\release\net10.0\inspection.application.tests.dll" id="a7b6c916-12e9-aabb-43ee-a87909c17cde">
+      <Execution id="312ceeb8-9c62-4195-81fb-8fb34d4552dd" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Application.Tests\bin\Release\net10.0\Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Missing_frame_marks_dependency_failure_but_next_safe_capture_continues" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Mixed_missing_frame_and_algorithm_failure_finish_as_technical_facts" storage="d:\a\x\x\backend\tests\inspection.application.tests\bin\release\net10.0\inspection.application.tests.dll" id="aac43464-20b7-afa9-4a52-a456e1f2b613">
+      <Execution id="67e0d148-0e94-4e45-8aa3-c30fb1d06246" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Application.Tests\bin\Release\net10.0\Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Mixed_missing_frame_and_algorithm_failure_finish_as_technical_facts" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.MotionExecutionLaneTests.Motion_deadline_marks_unknown_without_replaying_device_command" storage="d:\a\x\x\backend\tests\inspection.application.tests\bin\release\net10.0\inspection.application.tests.dll" id="1b09d7ab-b19d-6e54-75a9-c87188a48f88">
+      <Execution id="a0b92813-47a4-46c3-a623-2f1c948d2303" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Application.Tests\bin\Release\net10.0\Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.MotionExecutionLaneTests" name="Motion_deadline_marks_unknown_without_replaying_device_command" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Full_framework_order_preserves_part_identity_and_blocks_old_coordinates" storage="d:\a\x\x\backend\tests\inspection.application.tests\bin\release\net10.0\inspection.application.tests.dll" id="9f7e0c76-a174-1a15-c890-e689cb5115b4">
+      <Execution id="ce11f189-7d09-4cb4-a1ea-9ce058571b03" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Application.Tests\bin\Release\net10.0\Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Full_framework_order_preserves_part_identity_and_blocks_old_coordinates" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="188ba48f-fdef-42a4-17a1-4f8078b364b5" executionId="9252d09b-b5b8-423d-a066-a407594bd124" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="80f8c926-da83-72e7-48b5-e424f1cd214a" executionId="02835e19-0f2b-49dc-abfe-3efcb1a5a02c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aac43464-20b7-afa9-4a52-a456e1f2b613" executionId="67e0d148-0e94-4e45-8aa3-c30fb1d06246" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="60ab4128-0842-8361-7791-50dec1411ebf" executionId="6de5b09e-acfd-4fc5-9c5d-8e530f4a6f94" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a7b6c916-12e9-aabb-43ee-a87909c17cde" executionId="312ceeb8-9c62-4195-81fb-8fb34d4552dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="70b406b4-de7b-c1b2-7ae3-2a708c4d62b3" executionId="52134b87-1506-4229-8266-738112e9ede6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0f9858e2-5f49-cc2a-dacd-447f9692b775" executionId="03bf6c3d-3d70-4d9c-96ad-71d33c23cf27" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89699f93-7b7d-1478-eaeb-64879945495d" executionId="ecf27076-7b23-44d0-bed1-efcc25e84867" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="87295e7e-6907-9497-82e2-2da81b5af718" executionId="890683be-f598-4961-bfce-f6d92cdfb920" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f7e0c76-a174-1a15-c890-e689cb5115b4" executionId="ce11f189-7d09-4cb4-a1ea-9ce058571b03" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2631571b-f4a5-a7e9-674c-ef62523eb36d" executionId="41091d65-02e0-4835-94ad-f00ac6950c4f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1b09d7ab-b19d-6e54-75a9-c87188a48f88" executionId="a0b92813-47a4-46c3-a623-2f1c948d2303" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="12" executed="12" passed="12" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.17]   Discovering: Inspection.Application.Tests&#xD;
+[xUnit.net 00:00:00.24]   Discovered:  Inspection.Application.Tests&#xD;
+[xUnit.net 00:00:00.28]   Starting:    Inspection.Application.Tests&#xD;
+[xUnit.net 00:00:00.73]   Finished:    Inspection.Application.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

@@ -1,0 +1,30 @@
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.ModbusTcpServer[0]
+      Virtual PLC Modbus TCP listening on 127.0.0.1:41669, UnitId=1
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:36485
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T041902Z-ac796b0f/plc
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client connected: 127.0.0.1:39458
+warn: VirtualPlc.VirtualPlcEngine[0]
+      Simulation fault injected: MoveTimeout
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client disconnected: 127.0.0.1:39458
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client connected: 127.0.0.1:39470
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: ZoneConfig
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: PalletLock
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Move
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client disconnected: 127.0.0.1:39470
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...

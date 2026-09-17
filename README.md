@@ -3,8 +3,8 @@
 技术及测试以 [总体架构 V1.3](docs/architecture/architecture-v1.3.md) 为准；
 首版界面以用户最新 [原型核查记录](docs/ui-prototype/review.md) 为准。
 
-当前增量：可运行后端、普通零件整盘采集计划预览、基础测试和 CI。
-**尚未实现完整检测闭环、WPF、真实/独立虚拟设备对接、算法和业务保存；生产就绪为 false。**
+当前具备可运行后端、普通零件整盘计划预览、旧协议独立虚拟PLC最小联调、进程内流程框架及候选测试入口。
+**尚未实现正式V1.3设备接入、完整检测闭环、WPF、算法和业务保存；生产就绪为 false。**
 
 ## 开发与测试
 
@@ -35,8 +35,8 @@ dotnet run --project backend/src/Inspection.Host --no-launch-profile
 
 最新协作入口：[三人协作、Spec Kit、CI 与 Windows 部署包](docs/team-development-and-release.md)。
 同服务器新对话从 [项目交接](docs/handover-20260917.md) 和 [可复制提示词](docs/prompts/next-codex-session.md) 开始。
-2026-09-17 已取得同学的虚拟下位机副本进行审查，前端仍为 HTML 原型；
-模拟器尚未合入中台，V1.3 接入差异见 [审查记录](docs/reviews/virtual-plc-20260917/review.md)。
+2026-09-17 已取得并审查同学的虚拟下位机副本，前端仍为 HTML 原型；
+旧协议兼容联调已加入工程测试，正式 V1.3 接入差异见 [审查记录](docs/reviews/virtual-plc-20260917/review.md)。
 
 ## Spec Kit
 
@@ -72,3 +72,11 @@ python3 scripts/validate-virtual-plc.py
 Windows可用`python`。统一入口无.NET8回退，输出唯一运行目录及summary.json。
 执行原13组旧协议检查、真实Host工程探针与独立PLC进程的最小联调。默认Host保持计划预览，不自动运动。
 新版点表由下位机同学后续确认；本轮先搭框架。这里不是整盘执行、V1.3完整协议或Windows FullSim包。
+
+## 普通整盘中台流程框架（003）
+
+[规格与验证](specs/003-ordinary-workflow-foundation/validation.md)覆盖公共3D/F准备、唯一方案、A/B分面顺序、翻面重扫、单运动通道及采集/算法技术终态。用`dotnet test Gaode.slnx -c Release`运行；默认Host仍仅提供计划预览。正式设备、保存/判定/分拣待后续增量接入。
+
+## 下位机候选版本测试入口（004）
+
+当前统一脚本可随新增测试工程对账TRX，并可对同学独立发布的旧协议兼容模拟器运行真实Host↔模拟器联调。使用命令、需要回传的证据及V1.3边界见[同学运行指南](specs/004-plc-candidate-testkit/quickstart.md)。这是工程测试包，不是正式整盘或Windows安装包。

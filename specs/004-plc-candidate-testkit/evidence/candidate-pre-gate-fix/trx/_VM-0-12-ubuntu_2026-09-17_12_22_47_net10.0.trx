@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="71d36422-272d-4a91-8d4d-196a4f28cc46" name="@VM-0-12-ubuntu 2026-09-17 12:22:47" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-17T12:22:47.9920079+08:00" queuing="2026-09-17T12:22:47.9920080+08:00" start="2026-09-17T12:22:45.4456071+08:00" finish="2026-09-17T12:22:48.0444609+08:00" />
+  <TestSettings name="default" id="d0691e44-d272-4ad4-8277-60c9beb6b683">
+    <Deployment runDeploymentRoot="_VM-0-12-ubuntu_2026-09-17_12_22_47" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="2ed91aa8-e4d0-430d-83e8-64b285a014aa" testId="eacdae0b-5649-d855-d8b3-273d0c51cec0" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Batches_whole_tray_by_camera_and_preserves_identity_across_faces" computerName="VM-0-12-ubuntu" duration="00:00:00.0173483" startTime="2026-09-17T12:22:47.8312955+08:00" endTime="2026-09-17T12:22:47.8315075+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ed91aa8-e4d0-430d-83e8-64b285a014aa" />
+    <UnitTestResult executionId="60cb67a5-0cab-4938-960a-1f09f4e1bd40" testId="3882187e-d742-f444-fa38-2ed126931ea7" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Input_mutation_cannot_change_published_plan" computerName="VM-0-12-ubuntu" duration="00:00:00.0059737" startTime="2026-09-17T12:22:47.8928408+08:00" endTime="2026-09-17T12:22:47.8929324+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="60cb67a5-0cab-4938-960a-1f09f4e1bd40" />
+    <UnitTestResult executionId="793e1c34-0ea6-453e-bad8-7438234500e7" testId="891e82af-0fb3-29ab-962f-47c0c037d4a8" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_part_identifiers(invalid: &quot;p1 &quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0000289" startTime="2026-09-17T12:22:47.8362225+08:00" endTime="2026-09-17T12:22:47.8363610+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="793e1c34-0ea6-453e-bad8-7438234500e7" />
+    <UnitTestResult executionId="cd4c87cc-0561-4bf4-a345-b38172090808" testId="ebdb82b3-29dd-6b97-1525-193c86c166ae" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_part_identifiers(invalid: null)" computerName="VM-0-12-ubuntu" duration="00:00:00.0000194" startTime="2026-09-17T12:22:47.8365382+08:00" endTime="2026-09-17T12:22:47.8366298+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cd4c87cc-0561-4bf4-a345-b38172090808" />
+    <UnitTestResult executionId="cfe033fd-0c01-44aa-b688-9f44e42949e4" testId="492fee63-3098-417d-d4c5-fb5e3c67ba4c" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_face_identifiers(invalid: null)" computerName="VM-0-12-ubuntu" duration="00:00:00.0000230" startTime="2026-09-17T12:22:47.8919084+08:00" endTime="2026-09-17T12:22:47.8920002+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cfe033fd-0c01-44aa-b688-9f44e42949e4" />
+    <UnitTestResult executionId="a103b13e-17a0-4e54-b829-e17c2db7ccac" testId="eff5460b-bc20-8000-4371-57337658edc0" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_undefined_camera_group" computerName="VM-0-12-ubuntu" duration="00:00:00.0057990" startTime="2026-09-17T12:22:47.8371581+08:00" endTime="2026-09-17T12:22:47.8372578+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a103b13e-17a0-4e54-b829-e17c2db7ccac" />
+    <UnitTestResult executionId="c4a102ff-c73b-4729-b4b5-d4f41c9d692b" testId="5888c5b7-1fdd-9d82-4f90-76fd84500508" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_part_identifiers(invalid: &quot; &quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0002032" startTime="2026-09-17T12:22:47.8359744+08:00" endTime="2026-09-17T12:22:47.8360603+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c4a102ff-c73b-4729-b4b5-d4f41c9d692b" />
+    <UnitTestResult executionId="74a35f8a-05ad-4137-a7b8-a904f6c25d33" testId="b195b2f3-cef9-2e4d-16a6-0d5abdee69e3" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_face_identifiers(invalid: &quot; &quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0000218" startTime="2026-09-17T12:22:47.8921729+08:00" endTime="2026-09-17T12:22:47.8922714+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="74a35f8a-05ad-4137-a7b8-a904f6c25d33" />
+    <UnitTestResult executionId="7589353d-b632-4d32-8cc8-892f0e95dfef" testId="9f820417-8f0c-d967-e6b9-a93c07497e41" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_part_identifiers(invalid: &quot; p1&quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0000172" startTime="2026-09-17T12:22:47.8368219+08:00" endTime="2026-09-17T12:22:47.8369173+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7589353d-b632-4d32-8cc8-892f0e95dfef" />
+    <UnitTestResult executionId="5a8a7355-3184-4ccf-8400-a557ba9bf69d" testId="08678fd9-1902-0285-0ea0-70b972c0b322" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_part_identifiers(invalid: &quot;&quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0009590" startTime="2026-09-17T12:22:47.8356833+08:00" endTime="2026-09-17T12:22:47.8357821+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a8a7355-3184-4ccf-8400-a557ba9bf69d" />
+    <UnitTestResult executionId="85b2a133-1415-4e65-ad25-ed154e6f4de2" testId="01320553-e0f9-f4d0-99ab-376c0d2ff4bb" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_null_collections" computerName="VM-0-12-ubuntu" duration="00:00:00.0006413" startTime="2026-09-17T12:22:47.8931711+08:00" endTime="2026-09-17T12:22:47.8932675+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="85b2a133-1415-4e65-ad25-ed154e6f4de2" />
+    <UnitTestResult executionId="30e76505-899b-4ef8-8bcf-994ace93b6c2" testId="f1dda52b-d233-e95b-4882-9936b92c5c83" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_face_identifiers(invalid: &quot; f1&quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0001923" startTime="2026-09-17T12:22:47.8914699+08:00" endTime="2026-09-17T12:22:47.8915968+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="30e76505-899b-4ef8-8bcf-994ace93b6c2" />
+    <UnitTestResult executionId="bf16d65e-0477-4d90-af2a-7bf92b1a048e" testId="a0b9777d-1b70-5926-a799-adf6326fff4e" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_face_identifiers(invalid: &quot;&quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0002581" startTime="2026-09-17T12:22:47.8415453+08:00" endTime="2026-09-17T12:22:47.8416651+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bf16d65e-0477-4d90-af2a-7bf92b1a048e" />
+    <UnitTestResult executionId="c8c4c0e3-8b45-4b53-b27b-8dfc0d3e8e60" testId="f8e02860-fd95-9442-7ecf-ef57e116f575" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_empty_or_duplicate_parts_and_faces" computerName="VM-0-12-ubuntu" duration="00:00:00.0089279" startTime="2026-09-17T12:22:47.8925161+08:00" endTime="2026-09-17T12:22:47.8926043+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c8c4c0e3-8b45-4b53-b27b-8dfc0d3e8e60" />
+    <UnitTestResult executionId="1967b3e0-e8a0-4414-a42c-e5145371a91b" testId="b91753d6-3976-cb0f-f62d-b17d0aefe8f1" testName="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Supports_more_parts_faces_and_cd_group_without_reordering_slots" computerName="VM-0-12-ubuntu" duration="00:00:00.1009207" startTime="2026-09-17T12:22:47.6329475+08:00" endTime="2026-09-17T12:22:47.7684620+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1967b3e0-e8a0-4414-a42c-e5145371a91b" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_null_collections" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="01320553-e0f9-f4d0-99ab-376c0d2ff4bb">
+      <Execution id="85b2a133-1415-4e65-ad25-ed154e6f4de2" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Rejects_null_collections" />
+    </UnitTest>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Input_mutation_cannot_change_published_plan" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="3882187e-d742-f444-fa38-2ed126931ea7">
+      <Execution id="60cb67a5-0cab-4938-960a-1f09f4e1bd40" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Input_mutation_cannot_change_published_plan" />
+    </UnitTest>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_face_identifiers(invalid: &quot;&quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="a0b9777d-1b70-5926-a799-adf6326fff4e">
+      <Execution id="bf16d65e-0477-4d90-af2a-7bf92b1a048e" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Rejects_invalid_face_identifiers" />
+    </UnitTest>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_undefined_camera_group" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="eff5460b-bc20-8000-4371-57337658edc0">
+      <Execution id="a103b13e-17a0-4e54-b829-e17c2db7ccac" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Rejects_undefined_camera_group" />
+    </UnitTest>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_face_identifiers(invalid: null)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="492fee63-3098-417d-d4c5-fb5e3c67ba4c">
+      <Execution id="cfe033fd-0c01-44aa-b688-9f44e42949e4" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Rejects_invalid_face_identifiers" />
+    </UnitTest>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_face_identifiers(invalid: &quot; &quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="b195b2f3-cef9-2e4d-16a6-0d5abdee69e3">
+      <Execution id="74a35f8a-05ad-4137-a7b8-a904f6c25d33" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Rejects_invalid_face_identifiers" />
+    </UnitTest>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_part_identifiers(invalid: &quot;p1 &quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="891e82af-0fb3-29ab-962f-47c0c037d4a8">
+      <Execution id="793e1c34-0ea6-453e-bad8-7438234500e7" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Rejects_invalid_part_identifiers" />
+    </UnitTest>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Supports_more_parts_faces_and_cd_group_without_reordering_slots" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="b91753d6-3976-cb0f-f62d-b17d0aefe8f1">
+      <Execution id="1967b3e0-e8a0-4414-a42c-e5145371a91b" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Supports_more_parts_faces_and_cd_group_without_reordering_slots" />
+    </UnitTest>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Batches_whole_tray_by_camera_and_preserves_identity_across_faces" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="eacdae0b-5649-d855-d8b3-273d0c51cec0">
+      <Execution id="2ed91aa8-e4d0-430d-83e8-64b285a014aa" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Batches_whole_tray_by_camera_and_preserves_identity_across_faces" />
+    </UnitTest>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_part_identifiers(invalid: &quot; &quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="5888c5b7-1fdd-9d82-4f90-76fd84500508">
+      <Execution id="c4a102ff-c73b-4729-b4b5-d4f41c9d692b" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Rejects_invalid_part_identifiers" />
+    </UnitTest>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_part_identifiers(invalid: null)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="ebdb82b3-29dd-6b97-1525-193c86c166ae">
+      <Execution id="cd4c87cc-0561-4bf4-a345-b38172090808" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Rejects_invalid_part_identifiers" />
+    </UnitTest>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_empty_or_duplicate_parts_and_faces" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="f8e02860-fd95-9442-7ecf-ef57e116f575">
+      <Execution id="c8c4c0e3-8b45-4b53-b27b-8dfc0d3e8e60" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Rejects_empty_or_duplicate_parts_and_faces" />
+    </UnitTest>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_face_identifiers(invalid: &quot; f1&quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="f1dda52b-d233-e95b-4882-9936b92c5c83">
+      <Execution id="30e76505-899b-4ef8-8bcf-994ace93b6c2" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Rejects_invalid_face_identifiers" />
+    </UnitTest>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_part_identifiers(invalid: &quot;&quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="08678fd9-1902-0285-0ea0-70b972c0b322">
+      <Execution id="5a8a7355-3184-4ccf-8400-a557ba9bf69d" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Rejects_invalid_part_identifiers" />
+    </UnitTest>
+    <UnitTest name="Inspection.Domain.Tests.OrdinaryTrayPlannerTests.Rejects_invalid_part_identifiers(invalid: &quot; p1&quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.domain.tests/bin/release/net10.0/inspection.domain.tests.dll" id="9f820417-8f0c-d967-e6b9-a93c07497e41">
+      <Execution id="7589353d-b632-4d32-8cc8-892f0e95dfef" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Domain.Tests.OrdinaryTrayPlannerTests" name="Rejects_invalid_part_identifiers" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="eacdae0b-5649-d855-d8b3-273d0c51cec0" executionId="2ed91aa8-e4d0-430d-83e8-64b285a014aa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3882187e-d742-f444-fa38-2ed126931ea7" executionId="60cb67a5-0cab-4938-960a-1f09f4e1bd40" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="891e82af-0fb3-29ab-962f-47c0c037d4a8" executionId="793e1c34-0ea6-453e-bad8-7438234500e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ebdb82b3-29dd-6b97-1525-193c86c166ae" executionId="cd4c87cc-0561-4bf4-a345-b38172090808" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="492fee63-3098-417d-d4c5-fb5e3c67ba4c" executionId="cfe033fd-0c01-44aa-b688-9f44e42949e4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eff5460b-bc20-8000-4371-57337658edc0" executionId="a103b13e-17a0-4e54-b829-e17c2db7ccac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5888c5b7-1fdd-9d82-4f90-76fd84500508" executionId="c4a102ff-c73b-4729-b4b5-d4f41c9d692b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b195b2f3-cef9-2e4d-16a6-0d5abdee69e3" executionId="74a35f8a-05ad-4137-a7b8-a904f6c25d33" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f820417-8f0c-d967-e6b9-a93c07497e41" executionId="7589353d-b632-4d32-8cc8-892f0e95dfef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="08678fd9-1902-0285-0ea0-70b972c0b322" executionId="5a8a7355-3184-4ccf-8400-a557ba9bf69d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="01320553-e0f9-f4d0-99ab-376c0d2ff4bb" executionId="85b2a133-1415-4e65-ad25-ed154e6f4de2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f1dda52b-d233-e95b-4882-9936b92c5c83" executionId="30e76505-899b-4ef8-8bcf-994ace93b6c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a0b9777d-1b70-5926-a799-adf6326fff4e" executionId="bf16d65e-0477-4d90-af2a-7bf92b1a048e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f8e02860-fd95-9442-7ecf-ef57e116f575" executionId="c8c4c0e3-8b45-4b53-b27b-8dfc0d3e8e60" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b91753d6-3976-cb0f-f62d-b17d0aefe8f1" executionId="1967b3e0-e8a0-4414-a42c-e5145371a91b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="15" executed="15" passed="15" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 10.0.12)
+[xUnit.net 00:00:00.36]   Discovering: Inspection.Domain.Tests
+[xUnit.net 00:00:00.63]   Discovered:  Inspection.Domain.Tests
+[xUnit.net 00:00:00.69]   Starting:    Inspection.Domain.Tests
+[xUnit.net 00:00:01.06]   Finished:    Inspection.Domain.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

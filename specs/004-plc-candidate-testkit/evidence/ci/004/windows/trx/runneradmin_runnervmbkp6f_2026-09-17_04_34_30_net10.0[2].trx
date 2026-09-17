@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="b3c1e640-0d9c-4a98-bff0-46d830e109a2" name="runneradmin@runnervmbkp6f 2026-09-17 04:34:30" runUser="runnervmbkp6f\runneradmin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-17T04:34:30.7295466+00:00" queuing="2026-09-17T04:34:30.7295468+00:00" start="2026-09-17T04:34:29.1814520+00:00" finish="2026-09-17T04:34:30.7366106+00:00" />
+  <TestSettings name="default" id="352d7252-f3f2-430d-a7cc-0f55e7076d31">
+    <Deployment runDeploymentRoot="runneradmin_runnervmbkp6f_2026-09-17_04_34_30" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="9d603a40-61e7-4fd1-a6d1-9cf6a631ba57" testId="fb17721e-66a3-c8a8-fb7c-882561687322" testName="Inspection.Host.Tests.HostContractTests.Status_explicitly_reports_unavailable_production_capabilities" computerName="runnervmbkp6f" duration="00:00:00.3388770" startTime="2026-09-17T04:34:30.1655868+00:00" endTime="2026-09-17T04:34:30.5200121+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9d603a40-61e7-4fd1-a6d1-9cf6a631ba57" />
+    <UnitTestResult executionId="c38ac9df-5ef0-4166-b885-d4a447c4aa75" testId="f4f98c95-32ac-dcff-bd91-5d674f53d221" testName="Inspection.Host.Tests.HostContractTests.Live_does_not_claim_production_readiness" computerName="runnervmbkp6f" duration="00:00:00.0031053" startTime="2026-09-17T04:34:30.5749362+00:00" endTime="2026-09-17T04:34:30.5783075+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c38ac9df-5ef0-4166-b885-d4a447c4aa75" />
+    <UnitTestResult executionId="cbf7e746-8c0b-42a5-a207-5af511a65335" testId="25f863f5-c00b-f79c-c492-3bcd5d7f1509" testName="Inspection.Host.Tests.HostContractTests.Demo_query_returns_eight_captures_without_executing_them" computerName="runnervmbkp6f" duration="00:00:00.0426263" startTime="2026-09-17T04:34:30.5377108+00:00" endTime="2026-09-17T04:34:30.5665639+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cbf7e746-8c0b-42a5-a207-5af511a65335" />
+    <UnitTestResult executionId="e0b67755-89dd-411f-882b-28e15ee46b7b" testId="2a8f7648-ef84-6e37-0f57-0e38966b2e99" testName="Inspection.Host.Tests.HostContractTests.Unimplemented_production_commands_are_not_accepted" computerName="runnervmbkp6f" duration="00:00:00.0076723" startTime="2026-09-17T04:34:30.5678006+00:00" endTime="2026-09-17T04:34:30.5747062+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e0b67755-89dd-411f-882b-28e15ee46b7b" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Inspection.Host.Tests.HostContractTests.Demo_query_returns_eight_captures_without_executing_them" storage="d:\a\x\x\backend\tests\inspection.host.tests\bin\release\net10.0\inspection.host.tests.dll" id="25f863f5-c00b-f79c-c492-3bcd5d7f1509">
+      <Execution id="cbf7e746-8c0b-42a5-a207-5af511a65335" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Host.Tests\bin\Release\net10.0\Inspection.Host.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Host.Tests.HostContractTests" name="Demo_query_returns_eight_captures_without_executing_them" />
+    </UnitTest>
+    <UnitTest name="Inspection.Host.Tests.HostContractTests.Live_does_not_claim_production_readiness" storage="d:\a\x\x\backend\tests\inspection.host.tests\bin\release\net10.0\inspection.host.tests.dll" id="f4f98c95-32ac-dcff-bd91-5d674f53d221">
+      <Execution id="c38ac9df-5ef0-4166-b885-d4a447c4aa75" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Host.Tests\bin\Release\net10.0\Inspection.Host.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Host.Tests.HostContractTests" name="Live_does_not_claim_production_readiness" />
+    </UnitTest>
+    <UnitTest name="Inspection.Host.Tests.HostContractTests.Status_explicitly_reports_unavailable_production_capabilities" storage="d:\a\x\x\backend\tests\inspection.host.tests\bin\release\net10.0\inspection.host.tests.dll" id="fb17721e-66a3-c8a8-fb7c-882561687322">
+      <Execution id="9d603a40-61e7-4fd1-a6d1-9cf6a631ba57" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Host.Tests\bin\Release\net10.0\Inspection.Host.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Host.Tests.HostContractTests" name="Status_explicitly_reports_unavailable_production_capabilities" />
+    </UnitTest>
+    <UnitTest name="Inspection.Host.Tests.HostContractTests.Unimplemented_production_commands_are_not_accepted" storage="d:\a\x\x\backend\tests\inspection.host.tests\bin\release\net10.0\inspection.host.tests.dll" id="2a8f7648-ef84-6e37-0f57-0e38966b2e99">
+      <Execution id="e0b67755-89dd-411f-882b-28e15ee46b7b" />
+      <TestMethod codeBase="D:\a\x\x\backend\tests\Inspection.Host.Tests\bin\Release\net10.0\Inspection.Host.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Host.Tests.HostContractTests" name="Unimplemented_production_commands_are_not_accepted" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="fb17721e-66a3-c8a8-fb7c-882561687322" executionId="9d603a40-61e7-4fd1-a6d1-9cf6a631ba57" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f4f98c95-32ac-dcff-bd91-5d674f53d221" executionId="c38ac9df-5ef0-4166-b885-d4a447c4aa75" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="25f863f5-c00b-f79c-c492-3bcd5d7f1509" executionId="cbf7e746-8c0b-42a5-a207-5af511a65335" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2a8f7648-ef84-6e37-0f57-0e38966b2e99" executionId="e0b67755-89dd-411f-882b-28e15ee46b7b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="4" executed="4" passed="4" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.17]   Discovering: Inspection.Host.Tests&#xD;
+[xUnit.net 00:00:00.26]   Discovered:  Inspection.Host.Tests&#xD;
+[xUnit.net 00:00:00.33]   Starting:    Inspection.Host.Tests&#xD;
+info: Microsoft.Hosting.Lifetime[14]&#xD;
+      Now listening on: http://127.0.0.1:5000&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: D:\a\x\x\backend\src\Inspection.Host&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:00.80]   Finished:    Inspection.Host.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

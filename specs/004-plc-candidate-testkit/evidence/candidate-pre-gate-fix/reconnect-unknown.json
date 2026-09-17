@@ -1,0 +1,19 @@
+{
+  "contract": "legacy-v6-u16-snapshot-20260917",
+  "mode": "SimulatedEngineering",
+  "outcome": "RecoveryRequired",
+  "reason": "Non-initial legacy device state; reconcile externally before starting. No writes sent.",
+  "moves": [],
+  "exchanges": [
+    {
+      "request": "00010000000601010000000B",
+      "response": "0001000000050101021600",
+      "error": null
+    },
+    {
+      "request": "00020000000601030000001D",
+      "response": "00020000003D01033A00010000007B01C8004E000100000000000000000000000000000000000000000000000000000000000000000001000100020002000100010000",
+      "error": null
+    }
+  ]
+}
