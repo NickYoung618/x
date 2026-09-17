@@ -7,15 +7,17 @@
 
 | 事项 | 当前状态及证据 |
 | --- | --- |
-| 中台 | 只有工程基础、普通整盘计划预览，未实现检测执行链 |
+| 中台 | 已有普通整盘 Application 内存流程框架、42 项核心测试；Host 尚无工位执行链，按 [工位交付顺序](station-delivery-order.md) 逐站接入 |
 | 前端 | 用户确认仍是原来的 HTML 原型，尚无已接入仓库的 Vue/WPF 实现 |
 | 虚拟下位机 | 已从获授权服务器的 `/home/ubuntu/disk/pj1/VirtualPlc` 取得独立审查副本；为 .NET 10 + Modbus TCP 实现，按旧 V6.0 资料开发；与 V1.3 存在差异，见 [接入审查](reviews/virtual-plc-20260917/review.md) |
 | 接口资料 | 本地已有 2026-09-11《PLC与上位机通信接口协议.docx》；仓库已有 [虚拟设备 v0.1 草案](contracts/virtual-device-v0.1-draft.md)，无需重新起草整套协议 |
-| CI | [Core CI 34991611511](https://github.com/NickYoung618/x/actions/runs/34991611511) 成功；代码提交 `3e46d4e03fcfa201e55510e017a9aafed44ffea2`，每个平台 19 项基础测试 |
-| 主分支 | 查询时为 `02ca9d306be8c170106ddad8e21f9d23f9ade0f2`；相较上述构建只有文档/证据变化；branch API 返回 `protected=false` |
+| CI | 合并后 [CI 35187291769](https://github.com/NickYoung618/x/actions/runs/35187291769) 的 Linux/Windows Core 与 Virtual PLC framework 四作业成功；仍仅覆盖现有核心和旧协议框架 |
+| 主分支 | PR #1/#2/#3 已依次合并，当前 `09904fd8fe195fe2665e030d8b76b806e4c2f3ae`；尚无首工位执行链 |
 | 强制合并规则 | rulesets API 返回 403，明确要求升级 GitHub Pro 或公开仓库；尚未建立强制检查门槛 |
 | 下载包 | Actions 提供基础 Host 产物，保留 14 天；没有完整软件包，Release 列表为空 |
 | 自有 Windows 自动测试 | 仓库 runner 数量为 0；用户已经在另一台 Windows 电脑解压基础包，但尚未返回该机验收报告 |
+
+后续每工位各有单独 PR 与验证记录。
 
 推荐交付链：
 
