@@ -40,10 +40,12 @@ try {
         $status.stage -ne 'V13FrameworkFoundation' -or $status.runtimeMode -ne 'Unconfigured' -or
         $status.modules.Count -ne 15) { throw 'Unexpected V1.3 framework status.' }
     if (@($status.modules | Where-Object { $_.state -eq 'Implemented' }).Count -ne 0) { throw 'A skeleton module claims to be implemented.' }
-    $prepare = Invoke-WebRequest "$baseUrl/api/jobs/prepare" -Method Post -SkipHttpErrorCheck -TimeoutSec 5
-    $problem = $prepare.Content | ConvertFrom-Json
-    if ($prepare.StatusCode -ne 501 -or $problem.code -ne 'CAPABILITY_NOT_IMPLEMENTED' -or
-        [string]::IsNullOrWhiteSpace($problem.correlationId)) { throw 'Unimplemented job command was not rejected.' }
+    $prepareStatus = $null
+    $problem = Invoke-RestMethod "$baseUrl/api/jobs/prepare" -Method Post -Body '{}' -ContentType 'application/json' -SkipHttpErrorCheck -StatusCodeVariable prepareStatus -TimeoutSec 5
+    if ($prepareStatus -ne 501 -or $problem.code -ne 'CAPABILITY_NOT_IMPLEMENTED' -or
+        [string]::IsNullOrWhiteSpace($problem.correlationId)) {
+        throw "Unimplemented job command mismatch: status=$prepareStatus, code=$($problem.code), correlationIdPresent=$(-not [string]::IsNullOrWhiteSpace($problem.correlationId))"
+    }
     if ($plan.isTestFixture -ne $true -or $plan.executionEnabled -ne $false) { throw 'Plan must remain a nonexecuting fixture.' }
     $count = ($plan.plan.faces | ForEach-Object { $_.captures.Count } | Measure-Object -Sum).Sum
     if ($count -ne 8) { throw "Default published sample expected 8 captures, got $count." }
