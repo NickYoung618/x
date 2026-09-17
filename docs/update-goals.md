@@ -1,5 +1,19 @@
 # 高德更新目标台账
 
+## 2026-09-17 / S01 下位机工作派任书
+
+- 唯一主要问题：下位机负责人现在需要一份可直接执行、可回执的工作指令，而现有差异表和 S01 规格分散描述责任、接口及测试。
+- 原始证据：`docs/contracts/virtual-plc-alignment.md`、`specs/005-initial-3d-station/{contracts/station-boundary.md,test-matrix.md,plan.md,windows-real-device.md}`；S01 主 Draft PR #6 当前只有方案，无工位代码。
+- 对照与预期：从 `station-01-implementation` 提交 `6b0d1f7` 的干净工作树出发，新增 D1 点表、D2 独立模拟器、D3 真实 Modbus 双进程、D4 Windows 真机四个里程碑的正式派任书，明确交付位置、完成判据和回执。不替同学冻结未确认点表或发送任务消息。
+- 失败条件：旧 V6 兼容冒充 V1.3；把模拟器 HTTP 控制入口当中台业务通信；无独立设备轨迹/动作次数仍称联调通过；未准入即驱动真实设备；把 PLC 职责扩大到 3D 算法、F/配方或整盘。
+- 案例/模型/预算与前置：阅读上述差异/合同/故障矩阵及现场规程，覆盖 P01/P02、M01–M04b 和现场 W0–W5；无付费模型或设备操作，费用 0 元。本次仅生成仓库文档，不代用户向同学发送。
+
+### 派任书结项（文档范围）
+
+- 已形成 [D1–D4 派任书](assignments/s01-plc-work-order-20260917.md)：下位机负责人负责 S01 点表、独立模拟器、Infrastructure V1.3 Modbus 适配与双进程证据，并在现场负责 PLC 版本/状态/轨迹；中台负责 Application/Host 和跨端口验收，3D 结果由设备负责人提供。
+- 检查：Spec Kit 前置 PASS、派任书及引用文档的本地链接 0 缺失、`git diff --check` PASS。未修改运行代码，本地 .NET、V1.3 双进程、Windows 现场与整盘均 NOT RUN；旧协议既有通过不计为本单验收。无付费调用，费用 0 元。
+- 未解决：正式点表与握手签认、公共 3D 位/到位、Windows 真实 PLC 与 3D 标定/测试件。下一步由下位机负责人按 D1→D3 提交子 PR/证据，中台将其纳入 S01 主 Draft PR；D4 按现场准入另行执行。
+
 ## 2026-09-17 / S01 服务器—GitHub—Windows 真机开发与测试方案
 
 - 唯一主要问题：首工位已有业务规格与故障矩阵，但缺从 Linux 开发、GitHub CI/候选包到 Windows 实际设备的分层执行方案；PR #4 已合并的只是开工准备，不能继续在同一 PR 补实现。
