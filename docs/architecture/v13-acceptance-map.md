@@ -6,7 +6,7 @@
 | --- | --- | --- | --- |
 | P0-01 五层/十五模块、唯一 Host、默认拒绝 | 框架 | 项目依赖、HTTP 合同、发布 Host 进程 | Linux 本地 PASS；Windows CI 待 PR 检查 |
 | P0-02 身份/状态机/设备与算法端口、统一点表草案 | 已有 003 框架；后续工位/PLC 合同 | 进程内身份与状态测试；三方核对版本化接口 | 部分框架 PASS；正式接口 NOT RUN |
-| P0-03 Host/UI 最小页面与三方解释一致 | 前端框架 PR | Vue 页面取 Host 状态、离线构建、浏览器/Windows 查看 | NOT RUN |
+| P0-03 Host/UI 最小页面与三方解释一致 | 框架 + 前端后续 PR | Vue 组件取 Host 状态、离线构建、浏览器/Windows 查看 | Linux 组件/构建和双进程代理 PASS；真实浏览器、Windows 和三方解释待 CI/联调 |
 | P0-04 来源模式和 Provider 替换 | 框架合同；S01 起逐步接入 | 同一业务规则在合成/真实适配上运行，来源可追溯 | NOT RUN |
 | A01 A 已采、B 延迟/漏帧、缓存不死锁 | A/B、Media | 双相机组容量/归档/算法消费者独立轨迹 | NOT RUN |
 | A02 算法乱序/重复/迟到、跨面/盘、重拍 | A/B、AlgorithmRuntime | Worker 回放、身份与 Attempt 对账 | NOT RUN |

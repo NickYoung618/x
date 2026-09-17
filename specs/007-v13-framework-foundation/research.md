@@ -14,6 +14,10 @@ V1.3 §3.4、§17 明确十五个责任模块不等于十五项目。现有 Doma
 
 §18 的 A/B 缓存、算法乱序、PLC 丢回复、保存中断、UI 重启、数据库维护等需要对应业务/设备/数据实现，框架期无法做真实行为验证。先建唯一验收索引、分层证据和 PR 门槛；每个工位在同一业务代码路径补正反例，并在集成后复跑。旧协议回归继续单列。
 
+## Decision 4: P0 最小页面只读
+
+V1.3 §18 的 P0 退出包含 Host/UI 最小页面。用官方 Vue 3 + Vite/TypeScript/Pinia 建一个从 Host 状态 API 取数的页面，依赖精确锁定并在 Linux/Windows CI 构建和测试；页面不发送生产命令、不复制原型中的虚假按钮/质量判断，也不替代完整 Vue/WPF 界面。Vue 官方建议新 SPA 使用 Vite 并提供 TypeScript/Pinia 选项：[快速开始](https://vuejs.org/guide/quick-start)、[Pinia 接入](https://pinia.vuejs.org/getting-started)。
+
 ## 未决边界
 
 正式 PLC 点表/动作关联、实际视觉 SDK、坐标标定、生产配方、算法模型和 Windows 桌面不由框架 PR 猜测。`productionReady=false` 是实际当前状态；后续按已交付能力及真实证据逐步改变，不预写通过。

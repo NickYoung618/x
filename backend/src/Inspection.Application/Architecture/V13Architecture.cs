@@ -18,7 +18,7 @@ public static class V13Architecture
 
     public static IReadOnlyList<ModuleDefinition> Modules { get; } = Array.AsReadOnly<ModuleDefinition>(
     [
-        new("Presentation", "L1", "Frontend", ModuleDeliveryState.ContractOnly),
+        new("Presentation", "L1", "Frontend", ModuleDeliveryState.FrameworkOnly),
         new("Api", "L2", "Backend", ModuleDeliveryState.FrameworkOnly),
         new("Jobs", "L3", "Backend", ModuleDeliveryState.ContractOnly),
         new("Recipes", "L3", "Backend", ModuleDeliveryState.ContractOnly),

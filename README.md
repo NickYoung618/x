@@ -6,6 +6,7 @@
 当前具备可运行后端、普通零件整盘计划预览、旧协议独立虚拟PLC最小联调、进程内流程框架及候选测试入口。
 **尚未实现正式V1.3设备接入、完整检测闭环、WPF、算法和业务保存；生产就绪为 false。**
 V1.3 先交付[整体框架](docs/architecture/v13-framework-map.md)和[架构书测试映射](docs/architecture/v13-acceptance-map.md)，后续每个工位独立实现、测试、修正并提交 PR。框架 Host 只报告模块/能力状态，未实现的任务准备请求明确拒绝，不会启动设备。
+最小只读 [Vue 状态页](frontend/README.md) 可用于核对 Host 状态；完整原型迁移、WPF 桌面壳及业务控件仍由前端后续增量完成。
 
 ## 开发与测试
 
@@ -36,7 +37,7 @@ dotnet run --project backend/src/Inspection.Host --no-launch-profile
 
 最新协作入口：[三人协作、Spec Kit、CI 与 Windows 部署包](docs/team-development-and-release.md)。
 同服务器新对话从 [项目交接](docs/handover-20260917.md) 和 [可复制提示词](docs/prompts/next-codex-session.md) 开始。
-2026-09-17 已取得并审查同学的虚拟下位机副本，前端仍为 HTML 原型；
+2026-09-17 已取得并审查同学的虚拟下位机副本，完整前端仍以 HTML 原型为依据；
 旧协议兼容联调已加入工程测试，正式 V1.3 接入差异见 [审查记录](docs/reviews/virtual-plc-20260917/review.md)。
 
 ## Spec Kit

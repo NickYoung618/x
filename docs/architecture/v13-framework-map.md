@@ -4,7 +4,7 @@
 
 | 模块 ID / 层 | 当前状态 | 代码归属 / 后续接入点 | 负责人 |
 | --- | --- | --- | --- |
-| Presentation / L1 | ContractOnly | `frontend/` Vue 与 `desktop/` WPF 后续接入；只经 Host API | 前端 |
+| Presentation / L1 | FrameworkOnly | `frontend/` Vue 只读最小状态页已接 Host 合同；完整页面与 `desktop/` WPF 后续接入 | 前端 |
 | Api / L2 | FrameworkOnly | `Inspection.Host` 唯一组合根，当前健康/状态/工程预览及拒绝入口 | 中台 |
 | Jobs / L3 | ContractOnly | `Inspection.Application/Jobs` 未来承接任务准入、暂停/恢复与幂等 | 中台 |
 | Recipes / L3 | ContractOnly | `Inspection.Application/Recipes` 未来发布/冻结版本；当前 demo plan 不是生产配方 | 中台 |
@@ -28,4 +28,4 @@
 
 运行模式词汇为 FullSimulation、ImageReplay、HybridCommissioning、ManualHandoff、Production；当前默认 Unconfigured，不启动任何业务动作。全模拟/回放/混合/真实共用 Application 规则，Provider 来源随请求和结果记录；混合切换以设备或完整工艺边界进行，人工交接记录现场确认。旧 V6 探针不作为模式切换实现。生产模式绝不装入无物理证据的“自动成功”适配器。
 
-下一步先在本框架 PR 建立上述模块/状态/拒绝合同并运行 P0 结构测试。V1.3 §18 的完整 P0 退出还需要前端同学接入最小 Vue 状态页，以及三方核对身份、端口与点表；当前保持未完成。首工位 S01 Draft PR #4 基于框架合并后的 main 继续实现。之后 F、A、B、C、D、翻面重扫、E 等各自单独 PR；每个 PR 才补本工位的端口、适配、状态、错误、正常/故障及跨进程证据。判定、保存、分拣和数据库维护是横向/收尾增量，不伪装成某台相机工位。
+本框架 PR 建立上述模块/状态/拒绝合同及最小 Vue 状态页。页面通过 Vite 开发代理读取 Host，已做组件与离线构建；未打入 WPF/Host 发布包，也未执行真实浏览器/Windows 交互验收。V1.3 §18 的完整 P0 退出仍需三方核对身份、端口与点表，并验证最小 UI 的实际浏览器联通；当前保持未完成。首工位 S01 Draft PR #4 基于框架合并后的 main 继续实现。之后 F、A、B、C、D、翻面重扫、E 等各自单独 PR；每个 PR 才补本工位的端口、适配、状态、错误、正常/故障及跨进程证据。判定、保存、分拣和数据库维护是横向/收尾增量，不伪装成某台相机工位。

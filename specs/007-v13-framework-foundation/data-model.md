@@ -7,5 +7,6 @@
 | SystemStatus | ArchitectureVersion、Stage、RuntimeMode、ProductionReady、Modules、UnavailableCapabilities | `ProductionReady` 不可由手工开关宣称；默认 RuntimeMode=Unconfigured；保留旧状态字段 |
 | OperationProblem | Code、Title、Detail、CorrelationId | 未实现命令返回非 2xx；稳定码 `CAPABILITY_NOT_IMPLEMENTED`，不泄露内部异常 |
 | AcceptanceCase | Id、ArchitectureSection、DeliveryPhase、Layer、ExpectedEvidence、Status | 未运行与失败/通过分开；只有真实执行记录可改为通过 |
+| UiSystemState | Status、Loading、Error | 只由 Host 状态填入；请求失败/格式不完整时清除旧状态并显示错误；不持有设备命令 |
 
 本增量不建立 TrayRun、Recipe、Frame、AlgorithmResult 或数据库表；已有进程内类型保留，业务模型随工位/横向能力增量完善。

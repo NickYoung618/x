@@ -29,9 +29,16 @@
 - [x] T011 [US3] 建 `docs/architecture/v13-acceptance-map.md`，逐条映射 V1.3 §18 必测及数据库部署专项，标责任阶段、证据、当前 NOT RUN/旧基线
 - [x] T012 [US3] 更新 `docs/testing.md`、`README.md` 和协作文档，明确框架 PR → S01 → 逐工位 PR 的正常/故障/修正/复测/合并后回归门槛
 
-## Phase 6: Validation
+## Phase 6: User Story 1 - P0 最小只读状态页
 
-- [x] T013 锁定还原、Release 构建/全部测试、发布 Host 冒烟、旧 V6 独立模拟器脚本实测并写 `specs/007-v13-framework-foundation/validation.md`
-- [ ] T014 Spec Kit 前置与跨文档一致性检查、`git diff --check`，结项 `docs/update-goals.md`；创建 Draft PR，不合并未实现的 S01
+- [x] T013 [US1] 在 `frontend/package.json`、`package-lock.json`、`vite.config.ts`、`tsconfig.json` 建 Vue 3/TypeScript/Pinia 锁定项目及 Host `/api` 开发代理
+- [x] T014 [US1] 在 `frontend/src/api/system.ts`、`frontend/src/stores/system.ts`、`frontend/src/App.vue` 从状态接口展示模块/能力与非生产/连接失败，禁止业务按钮
+- [x] T015 [US1] 在 `frontend/src/App.test.ts` 以独立响应/断线输入验证页面，并在 `.github/workflows/ci.yml` 增 Linux/Windows 前端安装、类型检查、测试和构建
+- [x] T016 [US1] 在 `frontend/README.md`、`docs/architecture/v13-framework-map.md` 明确最小页面的运行/打包边界与前端同学后续责任
 
-依赖：T003/T004 → T006/T007/T008；T005 → T010/T011/T012；T013 检查所有前置。框架 PR 只兑现 P0 骨架，不把 §18 的后续场景打勾。
+## Phase 7: Validation
+
+- [x] T017 锁定还原、Release 构建/全部测试、发布 Host 冒烟、旧 V6 独立模拟器脚本、前端 `npm ci`/测试/构建实测并写 `specs/007-v13-framework-foundation/validation.md`
+- [ ] T018 Spec Kit 前置与跨文档一致性检查、`git diff --check`，结项 `docs/update-goals.md`；创建 Draft PR，不合并未实现的 S01
+
+依赖：T003/T004 → T006/T007/T008；T005 → T010/T011/T012；T013/T014 → T015/T016；T017 检查所有前置。框架 PR 只兑现 P0 最小骨架，不把 §18 的后续场景打勾。

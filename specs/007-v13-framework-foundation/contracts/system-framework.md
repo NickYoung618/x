@@ -7,3 +7,5 @@
 `GET /api/engineering/demo-plan` 继续返回 `isTestFixture=true`、`executionEnabled=false`；`--plc-probe` 只接受显式旧协议工程合同。未来前端首次进入及断线恢复先请求状态快照，再订阅通知；SignalR 仅推送变化，不当可靠任务队列。正式 PLC/算法/数据库合同不由本文件伪填具体字段。
 
 运行模式词汇：Unconfigured、FullSimulation、ImageReplay、HybridCommissioning、ManualHandoff、Production。框架只报告 Unconfigured，具体模式切换/来源标记在对应设备与工位 PR 实现；全模拟与真实 Provider 必须共用业务合同。
+
+`frontend/` 的 P0 页面只读此状态快照；请求失败或结构不完整时清除旧状态、显示连接/格式错误，不执行生产命令。开发时由 Vite 将 `/api` 代理到回环 Host；WPF/正式静态资源打包仍待前端交付验证。
