@@ -1,13 +1,29 @@
 using System.Net;
 using System.Text.Json;
+using Inspection.Application.Motion;
+using Inspection.Application.Workflow;
 using Microsoft.AspNetCore.Mvc.Testing;
 
 namespace Inspection.Host.Tests;
 
 public class HostContractTests : IClassFixture<WebApplicationFactory<Program>>
 {
+    private readonly WebApplicationFactory<Program> factory;
     private readonly HttpClient client;
-    public HostContractTests(WebApplicationFactory<Program> factory) => client = factory.CreateClient();
+    public HostContractTests(WebApplicationFactory<Program> factory)
+    {
+        this.factory = factory;
+        client = factory.CreateClient();
+    }
+
+    [Fact]
+    public void Framework_host_has_no_bound_motion_or_acquisition_provider()
+    {
+        Assert.Null(factory.Services.GetService(typeof(IMotionDevice)));
+        Assert.Null(factory.Services.GetService(typeof(IPlacementLocator)));
+        Assert.Null(factory.Services.GetService(typeof(ICapturePort)));
+        Assert.Null(factory.Services.GetService(typeof(IAlgorithmPort)));
+    }
 
     [Fact]
     public async Task Live_does_not_claim_production_readiness()
@@ -26,8 +42,50 @@ public class HostContractTests : IClassFixture<WebApplicationFactory<Program>>
         using var json = JsonDocument.Parse(await response.Content.ReadAsStringAsync());
         Assert.False(json.RootElement.GetProperty("productionReady").GetBoolean());
         Assert.Equal("1.3", json.RootElement.GetProperty("architectureVersion").GetString());
-        Assert.Equal("EngineeringFoundation", json.RootElement.GetProperty("stage").GetString());
-        Assert.NotEmpty(json.RootElement.GetProperty("unavailableCapabilities").EnumerateArray());
+        Assert.Equal("V13FrameworkFoundation", json.RootElement.GetProperty("stage").GetString());
+        var unavailable = json.RootElement.GetProperty("unavailableCapabilities").EnumerateArray()
+            .Select(item => item.GetString() ?? string.Empty).ToHashSet(StringComparer.Ordinal);
+        Assert.Contains("TrayExecution", unavailable);
+        Assert.Contains("DeviceIntegration", unavailable);
+        Assert.Contains("Algorithms", unavailable);
+        Assert.Contains("Traceability", unavailable);
+        Assert.Contains("Desktop", unavailable);
+    }
+
+    [Fact]
+    public async Task Framework_status_lists_all_fifteen_modules_without_claiming_an_implemented_station()
+    {
+        var response = await client.GetAsync("/api/system/status");
+        response.EnsureSuccessStatusCode();
+        using var json = JsonDocument.Parse(await response.Content.ReadAsStringAsync());
+        var root = json.RootElement;
+        Assert.Equal("V13FrameworkFoundation", root.GetProperty("stage").GetString());
+        Assert.Equal("Unconfigured", root.GetProperty("runtimeMode").GetString());
+        Assert.False(root.GetProperty("productionReady").GetBoolean());
+        var modules = root.GetProperty("modules").EnumerateArray().ToArray();
+        Assert.Equal(15, modules.Length);
+        var ids = modules.Select(m => m.GetProperty("id").GetString() ?? string.Empty)
+            .OrderBy(id => id, StringComparer.Ordinal).ToArray();
+        var expected = new[] { "Presentation", "Api", "Jobs", "Recipes", "Workflow", "Motion", "Acquisition",
+            "AlgorithmRuntime", "Quality", "Traceability", "Media", "DeviceAdapters", "Diagnostics",
+            "ModelManagement", "Mes" }.OrderBy(id => id, StringComparer.Ordinal).ToArray();
+        Assert.Equal(expected, ids);
+        Assert.DoesNotContain(modules, m => m.GetProperty("state").GetString() == "Implemented");
+        var device = Assert.Single(modules, m => m.GetProperty("id").GetString() == "DeviceAdapters");
+        Assert.Equal("LegacyEngineering", device.GetProperty("state").GetString());
+        Assert.All(root.GetProperty("capabilities").EnumerateArray(), c => Assert.False(c.GetProperty("available").GetBoolean()));
+    }
+
+    [Fact]
+    public async Task Unimplemented_prepare_command_fails_closed_with_stable_problem_code()
+    {
+        var response = await client.PostAsync("/api/jobs/prepare", null);
+        Assert.Equal(HttpStatusCode.NotImplemented, response.StatusCode);
+        using var json = JsonDocument.Parse(await response.Content.ReadAsStringAsync());
+        Assert.Equal("CAPABILITY_NOT_IMPLEMENTED", json.RootElement.GetProperty("code").GetString());
+        Assert.False(string.IsNullOrWhiteSpace(json.RootElement.GetProperty("correlationId").GetString()));
+        using var after = JsonDocument.Parse(await client.GetStringAsync("/api/system/status"));
+        Assert.False(after.RootElement.GetProperty("productionReady").GetBoolean());
     }
 
     [Fact]

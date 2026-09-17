@@ -6,6 +6,8 @@
 
 在已有 `TrayWorkflow`、`MotionExecutionLane` 上补齐公共移至 3D 位、受理/完成关联和首轮 3D 定位。由 Host 统一组合工作流与独立合成设备/定位适配器；合成入口显式受限。通过状态/错误/轨迹证明一条工位链可运行，终点为 WaitingTrayCode，不执行 F。实际 PLC 点表和 3D SDK 仍由端口隔离。
 
+本分支已合入框架 PR #5 的基线 `d030684`：复用 `Inspection.Contracts` 的对外状态/错误合同和十五模块能力目录；未实现能力保持默认拒绝。首工位实现时只将有独立证据的 S01 能力从 `ContractOnly`/`FrameworkOnly` 改为实际状态，不把整个平台标为生产就绪。
+
 ## Technical Context
 
 - **Language/Version**: C#/.NET 10，SDK 10.0.401，仓库锁定依赖。

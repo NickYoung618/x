@@ -398,6 +398,9 @@
           "Inspection.Domain": "[1.0.0, )"
         }
       },
+      "inspection.contracts": {
+        "type": "Project"
+      },
       "inspection.domain": {
         "type": "Project"
       },
@@ -405,6 +408,7 @@
         "type": "Project",
         "dependencies": {
           "Inspection.Application": "[1.0.0, )",
+          "Inspection.Contracts": "[1.0.0, )",
           "Inspection.Infrastructure": "[1.0.0, )"
         }
       },

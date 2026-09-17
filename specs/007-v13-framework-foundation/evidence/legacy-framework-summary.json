@@ -1,0 +1,80 @@
+{
+  "runId": "20260917T061444Z-658f1c8d",
+  "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+  "contract": "legacy-v6-u16-snapshot-20260917",
+  "build": "PASS",
+  "coreTests": {
+    "status": "PASS",
+    "passed": 45,
+    "assemblies": 4,
+    "byAssembly": {
+      "Inspection.Domain.Tests": {
+        "passed": 15,
+        "total": 15,
+        "report": "_VM-0-12-ubuntu_2026-09-17_14_14_57_net10.0.trx"
+      },
+      "Inspection.Host.Tests": {
+        "passed": 7,
+        "total": 7,
+        "report": "_VM-0-12-ubuntu_2026-09-17_14_15_01_net10.0.trx"
+      },
+      "Inspection.Infrastructure.Tests": {
+        "passed": 11,
+        "total": 11,
+        "report": "_VM-0-12-ubuntu_2026-09-17_14_15_02_net10.0.trx"
+      },
+      "Inspection.Application.Tests": {
+        "passed": 12,
+        "total": 12,
+        "report": "_VM-0-12-ubuntu_2026-09-17_14_14_57_net10.0[1].trx"
+      }
+    }
+  },
+  "legacy": "PASS 13/13 (old protocol and old policy only)",
+  "integration": [
+    {
+      "name": "normal",
+      "status": "PASS",
+      "outcome": "Completed",
+      "completedMoves": 2,
+      "submittedMoves": 2
+    },
+    {
+      "name": "reconnect-stale",
+      "status": "PASS",
+      "outcome": "RecoveryRequired",
+      "completedMoves": 0,
+      "submittedMoves": 0
+    },
+    {
+      "name": "device-failure",
+      "status": "PASS",
+      "outcome": "Failed",
+      "completedMoves": 0,
+      "submittedMoves": 1
+    },
+    {
+      "name": "action-timeout",
+      "status": "PASS",
+      "outcome": "Unknown",
+      "completedMoves": 0,
+      "submittedMoves": 1
+    },
+    {
+      "name": "reconnect-unknown",
+      "status": "PASS",
+      "outcome": "RecoveryRequired",
+      "completedMoves": 0,
+      "submittedMoves": 0
+    }
+  ],
+  "v13FullContract": "NOT RUN - interface decisions deferred to device owner",
+  "fullTray": "NOT RUN - framework increment only",
+  "verdict": "PASS - framework/legacy integration only",
+  "simulatorUnderTest": "repository snapshot",
+  "buildScope": "repository solution including simulator under test",
+  "sdk": "10.0.401",
+  "commit": "09904fd8fe195fe2665e030d8b76b806e4c2f3ae",
+  "workingTreeDirty": true,
+  "processesStopped": true
+}

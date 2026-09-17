@@ -2,6 +2,8 @@
 
 当前分支仅有规格与测试计划。不要把以下基线命令通过当成首工位已实现。
 
+基线已包含框架 PR #5：后端的十五模块状态与默认拒绝、前端只读状态页和旧协议回归。首工位完成后，需为新增能力补对应的后端/Host/前端状态测试，不能只沿用框架检查。
+
 ```sh
 dotnet restore Gaode.slnx --locked-mode
 dotnet build Gaode.slnx --no-restore

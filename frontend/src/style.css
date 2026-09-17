@@ -1,0 +1,20 @@
+:root { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #15212b; background: #f4f7f9; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.shell { max-width: 1120px; margin: 0 auto; padding: 48px 24px 80px; }
+.masthead { border-bottom: 1px solid #d8e1e8; padding-bottom: 24px; margin-bottom: 28px; }
+.masthead h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 8px 0; }
+.masthead p { margin: 0; color: #506170; }
+.eyebrow { color: #116471 !important; font-weight: 700; letter-spacing: .08em; }
+h2 { font-size: 1.25rem; margin: 0 0 12px; }
+.notice { border-radius: 14px; padding: 20px 24px; margin-bottom: 32px; border: 1px solid; }
+.notice p { margin: 8px 0 0; }
+.pending { background: #fff8e8; border-color: #e6cb8b; }
+.ready { background: #e8f6ed; border-color: #87c69b; }
+.error { background: #fff0f0; border-color: #e5a2a2; }
+.module-grid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.module-grid li, .capability-list li { background: white; border: 1px solid #d8e1e8; border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; }
+.module-grid span, .capability-list span { color: #536474; }
+.module-grid small { color: #886415; }
+.capability-list { list-style: none; padding: 0; display: grid; gap: 8px; }
+@media (max-width: 600px) { .shell { padding: 24px 16px 48px; } }
