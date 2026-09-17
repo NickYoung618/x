@@ -5,7 +5,6 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PJ1_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 PROJECT_ROOT="$PJ1_ROOT/VirtualPlc"
 TEST_PROJECT="$PROJECT_ROOT/tests/VirtualPlc.SystemValidation/VirtualPlc.SystemValidation.csproj"
-COMPAT_PROJECT="$PROJECT_ROOT/tests/VirtualPlc.SystemValidation/VirtualPlc.CompatibilityHost.csproj"
 PRODUCTION_PROJECT="$PROJECT_ROOT/src/VirtualPlc/VirtualPlc.csproj"
 RESULT_DIR="$PROJECT_ROOT/test-results"
 
@@ -35,6 +34,10 @@ find_free_port() {
 HTTP_PORT="$(find_free_port 50800 50899)"
 MODBUS_PORT="$(find_free_port 15020 15119)"
 SDK_VERSION="$(dotnet --version)"
+if ! dotnet --list-sdks | grep -q '^10\.'; then
+  echo '.NET 10 SDK is required for this validation.' >&2
+  exit 2
+fi
 HOST_PID=""
 
 cleanup() {
@@ -47,31 +50,18 @@ trap cleanup EXIT INT TERM
 
 cd "$PJ1_ROOT"
 
-dotnet restore "$TEST_PROJECT" --configfile "$PROJECT_ROOT/NuGet.Config" --nologo
+dotnet restore "$TEST_PROJECT" --locked-mode --configfile "$PROJECT_ROOT/NuGet.Config" --nologo
 dotnet build "$TEST_PROJECT" --no-restore --configuration Release --nologo
-
-if dotnet --list-sdks | grep -q '^10\.'; then
-  dotnet restore "$PRODUCTION_PROJECT" --configfile "$PROJECT_ROOT/NuGet.Config" --nologo
-  dotnet build "$PRODUCTION_PROJECT" --no-restore --configuration Release --nologo
-  HOST_DLL="$PROJECT_ROOT/src/VirtualPlc/bin/Release/net10.0/VirtualPlc.dll"
-  HOST_OUT="$(dirname "$HOST_DLL")"
-  EXECUTION_TARGET="net10.0"
-  RUN_MODE="production"
-  GATE_STATUS="PASS"
-  GATE_REASON="Production project restored and built with an installed .NET 10 SDK."
-else
-  dotnet restore "$COMPAT_PROJECT" --configfile "$PROJECT_ROOT/NuGet.Config" --nologo
-  dotnet build "$COMPAT_PROJECT" --no-restore --configuration Release --nologo
-  HOST_DLL="$PROJECT_ROOT/tests/VirtualPlc.SystemValidation/bin/Release/net8.0/VirtualPlc.CompatibilityHost.dll"
-  HOST_OUT="$(dirname "$HOST_DLL")"
-  EXECUTION_TARGET="net8.0"
-  RUN_MODE="compatibility-host"
-  GATE_STATUS="NOT RUN"
-  GATE_REASON="The production project targets net10.0, but no .NET 10 SDK is installed; behavior tests compiled the same source with net8.0."
-fi
+dotnet restore "$PRODUCTION_PROJECT" --locked-mode --configfile "$PROJECT_ROOT/NuGet.Config" --nologo
+dotnet build "$PRODUCTION_PROJECT" --no-restore --configuration Release --nologo
+HOST_DLL="$PROJECT_ROOT/src/VirtualPlc/bin/Release/net10.0/VirtualPlc.dll"
+EXECUTION_TARGET="net10.0"
+RUN_MODE="production"
+GATE_STATUS="PASS"
+GATE_REASON="Production project restored and built with an installed .NET 10 SDK."
 
 (
-  cd "$HOST_OUT"
+  cd "$PROJECT_ROOT/src/VirtualPlc"
   Dashboard__OpenBrowserOnStart=false \
   Modbus__ListenAddress=127.0.0.1 \
   Modbus__Port="$MODBUS_PORT" \
@@ -97,7 +87,7 @@ if [[ "$READY" -ne 1 ]]; then
 fi
 
 set +e
-dotnet "$PROJECT_ROOT/tests/VirtualPlc.SystemValidation/bin/Release/net8.0/VirtualPlc.SystemValidation.dll" \
+dotnet "$PROJECT_ROOT/tests/VirtualPlc.SystemValidation/bin/Release/net10.0/VirtualPlc.SystemValidation.dll" \
   --http "http://127.0.0.1:$HTTP_PORT" \
   --modbus-host 127.0.0.1 \
   --modbus-port "$MODBUS_PORT" \

@@ -2,6 +2,14 @@
 
 本项目依据 `资料/制冷机零件缺陷检测SRS_PLC接口设计规范报告.docx` V6.0 实现一个可独立运行的 Modbus TCP 虚拟下位机。
 
+## 2026-09-11 隔离合成协议（开发中）
+
+默认仍启动上述 V6。显式设置 `Simulation__ProtocolProfile=Protocol20260911Synthetic` 后，进程改用 [全工位合同草案](../../docs/contracts/plc-v13-all-stations-v0.1.md)对应的 9 月 11 日十六进制一基测试点表；只能在回环地址启动。基础版本提供 Float32 双字读写、心跳、Ready、夹紧、区域配置、人工区/报警等确定性事实，并在 `GET /api/v13/state` 与 `GET /api/v13/trace` 留存设备侧状态及原始 Modbus 报文。`POST /api/v13/faults/{fault}?active=true|false` 仅预置故障。
+
+此版本尚无已确认的 `MoveTo3D/MoveToF` 线缆命令，收到非零原始运动命令会返回 Modbus 异常；不把已写入的 XY 目标当作机构运行。独立 3D 采集与 Host S01 运动联调仍在后续增量。生产真实地址、字序、坐标和动作协议均未签认；[当前验证记录](../../specs/010-v13-device-simulator/validation.md)将旧 V6、合成新点表、真机和整盘分开报告。
+
+基础跨进程验证入口：先按 .NET 10 构建解决方案，再运行 `python3 simulator/VirtualPlc/scripts/validate-protocol20260911-base.py --dotnet /path/to/dotnet`。脚本启动独立虚拟 PLC 和 PR #9 Host 只读客户端，另以原始 Modbus 测夹紧、Float32、故障和未定义命令拒绝；证据写入 `specs/010-v13-device-simulator/evidence/`。
+
 它用于上位机在真实 PLC、SDK 和机械条件就绪前进行流程联调。上位机以后仍然使用同一组线圈、4X 地址和握手方式，只需要把连接目标从虚拟 PLC 换成真实 PLC。
 
 ## 当前实现范围
@@ -110,10 +118,8 @@ bash VirtualPlc/scripts/validate.sh
 - `VirtualPlc/test-results/latest.json`：机器可读逐项结果；
 - `VirtualPlc/test-results/host.log`：验证实例日志。
 
-生产项目仍以 .NET 10 为目标。如果当前机器缺少 .NET 10 SDK，脚本会以测试专用的 .NET 8
-兼容主机编译同一份源码完成行为验证，并在报告中将“.NET 10 生产构建”明确标为
-`NOT RUN`；兼容主机结果不替代生产目标框架构建门禁。对应 Spec Kit 需求、计划、合同和
-任务记录位于 `../specs/001-validate-virtual-plc/`。
+生产项目和验证程序现均以 .NET 10 为目标；脚本要求安装 .NET 10 SDK，并使用锁定还原。
+对应 Spec Kit 需求、计划、合同和任务记录位于 `../specs/001-validate-virtual-plc/`。
 
 这里的角色固定为：虚拟 PLC 是 Modbus TCP Slave/Server，上位机或测试工具是 Master/Client。两端通过 Modbus TCP 通信，不要求使用相同的 .NET 运行时。
 

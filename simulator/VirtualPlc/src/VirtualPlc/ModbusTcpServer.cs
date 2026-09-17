@@ -7,14 +7,14 @@ namespace VirtualPlc;
 
 public sealed class ModbusTcpServer : BackgroundService
 {
-    private readonly PlcDataStore _store;
+    private readonly IModbusDataStore _store;
     private readonly ModbusOptions _options;
     private readonly ILogger<ModbusTcpServer> _logger;
     private TcpListener? _listener;
     private volatile bool _stopRequested;
 
     public ModbusTcpServer(
-        PlcDataStore store,
+        IModbusDataStore store,
         IOptions<ModbusOptions> options,
         ILogger<ModbusTcpServer> logger)
     {
@@ -129,6 +129,8 @@ public sealed class ModbusTcpServer : BackgroundService
             response[6] = unitId;
             responsePdu.CopyTo(response, 7);
             await stream.WriteAsync(response, cancellationToken);
+            if (_store is IModbusTraceSink traceSink)
+                traceSink.RecordExchange([.. header, .. pdu], response);
         }
     }
 

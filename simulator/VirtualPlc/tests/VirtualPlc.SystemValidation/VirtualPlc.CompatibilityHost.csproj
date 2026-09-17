@@ -11,6 +11,8 @@
 
   <ItemGroup>
     <Compile Include="../../src/VirtualPlc/*.cs" Link="%(Filename)%(Extension)" />
+    <Compile Include="../../../../backend/src/Inspection.Infrastructure/Plc/Protocol20260911Map.cs"
+             Link="Protocol20260911Map.cs" />
     <Content Include="../../src/VirtualPlc/appsettings.json"
              Link="appsettings.json"
              CopyToOutputDirectory="PreserveNewest" />
