@@ -2,6 +2,8 @@
 
 **范围**：本分支仅重构框架合同、模块目录、Host 状态/拒绝和测试映射；不实现具体工位。对照 `main` 提交 `09904fd8fe195fe2665e030d8b76b806e4c2f3ae`。本地验证在提交前的工作树运行，跨平台 PR CI 需以最终提交另行核对。
 
+Draft PR：[#5 V1.3 整体框架](https://github.com/NickYoung618/x/pull/5)。Linux/Windows 的最终提交检查见 PR Checks；本地结果与 CI 结果分别判断。
+
 | 检查 | 实际结果 | 证据/限制 |
 | --- | --- | --- |
 | Spec Kit 前置 | PASS | `check-prerequisites.sh --json --require-spec --require-tasks --include-tasks` 指向本 007 目录，列出研究/数据/合同/快速启动/任务 |
