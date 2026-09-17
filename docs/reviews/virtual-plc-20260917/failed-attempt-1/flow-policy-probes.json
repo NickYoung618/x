@@ -1,0 +1,50 @@
+{
+  "Barcode": {
+    "continueFlow": true,
+    "shouldReportError": false,
+    "decision": "OK",
+    "isFallback": true,
+    "message": "非 PLC/下位机故障，模拟模式使用兜底结果继续流程",
+    "timestamp": "2026-09-17T02:13:16.2118146+00:00"
+  },
+  "Recipe": {
+    "continueFlow": true,
+    "shouldReportError": false,
+    "decision": "NG",
+    "isFallback": true,
+    "message": "非 PLC/下位机故障，模拟模式使用兜底结果继续流程",
+    "timestamp": "2026-09-17T02:13:16.2207115+00:00"
+  },
+  "Storage": {
+    "continueFlow": true,
+    "shouldReportError": false,
+    "decision": "OK",
+    "isFallback": true,
+    "message": "非 PLC/下位机故障，模拟模式使用兜底结果继续流程",
+    "timestamp": "2026-09-17T02:13:16.2214679+00:00"
+  },
+  "DeviceTimeout": {
+    "continueFlow": true,
+    "shouldReportError": true,
+    "decision": null,
+    "isFallback": true,
+    "message": "XY/Z 或翻面动作等待超时，记录错误后继续模拟流程",
+    "timestamp": "2026-09-17T02:13:16.2222049+00:00"
+  },
+  "Algorithm": {
+    "continueFlow": true,
+    "shouldReportError": false,
+    "decision": "NG",
+    "isFallback": true,
+    "message": "非 PLC/下位机故障，模拟模式使用兜底结果继续流程",
+    "timestamp": "2026-09-17T02:13:16.2233608+00:00"
+  },
+  "DeviceAction": {
+    "continueFlow": false,
+    "shouldReportError": true,
+    "decision": null,
+    "isFallback": false,
+    "message": "PLC/下位机动作或安全故障，停止流程并上报错误",
+    "timestamp": "2026-09-17T02:13:16.2240442+00:00"
+  }
+}

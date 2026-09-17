@@ -1,0 +1,22 @@
+{
+  "host_target": "net10.0",
+  "sdk": "10.0.401",
+  "test_driver_original_target": "net8.0",
+  "test_driver_review_target": "net10.0",
+  "source_modified": false,
+  "http_port": 34889,
+  "modbus_port": 37103,
+  "health": {
+    "status": "ok",
+    "service": "VirtualPlc",
+    "timestamp": "2026-09-17T02:13:15.9419858+00:00"
+  },
+  "suite_exit": 1,
+  "v13_policy_conflicts_confirmed": [
+    "Barcode",
+    "Recipe",
+    "Storage",
+    "DeviceTimeout"
+  ],
+  "own_host_stopped": true
+}

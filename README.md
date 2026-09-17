@@ -33,6 +33,11 @@ dotnet run --project backend/src/Inspection.Host --no-launch-profile
 [虚拟设备契约草案](docs/contracts/virtual-device-v0.1-draft.md) ·
 [CI 与完整测试矩阵](docs/testing.md) · [实际 Windows 部署/流程验收](docs/windows-acceptance.md)
 
+最新协作入口：[三人协作、Spec Kit、CI 与 Windows 部署包](docs/team-development-and-release.md)。
+同服务器新对话从 [项目交接](docs/handover-20260917.md) 和 [可复制提示词](docs/prompts/next-codex-session.md) 开始。
+2026-09-17 已取得同学的虚拟下位机副本进行审查，前端仍为 HTML 原型；
+模拟器尚未合入中台，V1.3 接入差异见 [审查记录](docs/reviews/virtual-plc-20260917/review.md)。
+
 ## Spec Kit
 
 已使用官方 v1.0.7 初始化 Codex skills（`.agents/skills/speckit-*`）。

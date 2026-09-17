@@ -1,0 +1,11 @@
+  Determining projects to restore...
+  Restored /tmp/gaode-virtual-plc-review-20260917-iJZI4U/review-driver/ReviewDriver.csproj (in 87 ms).
+/tmp/gaode-virtual-plc-review-20260917-iJZI4U/snapshot/VirtualPlc/tests/VirtualPlc.SystemValidation/Program.cs(258,13): error CS4007: Instance of type 'System.ReadOnlySpan<ushort>' cannot be preserved across 'await' or 'yield' boundary. [/tmp/gaode-virtual-plc-review-20260917-iJZI4U/review-driver/ReviewDriver.csproj]
+
+Build FAILED.
+
+/tmp/gaode-virtual-plc-review-20260917-iJZI4U/snapshot/VirtualPlc/tests/VirtualPlc.SystemValidation/Program.cs(258,13): error CS4007: Instance of type 'System.ReadOnlySpan<ushort>' cannot be preserved across 'await' or 'yield' boundary. [/tmp/gaode-virtual-plc-review-20260917-iJZI4U/review-driver/ReviewDriver.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:04.25

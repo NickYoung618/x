@@ -1,0 +1,14 @@
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.ModbusTcpServer[0]
+      Virtual PLC Modbus TCP listening on 127.0.0.1:37103, UnitId=1
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:34889
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /tmp/gaode-virtual-plc-review-20260917-iJZI4U/published-host
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
