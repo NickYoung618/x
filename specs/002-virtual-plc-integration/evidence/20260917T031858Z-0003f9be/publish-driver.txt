@@ -1,0 +1,2 @@
+["/home/ubuntu/.local/share/gaode-dotnet-10.0.401/dotnet", "publish", "simulator/VirtualPlc/tests/VirtualPlc.SystemValidation/VirtualPlc.SystemValidation.csproj", "-c", "Release", "--no-build", "-o", "/home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031858Z-0003f9be/driver"]
+  VirtualPlc.SystemValidation -> /home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031858Z-0003f9be/driver/

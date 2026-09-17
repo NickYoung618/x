@@ -404,8 +404,12 @@
       "inspection.host": {
         "type": "Project",
         "dependencies": {
-          "Inspection.Application": "[1.0.0, )"
+          "Inspection.Application": "[1.0.0, )",
+          "Inspection.Infrastructure": "[1.0.0, )"
         }
+      },
+      "inspection.infrastructure": {
+        "type": "Project"
       }
     }
   }

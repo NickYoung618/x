@@ -1,0 +1,2 @@
+["/home/ubuntu/.local/share/gaode-dotnet-10.0.401/dotnet", "/home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031858Z-0003f9be/host/Inspection.Host.dll", "--plc-probe", "--Plc:Contract", "legacy-v6-u16-snapshot-20260917", "--Plc:Host", "127.0.0.1", "--Plc:Port", "37911", "--Plc:Report", "/home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031858Z-0003f9be/normal.json", "--Plc:ActionTimeoutMs", "3000"]
+Legacy PLC probe: Completed. Two legacy simulated moves completed after fresh busy observations; tray remains locked.

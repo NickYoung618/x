@@ -1,0 +1,17 @@
+{
+  "runId": "20260917T031744Z-38ba64c2",
+  "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+  "contract": "legacy-v6-u16-snapshot-20260917",
+  "build": "PASS",
+  "coreTests": "PASS",
+  "legacy": "NOT RUN",
+  "integration": [],
+  "v13FullContract": "NOT RUN - interface decisions deferred to device owner",
+  "fullTray": "NOT RUN - framework increment only",
+  "verdict": "FAIL",
+  "sdk": "10.0.401",
+  "commit": "f6f7078da3c02bfd1a8784a2b45770570cbe0579",
+  "workingTreeDirty": true,
+  "error": "RuntimeError: publish-driver: exit 1, expected 0; see publish-driver.log",
+  "processesStopped": true
+}

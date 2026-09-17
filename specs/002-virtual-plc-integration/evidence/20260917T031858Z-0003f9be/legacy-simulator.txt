@@ -1,0 +1,206 @@
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.ModbusTcpServer[0]
+      Virtual PLC Modbus TCP listening on 127.0.0.1:44633, UnitId=1
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:49069
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031858Z-0003f9be/plc
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client connected: 127.0.0.1:56592
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client disconnected: 127.0.0.1:56592
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client connected: 127.0.0.1:56598
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client connected: 127.0.0.1:56602
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: ZoneConfig
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: PalletLock
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: PalletLock
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client disconnected: 127.0.0.1:56602
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client connected: 127.0.0.1:44510
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: ZoneConfig
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Move
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Move
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Move
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Move
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Move
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Move
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client disconnected: 127.0.0.1:44510
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client connected: 127.0.0.1:44512
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: ZoneConfig
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Flip
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Flip
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Sort
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Sort
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client disconnected: 127.0.0.1:44512
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client connected: 127.0.0.1:44520
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: ZoneConfig
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Move
+warn: VirtualPlc.VirtualPlcEngine[0]
+      Soft_Stop_Cmd received; active virtual PLC action stopped.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: ZoneConfig
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Move
+warn: VirtualPlc.VirtualPlcEngine[0]
+      Sorting command rejected because Sorting_Part_Index is 0.
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client disconnected: 127.0.0.1:44520
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client connected: 127.0.0.1:44522
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: ZoneConfig
+warn: VirtualPlc.VirtualPlcEngine[0]
+      Simulation fault injected: MoveTimeout
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Move
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Move
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: ZoneConfig
+warn: VirtualPlc.VirtualPlcEngine[0]
+      Simulation fault injected: FlipFailure
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Flip
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Flip
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: ZoneConfig
+warn: VirtualPlc.VirtualPlcEngine[0]
+      Simulation fault injected: FlipAngleMismatch
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Flip
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Flip
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: ZoneConfig
+warn: VirtualPlc.VirtualPlcEngine[0]
+      Simulation fault injected: SortingFailure
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Sort
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Sort
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: ZoneConfig
+warn: VirtualPlc.VirtualPlcEngine[0]
+      Simulation fault injected: FullPallet
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Sort
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Sort
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: ZoneConfig
+warn: VirtualPlc.VirtualPlcEngine[0]
+      Simulation fault injected: PalletLockFailure
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: PalletLock
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: PalletLock
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: PalletLock
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client disconnected: 127.0.0.1:44522
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client connected: 127.0.0.1:38200
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: ZoneConfig
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Move
+warn: VirtualPlc.VirtualPlcEngine[0]
+      Simulation fault injected: EmergencyAlarm
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: ZoneConfig
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC action started: Move
+warn: VirtualPlc.VirtualPlcEngine[0]
+      Simulation fault injected: ManualZoneOccupied
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client disconnected: 127.0.0.1:38200
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client connected: 127.0.0.1:38212
+warn: VirtualPlc.VirtualPlcEngine[0]
+      Simulation fault injected: PauseHeartbeat
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client disconnected: 127.0.0.1:38212
+warn: VirtualPlc.VirtualPlcEngine[0]
+      PC heartbeat timed out; virtual PLC entered soft-stop fault state.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+warn: VirtualPlc.VirtualPlcEngine[0]
+      Simulation fault injected: EmergencyAlarm
+info: VirtualPlc.VirtualPlcEngine[0]
+      Virtual PLC reset completed.
+info: VirtualPlc.ModbusTcpServer[0]
+      Modbus client disconnected: 127.0.0.1:56598
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...

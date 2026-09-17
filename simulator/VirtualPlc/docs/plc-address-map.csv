@@ -1,0 +1,30 @@
+Area,DocumentAddress,PduOffset,Name,Direction,ValuesOrMeaning
+Coil,0x0001,0,PLC_Heartbeat_Req,PLC->PC,PLC heartbeat toggle
+Coil,0x0002,1,PC_Heartbeat_Resp,PC->PLC,PC echoes heartbeat value
+Coil,0x0003,2,PC_System_Ready,PC->PLC,1=upper computer initialized
+Coil,0x0004,3,PLC_System_Fault,PLC->PC,1=PLC/device fault
+Coil,0x0005,4,PLC_Mode_Auto,PLC->PC,1=automatic mode
+Coil,0x0006,5,Soft_Stop_Cmd,PC->PLC,1=request soft stop
+Coil,0x0010,9,Manual_Zone_Occupied,PLC->PC,1=manual intervention/safety door open
+Coil,0x0011,10,Manual_Flip_Complete,PC->PLC,1=manual flip completion confirmed
+HoldingRegister,4x0001,0,XY_Move_Cmd,PC->PLC,0=idle/waiting for PC command;1=load;2=inspection;3=flip/scan;4=unload;5=scan
+HoldingRegister,4x0002,1,XY_Pos_Confirmed,PLC->PC,0=empty before first move / moving while move is active;1=arrived;2=timeout
+HoldingRegister,4x0003,2,Camera_Target_X,PC->PLC,0=empty/not written; otherwise raw 16-bit target X; unit/scale TBD
+HoldingRegister,4x0004,3,Camera_Target_Y,PC->PLC,0=empty/not written; otherwise raw 16-bit target Y; unit/scale TBD
+HoldingRegister,4x0005,4,Camera_Target_Z,PC->PLC,0=empty/not written; otherwise raw 16-bit target Z; unit/scale TBD
+HoldingRegister,4x0006,5,Z_Axis_Move_Status,PLC->PC,0=idle;1=moving;2=arrived;3=timeout/failure
+HoldingRegister,4x0007,6,Machine_Current_Pos_X,PLC->PC,0=empty/no feedback; otherwise raw 16-bit actual X; unit/scale TBD
+HoldingRegister,4x0008,7,Machine_Current_Pos_Y,PLC->PC,0=empty/no feedback; otherwise raw 16-bit actual Y; unit/scale TBD
+HoldingRegister,4x0010,9,Flip_Trigger_Cmd,PC->PLC,0=idle/waiting for PC command;1=flip 90 degrees;2=flip 180 degrees
+HoldingRegister,4x0011,10,Flip_Status,PLC->PC,0=idle;1=running;2=completed;3=failed
+HoldingRegister,4x0012,11,Flip_Result_Angle,PLC->PC,0=empty/no result; otherwise actual angle in degrees
+HoldingRegister,4x0020,19,Sorting_Part_Index,PC->PLC,0=empty/not written; otherwise current part slot index
+HoldingRegister,4x0021,20,Sorting_Cmd,PC->PLC,0=idle/waiting for PC command;1=sort;2=full-pallet alarm
+HoldingRegister,4x0022,21,Sorting_Exec_Status,PLC->PC,0=idle;1=running;2=success;3=pick failure;4=full
+HoldingRegister,4x0023,22,Pallet_Lock_Cmd,PC->PLC,0=unlock;1=lock
+HoldingRegister,4x0024,23,Pallet_Lock_Status,PLC->PC,0=unlocked;1=locked;2=failed
+HoldingRegister,4x0025,24,NG_Zone_Count,PC->PLC,0=empty/not written; otherwise valid physical slots in NG zone
+HoldingRegister,4x0026,25,Pending_Zone_Count,PC->PLC,0=empty/not written; otherwise valid physical slots in pending zone
+HoldingRegister,4x0027,26,Zone_Config_Ready,PC->PLC,0=idle/waiting for PC configuration-ready signal;1=configuration ready
+HoldingRegister,4x0028,27,Zone_Config_Ack,PLC->PC,0=not received;1=updated
+HoldingRegister,4x0029,28,Retry_Cmd,PC->PLC,0=idle/waiting for PC command;1=retry;2=skip;3=reset sorting queue

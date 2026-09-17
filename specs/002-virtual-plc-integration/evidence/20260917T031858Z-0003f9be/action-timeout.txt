@@ -1,0 +1,2 @@
+["/home/ubuntu/.local/share/gaode-dotnet-10.0.401/dotnet", "/home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031858Z-0003f9be/host/Inspection.Host.dll", "--plc-probe", "--Plc:Contract", "legacy-v6-u16-snapshot-20260917", "--Plc:Host", "127.0.0.1", "--Plc:Port", "47655", "--Plc:Report", "/home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031858Z-0003f9be/action-timeout.json", "--Plc:ActionTimeoutMs", "700"]
+Legacy PLC probe: Unknown. TaskCanceledException: A task was canceled. No automatic retry, reconnect or next action; device is not confirmed stopped.

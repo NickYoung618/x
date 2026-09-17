@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "results": {
+    "api/system/status": {
+      "architectureVersion": "1.3",
+      "stage": "EngineeringFoundation",
+      "productionReady": false,
+      "unavailableCapabilities": [
+        "TrayExecution",
+        "DeviceIntegration",
+        "Algorithms",
+        "Traceability",
+        "Desktop"
+      ]
+    },
+    "api/engineering/demo-plan": {
+      "plan": {
+        "faces": [
+          {
+            "faceId": "demo-face-1",
+            "requiresFlipBefore": false,
+            "requiresScanBefore": true,
+            "captures": [
+              {
+                "partId": "demo-part-1",
+                "camera": "A"
+              },
+              {
+                "partId": "demo-part-2",
+                "camera": "A"
+              },
+              {
+                "partId": "demo-part-1",
+                "camera": "B"
+              },
+              {
+                "partId": "demo-part-2",
+                "camera": "B"
+              }
+            ]
+          },
+          {
+            "faceId": "demo-face-2",
+            "requiresFlipBefore": true,
+            "requiresScanBefore": true,
+            "captures": [
+              {
+                "partId": "demo-part-1",
+                "camera": "A"
+              },
+              {
+                "partId": "demo-part-2",
+                "camera": "A"
+              },
+              {
+                "partId": "demo-part-1",
+                "camera": "B"
+              },
+              {
+                "partId": "demo-part-2",
+                "camera": "B"
+              }
+            ]
+          }
+        ]
+      },
+      "isTestFixture": true,
+      "executionEnabled": false
+    }
+  }
+}

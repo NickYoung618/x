@@ -1,0 +1,11 @@
+["/home/ubuntu/.local/share/gaode-dotnet-10.0.401/dotnet", "restore", "Gaode.slnx", "--locked-mode"]
+  Determining projects to restore...
+  Restored /home/ubuntu/dzk/gaode/repo/simulator/VirtualPlc/tests/VirtualPlc.SystemValidation/VirtualPlc.SystemValidation.csproj (in 156 ms).
+  Restored /home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/Inspection.Infrastructure.Tests.csproj (in 329 ms).
+  Restored /home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Host.Tests/Inspection.Host.Tests.csproj (in 145 ms).
+  Restored /home/ubuntu/dzk/gaode/repo/simulator/VirtualPlc/src/VirtualPlc/VirtualPlc.csproj (in 2 ms).
+  Restored /home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/Inspection.Domain.Tests.csproj (in 6 ms).
+  Restored /home/ubuntu/dzk/gaode/repo/backend/src/Inspection.Infrastructure/Inspection.Infrastructure.csproj (in 23 ms).
+  Restored /home/ubuntu/dzk/gaode/repo/backend/src/Inspection.Domain/Inspection.Domain.csproj (in 2 ms).
+  Restored /home/ubuntu/dzk/gaode/repo/backend/src/Inspection.Host/Inspection.Host.csproj (in 5 ms).
+  Restored /home/ubuntu/dzk/gaode/repo/backend/src/Inspection.Application/Inspection.Application.csproj (in 3 ms).

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Virtual PLC 实时监控</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">MODBUS TCP · LIVE MONITOR</p>
+        <h1>Virtual PLC 实时监控</h1>
+        <p class="subtitle">按 0x 线圈区和 4x 保持寄存器区查看全部信号的实时变化</p>
+      </div>
+      <div class="connection-panel" id="connectionPanel">
+        <span class="status-dot" id="connectionDot"></span>
+        <div>
+          <strong id="connectionText">正在连接</strong>
+          <span id="lastRefresh">尚未收到状态</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="overview-grid" aria-label="运行概览">
+        <article class="overview-card">
+          <span class="metric-label">已加载信号</span>
+          <strong class="metric-value" id="signalCount">0</strong>
+          <span class="metric-note" id="signalBreakdown">等待地址表</span>
+        </article>
+
+        <article class="overview-card">
+          <span class="metric-label">当前动作</span>
+          <strong class="metric-value" id="activeAction">空闲</strong>
+          <span class="metric-note">模拟器执行引擎状态</span>
+        </article>
+
+        <article class="overview-card">
+          <span class="metric-label">活动故障</span>
+          <strong class="metric-value" id="faultCount">0</strong>
+          <span class="metric-note text-ellipsis" id="faultNames">无故障</span>
+        </article>
+
+        <article class="overview-card">
+          <span class="metric-label">本次监控变化</span>
+          <strong class="metric-value" id="changeCount">0</strong>
+          <span class="metric-note">变化后高亮 1.5 秒</span>
+        </article>
+      </section>
+
+      <section class="monitor-panel">
+        <div class="panel-toolbar">
+          <div>
+            <p class="section-kicker">SIGNAL TABLE</p>
+            <h2>地址实时状态</h2>
+          </div>
+          <div class="toolbar-controls">
+            <label class="search-control">
+              <span class="sr-only">筛选地址或信号</span>
+              <input id="searchInput" type="search" placeholder="搜索地址或信号名称">
+            </label>
+            <button class="button button-secondary" id="pauseButton" type="button">暂停刷新</button>
+          </div>
+        </div>
+
+        <div class="legend" aria-label="显示规则图例">
+          <span><i class="legend-mark binary-off"></i>二值点位：0 为灰色</span>
+          <span><i class="legend-mark binary-on"></i>二值点位：1 为高亮</span>
+          <span><i class="legend-mark numeric"></i>多值、坐标和数量：直接显示当前数值</span>
+          <span><i class="legend-mark changed"></i>刚变化的数值会短暂闪烁</span>
+        </div>
+
+        <div class="direction-grid">
+          <section class="direction-lane plc-to-pc-lane">
+            <div class="lane-heading">
+              <div>
+                <span class="lane-label">左侧 · 状态与反馈</span>
+                <h3>PLC <span class="lane-arrow">→</span> 上位机</h3>
+              </div>
+              <span class="lane-total" id="plcToPcTotal">0 个点位</span>
+            </div>
+
+            <article class="signal-card">
+              <div class="signal-card-title">
+                <div><span class="area-tag coil-tag">0x</span><h3>线圈区</h3></div>
+                <span class="row-count" id="plcToPcCoilCount">0 个信号</span>
+              </div>
+              <div class="table-scroll">
+                <table>
+                  <thead><tr><th>地址</th><th>信号</th><th class="value-column">当前值</th></tr></thead>
+                  <tbody id="plcToPcCoilRows">
+                    <tr><td colspan="3" class="empty-cell">正在读取 PLC 状态…</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="signal-card">
+              <div class="signal-card-title">
+                <div><span class="area-tag register-tag">4x</span><h3>保持寄存器区</h3></div>
+                <span class="row-count" id="plcToPcRegisterCount">0 个信号</span>
+              </div>
+              <div class="table-scroll">
+                <table>
+                  <thead><tr><th>地址</th><th>信号</th><th class="value-column">当前值</th></tr></thead>
+                  <tbody id="plcToPcRegisterRows">
+                    <tr><td colspan="3" class="empty-cell">正在读取 PLC 反馈…</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </section>
+
+          <section class="direction-lane pc-to-plc-lane">
+            <div class="lane-heading">
+              <div>
+                <span class="lane-label">右侧 · 命令与参数</span>
+                <h3>上位机 <span class="lane-arrow">→</span> PLC</h3>
+              </div>
+              <span class="lane-total" id="pcToPlcTotal">0 个点位</span>
+            </div>
+
+            <article class="signal-card">
+              <div class="signal-card-title">
+                <div><span class="area-tag coil-tag">0x</span><h3>线圈区</h3></div>
+                <span class="row-count" id="pcToPlcCoilCount">0 个信号</span>
+              </div>
+              <div class="table-scroll">
+                <table>
+                  <thead><tr><th>地址</th><th>信号</th><th class="value-column">当前值</th></tr></thead>
+                  <tbody id="pcToPlcCoilRows">
+                    <tr><td colspan="3" class="empty-cell">正在读取上位机信号…</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="signal-card">
+              <div class="signal-card-title">
+                <div><span class="area-tag register-tag">4x</span><h3>保持寄存器区</h3></div>
+                <span class="row-count" id="pcToPlcRegisterCount">0 个信号</span>
+              </div>
+              <div class="table-scroll">
+                <table>
+                  <thead><tr><th>地址</th><th>信号</th><th class="value-column">当前值</th></tr></thead>
+                  <tbody id="pcToPlcRegisterRows">
+                    <tr><td colspan="3" class="empty-cell">正在读取上位机命令…</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <section class="history-panel">
+        <div class="history-heading">
+          <div>
+            <p class="section-kicker">CHANGE LOG</p>
+            <h2>最近变化</h2>
+          </div>
+          <button class="button button-ghost" id="clearHistoryButton" type="button">清空记录</button>
+        </div>
+        <div class="history-list" id="historyList">
+          <p class="history-empty">监控启动后，线圈和寄存器的变化会显示在这里。</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>只读监控页面，不会向 PLC 写入任何值。</span>
+      <span>刷新周期：100 ms</span>
+    </footer>
+  </div>
+  <script src="/app.js" defer></script>
+</body>
+</html>

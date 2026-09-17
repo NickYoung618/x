@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <ItemGroup>
+    <ProjectReference Include="../Inspection.Infrastructure/Inspection.Infrastructure.csproj" />
     <ProjectReference Include="../Inspection.Application/Inspection.Application.csproj" />
   </ItemGroup>
 </Project>
