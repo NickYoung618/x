@@ -15,9 +15,9 @@
 - 实际修改：新增纯外部 DTO 项目 `Inspection.Contracts`、Application 模块/能力目录、Host 状态与 501 默认拒绝、项目依赖/HTTP 检查、发布进程冒烟断言、Vue/TypeScript/Pinia 只读最小状态页及 Linux/Windows CI、Spec Kit 007 和 V1.3 §18 全场景/DB 专项映射；未新增设备动作、配方、算法或数据库迁移。
 - 各轮：新增 Host 合同测试首跑 2 项失败（旧阶段、404），实现后旧阶段断言 1 项失败，修正后 7/7。随后发现旧能力 ID 兼容风险并保留旧 ID；补无设备 Provider 绑定检查，最终 Host 8/8、全量 46/46。Linux 锁定还原、Release 构建 0 警告/错误、发布进程 HTTP 冒烟通过；旧协议 13/13 和双进程 5/5 通过。证据 `specs/007-v13-framework-foundation/validation.md` 与 `evidence/legacy-framework-summary.json`。
 - 新失败/修正：前端首次选用 TypeScript 7.0.2 时 vue-tsc 无法加载旧内部路径；锁定 TypeScript 5.9.3 后 `npm ci`、类型检查、3/3 组件测试和离线构建通过。补强 API 格式校验后类型检查发现过宽断言，逐字段构造后复测通过。
-- PR 初次 CI：运行 35191181805 的旧协议两作业 PASS；Core 两平台在 PowerShell 发布冒烟的 501 合并断言失败，因旧断言未输出子条件，不能直接认定 Host 返回错误；UI 两平台的锁文件引用本机腾讯镜像域名、托管 runner 解析失败。已把 156 个锁定下载 URL 改为官方 registry 并用空缓存 `npm ci` 验证；PowerShell 改为分别获取响应体和状态码并增强失败信息，待新 CI 复核。
+- PR CI：首次运行 35191181805 的旧协议两作业 PASS；Core 两平台在 PowerShell 发布冒烟的 501 合并断言失败，旧断言未输出子条件，不能直接认定 Host 返回错误；UI 两平台的锁文件引用本机腾讯镜像域名，托管 runner 解析失败。已把 156 个锁定下载 URL 改为官方 registry 并用空缓存 `npm ci` 验证；PowerShell 改为分别获取响应体和状态码。修正后运行 35192043297 的 Linux/Windows Core、Framework UI、Virtual PLC framework 六作业全部 PASS。首次 PowerShell 失败的精确子条件因证据不足仍未定，不捏造根因。
 - 未解决：V1.3 PLC 点表与动作关联、真实 3D/相机 SDK、前端真实浏览器/WPF 集成与三方接口核对、正式配方/算法、数据库部署与恢复；V1.3 正式对接和完整整盘均 NOT RUN。旧协议脚本实测发生在最后只读状态/前端补充前，CI 将对最终提交重跑。
-- 远端与费用：框架已推送 `framework-v13-foundation` 并建立 [Draft PR #5](https://github.com/NickYoung618/x/pull/5)；Linux/Windows 六作业 CI 待最终提交完成。无付费调用，0 元。
+- 远端与费用：框架已推送 `framework-v13-foundation` 并建立 [PR #5](https://github.com/NickYoung618/x/pull/5)；最终提交 `576778b` 的 Linux/Windows 六作业 CI 全部通过。无付费调用，0 元。
 - 下一目标：框架 PR 合并后，将 S01 Draft PR #4 更新到该基线，只实现首个 3D 工位并按其正常/故障矩阵测试；前端同学继续完整页面与 WPF，不把最小页面当成桌面验收。
 
 ## 2026-09-17 / 005 开工：全虚拟覆盖策略校正

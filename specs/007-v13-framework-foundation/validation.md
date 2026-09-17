@@ -1,8 +1,8 @@
 # V1.3 P0 框架验证记录
 
-**范围**：本分支仅重构框架合同、模块目录、Host 状态/拒绝和测试映射；不实现具体工位。对照 `main` 提交 `09904fd8fe195fe2665e030d8b76b806e4c2f3ae`。本地验证在提交前的工作树运行，跨平台 PR CI 需以最终提交另行核对。
+**范围**：本分支仅重构框架合同、模块目录、Host 状态/拒绝和测试映射；不实现具体工位。对照 `main` 提交 `09904fd8fe195fe2665e030d8b76b806e4c2f3ae`。本地验证和跨平台 PR CI 分别记录。
 
-Draft PR：[#5 V1.3 整体框架](https://github.com/NickYoung618/x/pull/5)。Linux/Windows 的最终提交检查见 PR Checks；本地结果与 CI 结果分别判断。
+PR：[#5 V1.3 整体框架](https://github.com/NickYoung618/x/pull/5)。最终提交 `576778b` 的 [CI 35192043297](https://github.com/NickYoung618/x/actions/runs/35192043297) 六作业全部 PASS：Linux/Windows Core、Framework UI、Virtual PLC framework 各两项。本地结果与 CI 结果分别判断。
 
 | 检查 | 实际结果 | 证据/限制 |
 | --- | --- | --- |
@@ -19,6 +19,6 @@ Draft PR：[#5 V1.3 整体框架](https://github.com/NickYoung618/x/pull/5)。Li
 
 前端首次锁定依赖时 TypeScript 7.0.2 与 vue-tsc 3.3.11 不兼容，`vue-tsc` 报 `ERR_PACKAGE_PATH_NOT_EXPORTED`；改为精确锁定 TypeScript 5.9.3 并重新 `npm ci` 后，类型检查、3/3 组件测试和构建/本地资源检查均通过。补全 API 响应字段校验时类型检查又报过宽断言，改为逐字段构造返回值后再次通过。两次失败与修正均记录，不以首次构建通过冒充。
 
-PR #5 首次最终提交 [CI 35191181805](https://github.com/NickYoung618/x/actions/runs/35191181805)：旧协议 Linux/Windows 两作业 PASS，Core 两作业在发布进程的 PowerShell 拒绝断言失败，UI 两作业因锁文件带本机腾讯镜像 `resolved` URL、托管 runner 无法解析镜像域名而在 `npm ci` 失败。前者旧日志只给合并断言，没有 HTTP 状态/响应字段，不能凭错误名认定 Host 未拒绝；本地真实进程的 POST 为 501。修正为官方 npm registry 锁定 URL，并用空缓存从官方 registry `npm ci` 成功；PowerShell 冒烟改用可同时取得解析体与状态码的 `Invoke-RestMethod -StatusCodeVariable`，在失败时分别输出状态/码/关联是否存在。需以新 CI 复核，不把此修改本身当作修复通过。
+PR #5 首次提交 [CI 35191181805](https://github.com/NickYoung618/x/actions/runs/35191181805)：旧协议 Linux/Windows 两作业 PASS，Core 两作业在发布进程的 PowerShell 拒绝断言失败，UI 两作业因锁文件带本机腾讯镜像 `resolved` URL、托管 runner 无法解析镜像域名而在 `npm ci` 失败。前者旧日志只给合并断言，没有 HTTP 状态/响应字段，不能凭错误名认定 Host 未拒绝；本地真实进程的 POST 为 501。修正为官方 npm registry 锁定 URL，并用空缓存从官方 registry `npm ci` 成功；PowerShell 冒烟改用可同时取得解析体与状态码的 `Invoke-RestMethod -StatusCodeVariable`。最终跨平台六作业均通过，确认冒烟断言和锁定安装可在 CI 运行；首次 PowerShell 失败的精确子条件因当时缺少日志，保持未定，不将它写成生产 Host 故障或确证根因。
 
 本次仍未达到 V1.3 §18 的完整 P0 退出：最小 Vue 状态页已实现并做组件/构建验证，但实际浏览器联通、WPF 包及三方接口核对仍未交付。后续场景已在[验收映射](../../docs/architecture/v13-acceptance-map.md)标责任增量。正式 3D/F/相机/算法/配方、数据库部署和恢复保持独立任务；S01 Draft PR #4 需基于此框架合并后的 main 继续实现。无付费模型调用，费用 0 元。
