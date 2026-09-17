@@ -3,8 +3,8 @@
 技术及测试以 [总体架构 V1.3](docs/architecture/architecture-v1.3.md) 为准；
 首版界面以用户最新 [原型核查记录](docs/ui-prototype/review.md) 为准。
 
-当前增量：可运行后端、普通零件整盘采集计划预览、基础测试和 CI。
-**尚未实现完整检测闭环、WPF、真实/独立虚拟设备对接、算法和业务保存；生产就绪为 false。**
+当前具备可运行后端、普通零件整盘计划预览、旧协议独立虚拟PLC最小联调、进程内流程框架及候选测试入口。
+**尚未实现正式V1.3设备接入、完整检测闭环、WPF、算法和业务保存；生产就绪为 false。**
 
 ## 开发与测试
 
@@ -35,8 +35,8 @@ dotnet run --project backend/src/Inspection.Host --no-launch-profile
 
 最新协作入口：[三人协作、Spec Kit、CI 与 Windows 部署包](docs/team-development-and-release.md)。
 同服务器新对话从 [项目交接](docs/handover-20260917.md) 和 [可复制提示词](docs/prompts/next-codex-session.md) 开始。
-2026-09-17 已取得同学的虚拟下位机副本进行审查，前端仍为 HTML 原型；
-模拟器尚未合入中台，V1.3 接入差异见 [审查记录](docs/reviews/virtual-plc-20260917/review.md)。
+2026-09-17 已取得并审查同学的虚拟下位机副本，前端仍为 HTML 原型；
+旧协议兼容联调已加入工程测试，正式 V1.3 接入差异见 [审查记录](docs/reviews/virtual-plc-20260917/review.md)。
 
 ## Spec Kit
 
