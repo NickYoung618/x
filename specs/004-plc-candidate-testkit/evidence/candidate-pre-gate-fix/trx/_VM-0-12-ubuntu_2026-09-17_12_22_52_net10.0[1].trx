@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="0f7c1136-e80b-41f3-b3f1-6358453da508" name="@VM-0-12-ubuntu 2026-09-17 12:22:52" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-17T12:22:52.8234098+08:00" queuing="2026-09-17T12:22:52.8234099+08:00" start="2026-09-17T12:22:49.2327396+08:00" finish="2026-09-17T12:22:53.1780004+08:00" />
+  <TestSettings name="default" id="fdddaf2c-257b-4eac-b5f5-e0090d436f9a">
+    <Deployment runDeploymentRoot="_VM-0-12-ubuntu_2026-09-17_12_22_52" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="6d571591-2124-43ff-ae52-bfc4136a3eb2" testId="80b29dc6-86f4-6565-7e24-3a159ec54cf6" testName="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;00010000010001&quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0039649" startTime="2026-09-17T12:22:52.7547161+08:00" endTime="2026-09-17T12:22:52.7577615+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d571591-2124-43ff-ae52-bfc4136a3eb2" />
+    <UnitTestResult executionId="45bb2200-2d95-462d-9897-4da2a229e022" testId="26be41f3-8124-6519-65db-98669a37faff" testName="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;0002000000050103020001&quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0461442" startTime="2026-09-17T12:22:52.7438311+08:00" endTime="2026-09-17T12:22:52.7538884+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="45bb2200-2d95-462d-9897-4da2a229e022" />
+    <UnitTestResult executionId="a4c18efb-b1c9-4847-be33-71b4da61dee9" testId="ce32d085-4c98-f041-8c64-a85b5c013685" testName="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;0001000000050104020001&quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0040308" startTime="2026-09-17T12:22:52.7795158+08:00" endTime="2026-09-17T12:22:52.7834315+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4c18efb-b1c9-4847-be33-71b4da61dee9" />
+    <UnitTestResult executionId="2edc184e-5f43-4bb9-8cfb-e9aefc1e10e6" testId="ecf5f0c5-b191-0f43-226a-d07ba758c2ce" testName="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;0001000000050203020001&quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0022903" startTime="2026-09-17T12:22:52.7836109+08:00" endTime="2026-09-17T12:22:52.7874818+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2edc184e-5f43-4bb9-8cfb-e9aefc1e10e6" />
+    <UnitTestResult executionId="2fa2e128-856e-4afa-8db6-2538c0d607aa" testId="59de9b32-2b99-1016-d8fb-0d19a890b029" testName="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;0001000100050103020001&quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0069997" startTime="2026-09-17T12:22:52.7720021+08:00" endTime="2026-09-17T12:22:52.7792765+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2fa2e128-856e-4afa-8db6-2538c0d607aa" />
+    <UnitTestResult executionId="fe65a983-3109-413b-9e53-c61faba26e34" testId="ad9613af-fa2e-66ff-8a0e-b9e125e0246c" testName="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;0001000000050103010001&quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0043716" startTime="2026-09-17T12:22:52.7579429+08:00" endTime="2026-09-17T12:22:52.7624890+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe65a983-3109-413b-9e53-c61faba26e34" />
+    <UnitTestResult executionId="08b44bb0-b0a5-43f5-914a-7df31b732b5b" testId="9e432072-1283-faa6-bfde-78b1bc4434fa" testName="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;000100000003018302&quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0040651" startTime="2026-09-17T12:22:52.7658769+08:00" endTime="2026-09-17T12:22:52.7715579+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="08b44bb0-b0a5-43f5-914a-7df31b732b5b" />
+    <UnitTestResult executionId="efa484a5-dd6e-4059-bc76-699974c38186" testId="cb5acc6c-6e69-c6a5-4e08-c9c4a793af47" testName="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Writes_known_coordinates_and_checks_echo" computerName="VM-0-12-ubuntu" duration="00:00:00.8138003" startTime="2026-09-17T12:22:51.8544337+08:00" endTime="2026-09-17T12:22:52.7030710+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="efa484a5-dd6e-4059-bc76-699974c38186" />
+    <UnitTestResult executionId="c586c0b9-6948-4699-9b4a-1192449371db" testId="036b047d-cb0a-05b5-35ab-72d386e44ef2" testName="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Stalled_reply_is_bounded_and_connection_cannot_be_reused" computerName="VM-0-12-ubuntu" duration="00:00:00.1652515" startTime="2026-09-17T12:22:52.7981925+08:00" endTime="2026-09-17T12:22:52.9574376+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c586c0b9-6948-4699-9b4a-1192449371db" />
+    <UnitTestResult executionId="f6671369-4672-47d6-be65-733ca1a1f220" testId="630c2255-4140-6586-14dc-945616aeaeab" testName="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;00010000000501030200&quot;)" computerName="VM-0-12-ubuntu" duration="00:00:00.0026155" startTime="2026-09-17T12:22:52.7626930+08:00" endTime="2026-09-17T12:22:52.7656944+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f6671369-4672-47d6-be65-733ca1a1f220" />
+    <UnitTestResult executionId="719b5309-483b-4622-9cfb-1478dc40c19e" testId="06169a33-e420-2d3a-6b1a-5bbd8ff7b909" testName="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Reads_known_registers_with_zero_based_address_and_fragmented_response" computerName="VM-0-12-ubuntu" duration="00:00:00.0176052" startTime="2026-09-17T12:22:52.9578794+08:00" endTime="2026-09-17T12:22:52.9768033+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="719b5309-483b-4622-9cfb-1478dc40c19e" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;00010000010001&quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.infrastructure.tests/bin/release/net10.0/inspection.infrastructure.tests.dll" id="80b29dc6-86f4-6565-7e24-3a159ec54cf6">
+      <Execution id="6d571591-2124-43ff-ae52-bfc4136a3eb2" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/bin/Release/net10.0/Inspection.Infrastructure.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Infrastructure.Tests.ModbusTcpClientTests" name="Invalid_reply_closes_connection_and_does_not_retry" />
+    </UnitTest>
+    <UnitTest name="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;0001000100050103020001&quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.infrastructure.tests/bin/release/net10.0/inspection.infrastructure.tests.dll" id="59de9b32-2b99-1016-d8fb-0d19a890b029">
+      <Execution id="2fa2e128-856e-4afa-8db6-2538c0d607aa" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/bin/Release/net10.0/Inspection.Infrastructure.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Infrastructure.Tests.ModbusTcpClientTests" name="Invalid_reply_closes_connection_and_does_not_retry" />
+    </UnitTest>
+    <UnitTest name="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;0002000000050103020001&quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.infrastructure.tests/bin/release/net10.0/inspection.infrastructure.tests.dll" id="26be41f3-8124-6519-65db-98669a37faff">
+      <Execution id="45bb2200-2d95-462d-9897-4da2a229e022" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/bin/Release/net10.0/Inspection.Infrastructure.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Infrastructure.Tests.ModbusTcpClientTests" name="Invalid_reply_closes_connection_and_does_not_retry" />
+    </UnitTest>
+    <UnitTest name="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Writes_known_coordinates_and_checks_echo" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.infrastructure.tests/bin/release/net10.0/inspection.infrastructure.tests.dll" id="cb5acc6c-6e69-c6a5-4e08-c9c4a793af47">
+      <Execution id="efa484a5-dd6e-4059-bc76-699974c38186" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/bin/Release/net10.0/Inspection.Infrastructure.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Infrastructure.Tests.ModbusTcpClientTests" name="Writes_known_coordinates_and_checks_echo" />
+    </UnitTest>
+    <UnitTest name="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Stalled_reply_is_bounded_and_connection_cannot_be_reused" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.infrastructure.tests/bin/release/net10.0/inspection.infrastructure.tests.dll" id="036b047d-cb0a-05b5-35ab-72d386e44ef2">
+      <Execution id="c586c0b9-6948-4699-9b4a-1192449371db" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/bin/Release/net10.0/Inspection.Infrastructure.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Infrastructure.Tests.ModbusTcpClientTests" name="Stalled_reply_is_bounded_and_connection_cannot_be_reused" />
+    </UnitTest>
+    <UnitTest name="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;0001000000050203020001&quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.infrastructure.tests/bin/release/net10.0/inspection.infrastructure.tests.dll" id="ecf5f0c5-b191-0f43-226a-d07ba758c2ce">
+      <Execution id="2edc184e-5f43-4bb9-8cfb-e9aefc1e10e6" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/bin/Release/net10.0/Inspection.Infrastructure.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Infrastructure.Tests.ModbusTcpClientTests" name="Invalid_reply_closes_connection_and_does_not_retry" />
+    </UnitTest>
+    <UnitTest name="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;0001000000050104020001&quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.infrastructure.tests/bin/release/net10.0/inspection.infrastructure.tests.dll" id="ce32d085-4c98-f041-8c64-a85b5c013685">
+      <Execution id="a4c18efb-b1c9-4847-be33-71b4da61dee9" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/bin/Release/net10.0/Inspection.Infrastructure.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Infrastructure.Tests.ModbusTcpClientTests" name="Invalid_reply_closes_connection_and_does_not_retry" />
+    </UnitTest>
+    <UnitTest name="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;000100000003018302&quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.infrastructure.tests/bin/release/net10.0/inspection.infrastructure.tests.dll" id="9e432072-1283-faa6-bfde-78b1bc4434fa">
+      <Execution id="08b44bb0-b0a5-43f5-914a-7df31b732b5b" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/bin/Release/net10.0/Inspection.Infrastructure.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Infrastructure.Tests.ModbusTcpClientTests" name="Invalid_reply_closes_connection_and_does_not_retry" />
+    </UnitTest>
+    <UnitTest name="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Reads_known_registers_with_zero_based_address_and_fragmented_response" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.infrastructure.tests/bin/release/net10.0/inspection.infrastructure.tests.dll" id="06169a33-e420-2d3a-6b1a-5bbd8ff7b909">
+      <Execution id="719b5309-483b-4622-9cfb-1478dc40c19e" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/bin/Release/net10.0/Inspection.Infrastructure.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Infrastructure.Tests.ModbusTcpClientTests" name="Reads_known_registers_with_zero_based_address_and_fragmented_response" />
+    </UnitTest>
+    <UnitTest name="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;00010000000501030200&quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.infrastructure.tests/bin/release/net10.0/inspection.infrastructure.tests.dll" id="630c2255-4140-6586-14dc-945616aeaeab">
+      <Execution id="f6671369-4672-47d6-be65-733ca1a1f220" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/bin/Release/net10.0/Inspection.Infrastructure.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Infrastructure.Tests.ModbusTcpClientTests" name="Invalid_reply_closes_connection_and_does_not_retry" />
+    </UnitTest>
+    <UnitTest name="Inspection.Infrastructure.Tests.ModbusTcpClientTests.Invalid_reply_closes_connection_and_does_not_retry(responseHex: &quot;0001000000050103010001&quot;)" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.infrastructure.tests/bin/release/net10.0/inspection.infrastructure.tests.dll" id="ad9613af-fa2e-66ff-8a0e-b9e125e0246c">
+      <Execution id="fe65a983-3109-413b-9e53-c61faba26e34" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/bin/Release/net10.0/Inspection.Infrastructure.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Infrastructure.Tests.ModbusTcpClientTests" name="Invalid_reply_closes_connection_and_does_not_retry" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="80b29dc6-86f4-6565-7e24-3a159ec54cf6" executionId="6d571591-2124-43ff-ae52-bfc4136a3eb2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="26be41f3-8124-6519-65db-98669a37faff" executionId="45bb2200-2d95-462d-9897-4da2a229e022" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ce32d085-4c98-f041-8c64-a85b5c013685" executionId="a4c18efb-b1c9-4847-be33-71b4da61dee9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ecf5f0c5-b191-0f43-226a-d07ba758c2ce" executionId="2edc184e-5f43-4bb9-8cfb-e9aefc1e10e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="59de9b32-2b99-1016-d8fb-0d19a890b029" executionId="2fa2e128-856e-4afa-8db6-2538c0d607aa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ad9613af-fa2e-66ff-8a0e-b9e125e0246c" executionId="fe65a983-3109-413b-9e53-c61faba26e34" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9e432072-1283-faa6-bfde-78b1bc4434fa" executionId="08b44bb0-b0a5-43f5-914a-7df31b732b5b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb5acc6c-6e69-c6a5-4e08-c9c4a793af47" executionId="efa484a5-dd6e-4059-bc76-699974c38186" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="036b047d-cb0a-05b5-35ab-72d386e44ef2" executionId="c586c0b9-6948-4699-9b4a-1192449371db" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="630c2255-4140-6586-14dc-945616aeaeab" executionId="f6671369-4672-47d6-be65-733ca1a1f220" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="06169a33-e420-2d3a-6b1a-5bbd8ff7b909" executionId="719b5309-483b-4622-9cfb-1478dc40c19e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="11" executed="11" passed="11" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 10.0.12)
+[xUnit.net 00:00:00.48]   Discovering: Inspection.Infrastructure.Tests
+[xUnit.net 00:00:00.71]   Discovered:  Inspection.Infrastructure.Tests
+[xUnit.net 00:00:00.90]   Starting:    Inspection.Infrastructure.Tests
+[xUnit.net 00:00:02.13]   Finished:    Inspection.Infrastructure.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

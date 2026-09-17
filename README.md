@@ -76,3 +76,7 @@ Windows可用`python`。统一入口无.NET8回退，输出唯一运行目录及
 ## 普通整盘中台流程框架（003）
 
 [规格与验证](specs/003-ordinary-workflow-foundation/validation.md)覆盖公共3D/F准备、唯一方案、A/B分面顺序、翻面重扫、单运动通道及采集/算法技术终态。用`dotnet test Gaode.slnx -c Release`运行；默认Host仍仅提供计划预览。正式设备、保存/判定/分拣待后续增量接入。
+
+## 下位机候选版本测试入口（004）
+
+当前统一脚本可随新增测试工程对账TRX，并可对同学独立发布的旧协议兼容模拟器运行真实Host↔模拟器联调。使用命令、需要回传的证据及V1.3边界见[同学运行指南](specs/004-plc-candidate-testkit/quickstart.md)。这是工程测试包，不是正式整盘或Windows安装包。

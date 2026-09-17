@@ -1,0 +1,470 @@
+{
+  "before": {
+    "timestamp": "2026-09-17T04:23:22.0781643+00:00",
+    "communicationTimedOut": false,
+    "activeAction": null,
+    "activeFaults": [],
+    "coils": [
+      {
+        "address": "0x0001",
+        "pduOffset": 0,
+        "name": "PLC_Heartbeat_Req",
+        "direction": "PlcToPc",
+        "value": true
+      },
+      {
+        "address": "0x0002",
+        "pduOffset": 1,
+        "name": "PC_Heartbeat_Resp",
+        "direction": "PcToPlc",
+        "value": true
+      },
+      {
+        "address": "0x0003",
+        "pduOffset": 2,
+        "name": "PC_System_Ready",
+        "direction": "PcToPlc",
+        "value": true
+      },
+      {
+        "address": "0x0004",
+        "pduOffset": 3,
+        "name": "PLC_System_Fault",
+        "direction": "PlcToPc",
+        "value": false
+      },
+      {
+        "address": "0x0005",
+        "pduOffset": 4,
+        "name": "PLC_Mode_Auto",
+        "direction": "PlcToPc",
+        "value": true
+      },
+      {
+        "address": "0x0006",
+        "pduOffset": 5,
+        "name": "Soft_Stop_Cmd",
+        "direction": "PcToPlc",
+        "value": false
+      },
+      {
+        "address": "0x0010",
+        "pduOffset": 9,
+        "name": "Manual_Zone_Occupied",
+        "direction": "PlcToPc",
+        "value": false
+      },
+      {
+        "address": "0x0011",
+        "pduOffset": 10,
+        "name": "Manual_Flip_Complete",
+        "direction": "PcToPlc",
+        "value": false
+      }
+    ],
+    "holdingRegisters": [
+      {
+        "address": "4x0001",
+        "pduOffset": 0,
+        "name": "XY_Move_Cmd",
+        "direction": "PcToPlc",
+        "rawValue": 1,
+        "signedValue": 1
+      },
+      {
+        "address": "4x0002",
+        "pduOffset": 1,
+        "name": "XY_Pos_Confirmed",
+        "direction": "PlcToPc",
+        "rawValue": 1,
+        "signedValue": 1
+      },
+      {
+        "address": "4x0003",
+        "pduOffset": 2,
+        "name": "Camera_Target_X",
+        "direction": "PcToPlc",
+        "rawValue": 321,
+        "signedValue": 321
+      },
+      {
+        "address": "4x0004",
+        "pduOffset": 3,
+        "name": "Camera_Target_Y",
+        "direction": "PcToPlc",
+        "rawValue": 654,
+        "signedValue": 654
+      },
+      {
+        "address": "4x0005",
+        "pduOffset": 4,
+        "name": "Camera_Target_Z",
+        "direction": "PcToPlc",
+        "rawValue": 87,
+        "signedValue": 87
+      },
+      {
+        "address": "4x0006",
+        "pduOffset": 5,
+        "name": "Z_Axis_Move_Status",
+        "direction": "PlcToPc",
+        "rawValue": 2,
+        "signedValue": 2
+      },
+      {
+        "address": "4x0007",
+        "pduOffset": 6,
+        "name": "Machine_Current_Pos_X",
+        "direction": "PlcToPc",
+        "rawValue": 321,
+        "signedValue": 321
+      },
+      {
+        "address": "4x0008",
+        "pduOffset": 7,
+        "name": "Machine_Current_Pos_Y",
+        "direction": "PlcToPc",
+        "rawValue": 654,
+        "signedValue": 654
+      },
+      {
+        "address": "4x0010",
+        "pduOffset": 9,
+        "name": "Flip_Trigger_Cmd",
+        "direction": "PcToPlc",
+        "rawValue": 0,
+        "signedValue": 0
+      },
+      {
+        "address": "4x0011",
+        "pduOffset": 10,
+        "name": "Flip_Status",
+        "direction": "PlcToPc",
+        "rawValue": 0,
+        "signedValue": 0
+      },
+      {
+        "address": "4x0012",
+        "pduOffset": 11,
+        "name": "Flip_Result_Angle",
+        "direction": "PlcToPc",
+        "rawValue": 0,
+        "signedValue": 0
+      },
+      {
+        "address": "4x0020",
+        "pduOffset": 19,
+        "name": "Sorting_Part_Index",
+        "direction": "PcToPlc",
+        "rawValue": 0,
+        "signedValue": 0
+      },
+      {
+        "address": "4x0021",
+        "pduOffset": 20,
+        "name": "Sorting_Cmd",
+        "direction": "PcToPlc",
+        "rawValue": 0,
+        "signedValue": 0
+      },
+      {
+        "address": "4x0022",
+        "pduOffset": 21,
+        "name": "Sorting_Exec_Status",
+        "direction": "PlcToPc",
+        "rawValue": 0,
+        "signedValue": 0
+      },
+      {
+        "address": "4x0023",
+        "pduOffset": 22,
+        "name": "Pallet_Lock_Cmd",
+        "direction": "PcToPlc",
+        "rawValue": 1,
+        "signedValue": 1
+      },
+      {
+        "address": "4x0024",
+        "pduOffset": 23,
+        "name": "Pallet_Lock_Status",
+        "direction": "PlcToPc",
+        "rawValue": 1,
+        "signedValue": 1
+      },
+      {
+        "address": "4x0025",
+        "pduOffset": 24,
+        "name": "NG_Zone_Count",
+        "direction": "PcToPlc",
+        "rawValue": 2,
+        "signedValue": 2
+      },
+      {
+        "address": "4x0026",
+        "pduOffset": 25,
+        "name": "Pending_Zone_Count",
+        "direction": "PcToPlc",
+        "rawValue": 2,
+        "signedValue": 2
+      },
+      {
+        "address": "4x0027",
+        "pduOffset": 26,
+        "name": "Zone_Config_Ready",
+        "direction": "PcToPlc",
+        "rawValue": 1,
+        "signedValue": 1
+      },
+      {
+        "address": "4x0028",
+        "pduOffset": 27,
+        "name": "Zone_Config_Ack",
+        "direction": "PlcToPc",
+        "rawValue": 1,
+        "signedValue": 1
+      },
+      {
+        "address": "4x0029",
+        "pduOffset": 28,
+        "name": "Retry_Cmd",
+        "direction": "PcToPlc",
+        "rawValue": 0,
+        "signedValue": 0
+      }
+    ]
+  },
+  "after": {
+    "timestamp": "2026-09-17T04:23:22.3995711+00:00",
+    "communicationTimedOut": false,
+    "activeAction": null,
+    "activeFaults": [],
+    "coils": [
+      {
+        "address": "0x0001",
+        "pduOffset": 0,
+        "name": "PLC_Heartbeat_Req",
+        "direction": "PlcToPc",
+        "value": false
+      },
+      {
+        "address": "0x0002",
+        "pduOffset": 1,
+        "name": "PC_Heartbeat_Resp",
+        "direction": "PcToPlc",
+        "value": true
+      },
+      {
+        "address": "0x0003",
+        "pduOffset": 2,
+        "name": "PC_System_Ready",
+        "direction": "PcToPlc",
+        "value": true
+      },
+      {
+        "address": "0x0004",
+        "pduOffset": 3,
+        "name": "PLC_System_Fault",
+        "direction": "PlcToPc",
+        "value": false
+      },
+      {
+        "address": "0x0005",
+        "pduOffset": 4,
+        "name": "PLC_Mode_Auto",
+        "direction": "PlcToPc",
+        "value": true
+      },
+      {
+        "address": "0x0006",
+        "pduOffset": 5,
+        "name": "Soft_Stop_Cmd",
+        "direction": "PcToPlc",
+        "value": false
+      },
+      {
+        "address": "0x0010",
+        "pduOffset": 9,
+        "name": "Manual_Zone_Occupied",
+        "direction": "PlcToPc",
+        "value": false
+      },
+      {
+        "address": "0x0011",
+        "pduOffset": 10,
+        "name": "Manual_Flip_Complete",
+        "direction": "PcToPlc",
+        "value": false
+      }
+    ],
+    "holdingRegisters": [
+      {
+        "address": "4x0001",
+        "pduOffset": 0,
+        "name": "XY_Move_Cmd",
+        "direction": "PcToPlc",
+        "rawValue": 1,
+        "signedValue": 1
+      },
+      {
+        "address": "4x0002",
+        "pduOffset": 1,
+        "name": "XY_Pos_Confirmed",
+        "direction": "PlcToPc",
+        "rawValue": 1,
+        "signedValue": 1
+      },
+      {
+        "address": "4x0003",
+        "pduOffset": 2,
+        "name": "Camera_Target_X",
+        "direction": "PcToPlc",
+        "rawValue": 321,
+        "signedValue": 321
+      },
+      {
+        "address": "4x0004",
+        "pduOffset": 3,
+        "name": "Camera_Target_Y",
+        "direction": "PcToPlc",
+        "rawValue": 654,
+        "signedValue": 654
+      },
+      {
+        "address": "4x0005",
+        "pduOffset": 4,
+        "name": "Camera_Target_Z",
+        "direction": "PcToPlc",
+        "rawValue": 87,
+        "signedValue": 87
+      },
+      {
+        "address": "4x0006",
+        "pduOffset": 5,
+        "name": "Z_Axis_Move_Status",
+        "direction": "PlcToPc",
+        "rawValue": 2,
+        "signedValue": 2
+      },
+      {
+        "address": "4x0007",
+        "pduOffset": 6,
+        "name": "Machine_Current_Pos_X",
+        "direction": "PlcToPc",
+        "rawValue": 321,
+        "signedValue": 321
+      },
+      {
+        "address": "4x0008",
+        "pduOffset": 7,
+        "name": "Machine_Current_Pos_Y",
+        "direction": "PlcToPc",
+        "rawValue": 654,
+        "signedValue": 654
+      },
+      {
+        "address": "4x0010",
+        "pduOffset": 9,
+        "name": "Flip_Trigger_Cmd",
+        "direction": "PcToPlc",
+        "rawValue": 0,
+        "signedValue": 0
+      },
+      {
+        "address": "4x0011",
+        "pduOffset": 10,
+        "name": "Flip_Status",
+        "direction": "PlcToPc",
+        "rawValue": 0,
+        "signedValue": 0
+      },
+      {
+        "address": "4x0012",
+        "pduOffset": 11,
+        "name": "Flip_Result_Angle",
+        "direction": "PlcToPc",
+        "rawValue": 0,
+        "signedValue": 0
+      },
+      {
+        "address": "4x0020",
+        "pduOffset": 19,
+        "name": "Sorting_Part_Index",
+        "direction": "PcToPlc",
+        "rawValue": 0,
+        "signedValue": 0
+      },
+      {
+        "address": "4x0021",
+        "pduOffset": 20,
+        "name": "Sorting_Cmd",
+        "direction": "PcToPlc",
+        "rawValue": 0,
+        "signedValue": 0
+      },
+      {
+        "address": "4x0022",
+        "pduOffset": 21,
+        "name": "Sorting_Exec_Status",
+        "direction": "PlcToPc",
+        "rawValue": 0,
+        "signedValue": 0
+      },
+      {
+        "address": "4x0023",
+        "pduOffset": 22,
+        "name": "Pallet_Lock_Cmd",
+        "direction": "PcToPlc",
+        "rawValue": 1,
+        "signedValue": 1
+      },
+      {
+        "address": "4x0024",
+        "pduOffset": 23,
+        "name": "Pallet_Lock_Status",
+        "direction": "PlcToPc",
+        "rawValue": 1,
+        "signedValue": 1
+      },
+      {
+        "address": "4x0025",
+        "pduOffset": 24,
+        "name": "NG_Zone_Count",
+        "direction": "PcToPlc",
+        "rawValue": 2,
+        "signedValue": 2
+      },
+      {
+        "address": "4x0026",
+        "pduOffset": 25,
+        "name": "Pending_Zone_Count",
+        "direction": "PcToPlc",
+        "rawValue": 2,
+        "signedValue": 2
+      },
+      {
+        "address": "4x0027",
+        "pduOffset": 26,
+        "name": "Zone_Config_Ready",
+        "direction": "PcToPlc",
+        "rawValue": 1,
+        "signedValue": 1
+      },
+      {
+        "address": "4x0028",
+        "pduOffset": 27,
+        "name": "Zone_Config_Ack",
+        "direction": "PlcToPc",
+        "rawValue": 1,
+        "signedValue": 1
+      },
+      {
+        "address": "4x0029",
+        "pduOffset": 28,
+        "name": "Retry_Cmd",
+        "direction": "PcToPlc",
+        "rawValue": 0,
+        "signedValue": 0
+      }
+    ]
+  }
+}

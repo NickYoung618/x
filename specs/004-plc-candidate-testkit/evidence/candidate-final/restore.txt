@@ -1,0 +1,3 @@
+["/home/ubuntu/.local/share/gaode-dotnet-10.0.401/dotnet", "restore", "Gaode.slnx", "--locked-mode"]
+  Determining projects to restore...
+  All projects are up-to-date for restore.

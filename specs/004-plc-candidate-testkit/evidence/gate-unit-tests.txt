@@ -1,0 +1,9 @@
+test_accepts_exact_current_assemblies (test_validate_virtual_plc.ReportGateTests.test_accepts_exact_current_assemblies) ... ok
+test_duplicate_assembly_fails_even_with_expected_report_count (test_validate_virtual_plc.ReportGateTests.test_duplicate_assembly_fails_even_with_expected_report_count) ... ok
+test_missing_assembly_fails (test_validate_virtual_plc.ReportGateTests.test_missing_assembly_fails) ... ok
+test_skipped_or_failed_test_fails (test_validate_virtual_plc.ReportGateTests.test_skipped_or_failed_test_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.006s
+
+OK

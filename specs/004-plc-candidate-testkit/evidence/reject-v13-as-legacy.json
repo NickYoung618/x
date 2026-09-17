@@ -1,0 +1,14 @@
+{
+  "runId": "20260917T042032Z-055f3fb3",
+  "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+  "contract": "legacy-v6-u16-snapshot-20260917",
+  "build": "NOT RUN",
+  "coreTests": "NOT RUN",
+  "legacy": "NOT RUN",
+  "integration": [],
+  "v13FullContract": "NOT RUN - interface decisions deferred to device owner",
+  "fullTray": "NOT RUN - framework increment only",
+  "verdict": "FAIL",
+  "error": "RuntimeError: Only the pinned legacy contract is runnable; V1.3 contract is NOT RUN",
+  "processesStopped": true
+}

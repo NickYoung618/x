@@ -1,0 +1,87 @@
+{
+  "runId": "20260917T042234Z-3d7d259e",
+  "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+  "contract": "legacy-v6-u16-snapshot-20260917",
+  "build": "PASS",
+  "coreTests": {
+    "status": "PASS",
+    "passed": 42,
+    "assemblies": 4,
+    "byAssembly": {
+      "Inspection.Host.Tests": {
+        "passed": 4,
+        "total": 4,
+        "report": "_VM-0-12-ubuntu_2026-09-17_12_22_52_net10.0.trx"
+      },
+      "Inspection.Domain.Tests": {
+        "passed": 15,
+        "total": 15,
+        "report": "_VM-0-12-ubuntu_2026-09-17_12_22_47_net10.0.trx"
+      },
+      "Inspection.Application.Tests": {
+        "passed": 12,
+        "total": 12,
+        "report": "_VM-0-12-ubuntu_2026-09-17_12_22_47_net10.0[1].trx"
+      },
+      "Inspection.Infrastructure.Tests": {
+        "passed": 11,
+        "total": 11,
+        "report": "_VM-0-12-ubuntu_2026-09-17_12_22_52_net10.0[1].trx"
+      }
+    }
+  },
+  "legacy": "PASS 13/13 (old protocol and old policy only)",
+  "integration": [
+    {
+      "name": "normal",
+      "status": "PASS",
+      "outcome": "Completed",
+      "completedMoves": 2,
+      "submittedMoves": 2
+    },
+    {
+      "name": "reconnect-stale",
+      "status": "PASS",
+      "outcome": "RecoveryRequired",
+      "completedMoves": 0,
+      "submittedMoves": 0
+    },
+    {
+      "name": "device-failure",
+      "status": "PASS",
+      "outcome": "Failed",
+      "completedMoves": 0,
+      "submittedMoves": 1
+    },
+    {
+      "name": "action-timeout",
+      "status": "PASS",
+      "outcome": "Unknown",
+      "completedMoves": 0,
+      "submittedMoves": 1
+    },
+    {
+      "name": "reconnect-unknown",
+      "status": "PASS",
+      "outcome": "RecoveryRequired",
+      "completedMoves": 0,
+      "submittedMoves": 0
+    }
+  ],
+  "v13FullContract": "NOT RUN - interface decisions deferred to device owner",
+  "fullTray": "NOT RUN - framework increment only",
+  "verdict": "PASS - framework/legacy integration only",
+  "candidate": {
+    "dll": "/home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T041902Z-ac796b0f/plc/VirtualPlc.dll",
+    "sha256": "60004ac00a026b26a28544c0f2a0bed031fa0e44f5aee7ef67bb4e20626d4166",
+    "packageSha256": "eb77497b547e02e08f36904d621b4f5a6776d4da9e81ac09f1ac38d457f3206c",
+    "packageFileCount": 17,
+    "targetFramework": "net10.0",
+    "sourceBuild": "NOT VERIFIED - provide candidate build evidence separately"
+  },
+  "simulatorUnderTest": "external candidate DLL",
+  "sdk": "10.0.401",
+  "commit": "542c8946597b3439cdcf2ac1a2e2837bdb48965a",
+  "workingTreeDirty": true,
+  "processesStopped": true
+}
