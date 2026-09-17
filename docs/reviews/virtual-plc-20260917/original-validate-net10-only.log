@@ -1,0 +1,5 @@
+  Determining projects to restore...
+/tmp/gaode-virtual-plc-review-20260917-iJZI4U/snapshot/VirtualPlc/tests/VirtualPlc.SystemValidation/VirtualPlc.SystemValidation.csproj : error NU1100: Unable to resolve 'Microsoft.NETCore.App.Ref (= 8.0.31)' for 'net8.0'.
+/tmp/gaode-virtual-plc-review-20260917-iJZI4U/snapshot/VirtualPlc/tests/VirtualPlc.SystemValidation/VirtualPlc.SystemValidation.csproj : error NU1100: Unable to resolve 'Microsoft.AspNetCore.App.Ref (= 8.0.31)' for 'net8.0'.
+/tmp/gaode-virtual-plc-review-20260917-iJZI4U/snapshot/VirtualPlc/tests/VirtualPlc.SystemValidation/VirtualPlc.SystemValidation.csproj : error NU1100: Unable to resolve 'Microsoft.NETCore.App.Host.linux-x64 (= 8.0.31)' for 'net8.0'.
+  Failed to restore /tmp/gaode-virtual-plc-review-20260917-iJZI4U/snapshot/VirtualPlc/tests/VirtualPlc.SystemValidation/VirtualPlc.SystemValidation.csproj (in 126 ms).

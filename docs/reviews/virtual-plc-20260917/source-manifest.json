@@ -1,0 +1,227 @@
+{
+  "review_date": "2026-09-17",
+  "remote_path": "/home/ubuntu/disk/pj1/VirtualPlc",
+  "git_commit": null,
+  "git_commit_note": "No valid git HEAD was obtained from the provided pj1 directory; archive and per-file hashes identify this snapshot.",
+  "source_archive_sha256": "0780781b7c09f44b6cbf547181094ed445dc06cc87cebdb82e23e9f5e5814010",
+  "local_archive": "/tmp/gaode-virtual-plc-review-20260917-iJZI4U/source.tar.gz",
+  "snapshot_files_unchanged": true,
+  "files": [
+    {
+      "path": "VirtualPlc/NuGet.Config",
+      "bytes": 207,
+      "sha256": "2e5b2718ff4a0cf696106dfa4bb2eeb1af699d56ef9585626a6ebdc82bd6af66",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/docs/上位机接入说明.md",
+      "bytes": 6199,
+      "sha256": "e6ff79afe5c29b7322ecab90ff03b043b655f806e050144823c3ca325425b7b2",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/docs/PLC信号交互核对.md",
+      "bytes": 6298,
+      "sha256": "966d34b3d4cd8b121e1f179fe9e05a7d9468d10ec4bb778d0a6212307944a4aa",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/docs/plc-address-map.csv",
+      "bytes": 2830,
+      "sha256": "67729ad7b9a3b2bb37c0916e7ad28b7828b419a1e8c9914e7f417bf5e95ba679",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/global.json",
+      "bytes": 111,
+      "sha256": "20c93ca7812d0a9825eef71217156f95ab2f4fe5aadfeb22ebc1c24b630018d3",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/tools/VirtualPlc.SmokeTest/Program.cs",
+      "bytes": 15576,
+      "sha256": "556a8dd0f8a578b293bde32b6e96f6dc6611de819f45a74ad1d8db980b6773b0",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/tools/VirtualPlc.SmokeTest/VirtualPlc.SmokeTest.csproj",
+      "bytes": 240,
+      "sha256": "acd95014af5198a4b92c655ddd680cef3448692ea96fd8613b512fa321816cd9",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/src/VirtualPlc/VirtualPlcEngine.cs",
+      "bytes": 20953,
+      "sha256": "a8d1d95258fbd9a6d5eb8db23cd08e83793b8b36f4a9656b9e53786b5d2ecaed",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/src/VirtualPlc/wwwroot/index.html",
+      "bytes": 7497,
+      "sha256": "9cea7ad4be5e2e212ef18085c6f87760d03af48ef12542f2015a110185ad9559",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/src/VirtualPlc/wwwroot/styles.css",
+      "bytes": 12303,
+      "sha256": "9e2f1fe1720a44701d9637b9f30267afe0868871432b16354c60ee31a80ff58f",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/src/VirtualPlc/wwwroot/app.js",
+      "bytes": 16521,
+      "sha256": "179fcbbeb359e5e03419773bb88203180e1611f64d905f2e48fd1e7baf19bb4f",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/src/VirtualPlc/SimulationModels.cs",
+      "bytes": 2133,
+      "sha256": "cb7eb0c829a8734458077341e905a1fd7db05c04015381cd4f3d2eccc74442a8",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/src/VirtualPlc/Program.cs",
+      "bytes": 2839,
+      "sha256": "333a01bc7538260aaf35b1c2583af27e457c84977848009d6c75c2ed69780ba3",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/src/VirtualPlc/PlcDataStore.cs",
+      "bytes": 7750,
+      "sha256": "19c0f9eaecb2458ae090c40058c6c7600b262598b0e29935e4c230bb46fa4e77",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/src/VirtualPlc/appsettings.json",
+      "bytes": 683,
+      "sha256": "a7b1a0394a04680d83a77a5ef495d55e73bfd76854463172124ae04c53939189",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/src/VirtualPlc/DashboardLauncher.cs",
+      "bytes": 1475,
+      "sha256": "fc14ee7d976e79246815f501f5eea81f69b82fc44468c8c8585990f87f61c363",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/src/VirtualPlc/PlcAddressMap.cs",
+      "bytes": 6039,
+      "sha256": "40f2af503925101991e2fea599aa07769e68b3abf5ed72fccffce11d9f12a1e5",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/src/VirtualPlc/ModbusTcpServer.cs",
+      "bytes": 10960,
+      "sha256": "a3a10451e6b488808912c3408a90fa3a543fcc3fa106d76de0b8f20f30820f62",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/src/VirtualPlc/VirtualPlc.csproj",
+      "bytes": 269,
+      "sha256": "06a6bdbe2de92476a7db4a94ed73eb61d70625e5b5b7b60246651a2b6316eba0",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/specs/001-validate-virtual-plc/validation-report.md",
+      "bytes": 2705,
+      "sha256": "d566c5057ca5ca2c6f167e35d51c15c95819b2ad52dd864869b354a111739dc8",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/specs/001-validate-virtual-plc/contracts/validation-contract.md",
+      "bytes": 2118,
+      "sha256": "f2333e71a6fb5763eb378b2fa7634c95cc6b95f18acdf6ac09a7997a78ef2838",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/specs/001-validate-virtual-plc/plan.md",
+      "bytes": 4664,
+      "sha256": "5bfce414dd3d5583b1de963b48ca9ab790e72e9f08f438e4c8e0bc45d3d2bc44",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/specs/001-validate-virtual-plc/data-model.md",
+      "bytes": 2295,
+      "sha256": "0378f3445c49f16ec61106f03a3f4a7574f3e6fde9679c95789ca3a2712f34dc",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/specs/001-validate-virtual-plc/checklists/requirements.md",
+      "bytes": 1237,
+      "sha256": "35b8c4e356c337655e333b592d3ff52d2a0af9a71dd967d2955aec8cd5cd37e6",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/specs/001-validate-virtual-plc/spec.md",
+      "bytes": 8847,
+      "sha256": "44863196315d672278cd327df65177815e44e1318ae69620e80f9da885b9999d",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/specs/001-validate-virtual-plc/research.md",
+      "bytes": 2540,
+      "sha256": "dde60c5cbc48af6912c4f7ee0f3875afd456bf0d041e014319de3fcc04d53c56",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/specs/001-validate-virtual-plc/tasks.md",
+      "bytes": 5799,
+      "sha256": "acff968a2842ee3a0ca7d1503ac889e945a4db7b4d9e1b8dbe0705c8ac9eca33",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/specs/001-validate-virtual-plc/quickstart.md",
+      "bytes": 1336,
+      "sha256": "d9c1f3f172995ed22f8752aa31aec3397889b1d56f51042e2a8c4bc415cf841e",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/README.md",
+      "bytes": 13305,
+      "sha256": "90a5816cf13e8ade93a538abfd3aa377a46867a2fbc6fdcbe7e7c4d8f483b6eb",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/scripts/validate.sh",
+      "bytes": 4002,
+      "sha256": "de35b861b54f19e5ffe5a29968db46756d30f2af42a40f0ae7d6708a0a67294a",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/test-results/latest.md",
+      "bytes": 3356,
+      "sha256": "f89720579214fc7f012fd9afd54e649ecbe8cc2b628c9a49be2bf9d3f7b1f0b1",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/test-results/latest.json",
+      "bytes": 6638,
+      "sha256": "0a2a38e1004d20468b3605540901acdcef4dc44e160feb4e401e87720f485085",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/tests/VirtualPlc.SystemValidation/Program.cs",
+      "bytes": 48401,
+      "sha256": "c366b25b85102764c7b03fb91c9eb194d19b3ec9f871dcb39aef1c3bc3e4144f",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/tests/VirtualPlc.SystemValidation/VirtualPlc.CompatibilityHost.csproj",
+      "bytes": 901,
+      "sha256": "705ada7e94aff30a0c53ecb0c1776a71cd86cef61c11c8195eb5404cc4c56ddf",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/tests/VirtualPlc.SystemValidation/VirtualPlc.SystemValidation.csproj",
+      "bytes": 295,
+      "sha256": "d4573558a7da1866244ab65dc92126c3d0c176f5e2edaf7f51f99bace98c96cf",
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "VirtualPlc/.gitignore",
+      "bytes": 58,
+      "sha256": "9e082e99c6a9245cf7339745c03bf646add9291aa6e1b56741d12c3c98d518ad",
+      "snapshot_unchanged": true
+    }
+  ]
+}

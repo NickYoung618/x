@@ -1,0 +1,2 @@
+["/home/ubuntu/.local/share/gaode-dotnet-10.0.401/dotnet", "publish", "simulator/VirtualPlc/src/VirtualPlc", "-c", "Release", "--no-build", "-o", "/home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031744Z-38ba64c2/plc"]
+  VirtualPlc -> /home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031744Z-38ba64c2/plc/

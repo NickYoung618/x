@@ -1,0 +1,46 @@
+# VirtualPlc 全量测试验证报告
+
+- **结论**: PASS
+- **开始**: 2026-09-17T01:44:39.9327203+00:00
+- **结束**: 2026-09-17T01:45:00.1711764+00:00
+- **耗时**: 20.24 秒
+- **SDK**: 8.0.129
+- **运行模式**: compatibility-host (net8.0)
+- **生产目标**: net10.0
+
+## 自动检查
+
+| ID | 需求 | 状态 | 耗时(ms) | 检查 | 证据/错误 |
+|---|---|---:|---:|---|---|
+| HTTP-01 | FR-004 | PASS | 119 | HTTP 健康、监控和非法参数 | health、dashboard、app.js、styles.css 可用；非法 fault/category 返回 400 |
+| MAP-01 | FR-001 | PASS | 109 | 29 点 CSV/HTTP/state 一致性 | 8 个线圈 + 21 个保持寄存器三方一致；65535 的 signedValue 为 -1 |
+| MODBUS-01 | FR-002 | PASS | 103 | 六个 Modbus 功能码成功路径 | FC01、03、05、06、15、16 均完成真实 TCP 往返和回读 |
+| MODBUS-02 | FR-003 | PASS | 68 | Modbus 异常码、方向和多写原子性 | 异常码 01/02/03/0B、PLC 所有权和多写原子拒绝均符合合同 |
+| FLOW-01 | FR-005 | PASS | 2034 | 心跳、区域配置和托盘锁握手 | PLC 心跳翻转；PC 应答、区域 Ack、托盘锁紧/解锁闭环通过 |
+| ACTION-01 | FR-006 | PASS | 3128 | 移动、重触发和 Retry_Cmd | 移动命令 1~5、0→非0 重触发、坐标反馈和 Retry_Cmd 状态复位通过 |
+| ACTION-02 | FR-006 | PASS | 2087 | 翻转和分拣正常流程 | 90°/180° 翻转、分拣成功和满盘命令状态通过 |
+| LOCK-01 | FR-007 | PASS | 1222 | 就绪、配置、软停和动作互斥 | 未就绪、未配置、非法命令、软停、动作互斥和零槽位均被拒绝 |
+| FAULT-01 | FR-008 | PASS | 6507 | 六种一次性动作故障 | 6 种动作故障均产生预期终态，且下一次动作恢复正常 |
+| FAULT-02 | FR-008 | PASS | 4720 | 急停、人工介入和心跳超时 | 急停与人工介入切断动作；人工确认恢复；暂停心跳且停止应答后 3 秒超时 |
+| POLICY-01 | FR-009 | PASS | 25 | 十一类流程决策 | 11 类成功策略和失败策略全部通过；随机 decision 限定为 OK/NG/Pending |
+| RESET-01 | FR-010 | PASS | 79 | 复位清除故障、PC 值和动作状态 | reset 清除故障、活动动作、PC 可写量和状态，并恢复自动模式 |
+| EVIDENCE-01 | FR-011, FR-012, FR-013, FR-014 | PASS | 2 | 单命令、目录边界、报告判定和生产目标门禁 | validate.sh 为单入口；JSON/Markdown 位于 pj1；报告区分门禁与限制；生产目标仍为 net10.0 |
+
+## 环境门禁
+
+| 门禁 | 状态 | 原因 |
+|---|---:|---|
+| Production .NET 10 build | NOT RUN | The production project targets net10.0, but no .NET 10 SDK is installed; behavior tests compiled the same source with net8.0. |
+
+## 已知规范限制
+
+- V6.0 点表没有故障码寄存器，只能通过 PLC_System_Fault 和管理 API 表达详细故障。
+- 点表没有分拣目标区域和区域占用量，无法自动闭环 NG/Pending 满盘判断。
+- 点表没有实际抓取槽位反馈，无法验证命令槽位与实际槽位冲突。
+- X/Y/Z 坐标的单位、比例、符号和溢出规则尚未定义。
+- Retry_Cmd 的参数保留、确认与断线幂等规则尚未定义。
+- 虚拟进程不能替代真实编码器断电位置保持验收。
+
+## 判定规则
+
+自动检查任一 FAIL 时总评为 FAIL。环境门禁 NOT RUN 单独披露，不会被兼容主机冒充为 PASS。

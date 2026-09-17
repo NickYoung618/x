@@ -1,0 +1,2 @@
+["/home/ubuntu/.local/share/gaode-dotnet-10.0.401/dotnet", "publish", "backend/src/Inspection.Host", "-c", "Release", "--no-build", "-o", "/home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031858Z-0003f9be/host"]
+  Inspection.Host -> /home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031858Z-0003f9be/host/

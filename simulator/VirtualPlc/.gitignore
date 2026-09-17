@@ -1,0 +1,6 @@
+**/bin/
+**/obj/
+test-results/
+.dotnet-home/
+.nuget/
+.tmp/

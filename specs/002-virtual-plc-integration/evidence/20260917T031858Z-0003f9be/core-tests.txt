@@ -1,0 +1,16 @@
+["/home/ubuntu/.local/share/gaode-dotnet-10.0.401/dotnet", "test", "Gaode.slnx", "-c", "Release", "--no-build", "--logger", "trx", "--results-directory", "/home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031858Z-0003f9be/test-results"]
+Test run for /home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll (.NETCoreApp,Version=v10.0)
+Test run for /home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Host.Tests/bin/Release/net10.0/Inspection.Host.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+A total of 1 test files matched the specified pattern.
+Results File: /home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031858Z-0003f9be/test-results/_VM-0-12-ubuntu_2026-09-17_11_19_06_net10.0.trx
+
+Passed!  - Failed:     0, Passed:    15, Skipped:     0, Total:    15, Duration: 174 ms - Inspection.Domain.Tests.dll (net10.0)
+Test run for /home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/bin/Release/net10.0/Inspection.Infrastructure.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Results File: /home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031858Z-0003f9be/test-results/_VM-0-12-ubuntu_2026-09-17_11_19_07_net10.0.trx
+
+Passed!  - Failed:     0, Passed:     4, Skipped:     0, Total:     4, Duration: 1 s - Inspection.Host.Tests.dll (net10.0)
+Results File: /home/ubuntu/dzk/gaode/repo/simulator/artifacts/20260917T031858Z-0003f9be/test-results/_VM-0-12-ubuntu_2026-09-17_11_19_08_net10.0.trx
+
+Passed!  - Failed:     0, Passed:    11, Skipped:     0, Total:    11, Duration: 1 s - Inspection.Infrastructure.Tests.dll (net10.0)

@@ -33,6 +33,11 @@ dotnet run --project backend/src/Inspection.Host --no-launch-profile
 [虚拟设备契约草案](docs/contracts/virtual-device-v0.1-draft.md) ·
 [CI 与完整测试矩阵](docs/testing.md) · [实际 Windows 部署/流程验收](docs/windows-acceptance.md)
 
+最新协作入口：[三人协作、Spec Kit、CI 与 Windows 部署包](docs/team-development-and-release.md)。
+同服务器新对话从 [项目交接](docs/handover-20260917.md) 和 [可复制提示词](docs/prompts/next-codex-session.md) 开始。
+2026-09-17 已取得同学的虚拟下位机副本进行审查，前端仍为 HTML 原型；
+模拟器尚未合入中台，V1.3 接入差异见 [审查记录](docs/reviews/virtual-plc-20260917/review.md)。
+
 ## Spec Kit
 
 已使用官方 v1.0.7 初始化 Codex skills（`.agents/skills/speckit-*`）。
@@ -53,3 +58,17 @@ dotnet run --project backend/src/Inspection.Host --no-launch-profile
   下载到自有 `gaode-staging` runner 的独立目录，执行实际进程检查。
 - 当前该 self-hosted runner 尚未注册；先按 Windows 文档配置环境，再触发部署作业。
 - 完整 WPF/虚拟设备/SQLite 流程验收尚待对应实现接入，不能用基础 Host 冒烟替代。
+
+
+## 虚拟下位机框架（002）
+
+复用已校验的独立模拟器，详见[来源](simulator/README.md)、[本轮规格](specs/002-virtual-plc-integration/spec.md)和[接口差异](docs/contracts/virtual-plc-alignment.md)。
+安装global.json指定SDK和Python3.12+后，在仓库根运行：
+
+```sh
+python3 scripts/validate-virtual-plc.py
+```
+
+Windows可用`python`。统一入口无.NET8回退，输出唯一运行目录及summary.json。
+执行原13组旧协议检查、真实Host工程探针与独立PLC进程的最小联调。默认Host保持计划预览，不自动运动。
+新版点表由下位机同学后续确认；本轮先搭框架。这里不是整盘执行、V1.3完整协议或Windows FullSim包。

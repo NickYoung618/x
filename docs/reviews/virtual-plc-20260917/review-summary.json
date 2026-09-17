@@ -1,0 +1,23 @@
+{
+  "host_target": "net10.0",
+  "sdk": "10.0.401",
+  "test_driver_original_target": "net8.0",
+  "test_driver_review_target": "net10.0",
+  "test_driver_language": "C# 12",
+  "source_modified": false,
+  "http_port": 35225,
+  "modbus_port": 58243,
+  "health": {
+    "status": "ok",
+    "service": "VirtualPlc",
+    "timestamp": "2026-09-17T02:16:24.6767064+00:00"
+  },
+  "suite_exit": 0,
+  "v13_policy_conflicts_confirmed": [
+    "Barcode",
+    "Recipe",
+    "Storage",
+    "DeviceTimeout"
+  ],
+  "own_host_stopped": true
+}
