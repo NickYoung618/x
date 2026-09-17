@@ -72,3 +72,7 @@ python3 scripts/validate-virtual-plc.py
 Windows可用`python`。统一入口无.NET8回退，输出唯一运行目录及summary.json。
 执行原13组旧协议检查、真实Host工程探针与独立PLC进程的最小联调。默认Host保持计划预览，不自动运动。
 新版点表由下位机同学后续确认；本轮先搭框架。这里不是整盘执行、V1.3完整协议或Windows FullSim包。
+
+## 普通整盘中台流程框架（003）
+
+[规格与验证](specs/003-ordinary-workflow-foundation/validation.md)覆盖公共3D/F准备、唯一方案、A/B分面顺序、翻面重扫、单运动通道及采集/算法技术终态。用`dotnet test Gaode.slnx -c Release`运行；默认Host仍仅提供计划预览。正式设备、保存/判定/分拣待后续增量接入。

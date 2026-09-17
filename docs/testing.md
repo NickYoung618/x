@@ -98,3 +98,8 @@ DB-008 Host 无法启动、无设备：独立部署工具仍可核查/恢复，�
 
 新CI在两平台运行统一入口，主程序构建与发布实际成功才运行行为检查；检查数、TRX及退出码校验阻止NOT RUN假通过。
 脚本只清理本次子进程；所有尝试分别存simulator/artifacts/。实际本轮结论见[验证记录](../specs/002-virtual-plc-integration/validation.md)，不能把CI配置存在当CI已通过。
+
+## 003 普通整盘中台流程框架
+
+新`Inspection.Application.Tests`测试准备顺序、分面采集、翻面重扫/CoordinateEpoch、旧反馈、普通缺帧、算法乱序与截止、单运动通道及动作超时。执行仍为**接口级状态机与假设备**；不等于真实PLC与扫码/3D/相机/算法连通。
+本轮实测与失败尝试见[003验证](../specs/003-ordinary-workflow-foundation/validation.md)。Host默认保持计划预览，未提供生产任务启动入口；方案冻结、技术终态可在内存框架中检查，但质量判定、必要保存、分拣和放行尚未实现。

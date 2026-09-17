@@ -1,0 +1,20 @@
+Test run for /home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Application.Tests/bin/Release/net10.0/Inspection.Application.Tests.dll (.NETCoreApp,Version=v10.0)
+Test run for /home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Domain.Tests/bin/Release/net10.0/Inspection.Domain.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+A total of 1 test files matched the specified pattern.
+Results File: /home/ubuntu/dzk/gaode/repo/artifacts/workflow-tests-final-3/_VM-0-12-ubuntu_2026-09-17_11_45_48_net10.0.trx
+
+Passed!  - Failed:     0, Passed:    15, Skipped:     0, Total:    15, Duration: 204 ms - Inspection.Domain.Tests.dll (net10.0)
+Test run for /home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Host.Tests/bin/Release/net10.0/Inspection.Host.Tests.dll (.NETCoreApp,Version=v10.0)
+Results File: /home/ubuntu/dzk/gaode/repo/artifacts/workflow-tests-final-3/_VM-0-12-ubuntu_2026-09-17_11_45_48_net10.0[1].trx
+
+Passed!  - Failed:     0, Passed:    12, Skipped:     0, Total:    12, Duration: 1 s - Inspection.Application.Tests.dll (net10.0)
+A total of 1 test files matched the specified pattern.
+Test run for /home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Infrastructure.Tests/bin/Release/net10.0/Inspection.Infrastructure.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Results File: /home/ubuntu/dzk/gaode/repo/artifacts/workflow-tests-final-3/_VM-0-12-ubuntu_2026-09-17_11_45_53_net10.0.trx
+
+Passed!  - Failed:     0, Passed:     4, Skipped:     0, Total:     4, Duration: 1 s - Inspection.Host.Tests.dll (net10.0)
+Results File: /home/ubuntu/dzk/gaode/repo/artifacts/workflow-tests-final-3/_VM-0-12-ubuntu_2026-09-17_11_45_54_net10.0.trx
+
+Passed!  - Failed:     0, Passed:    11, Skipped:     0, Total:    11, Duration: 1 s - Inspection.Infrastructure.Tests.dll (net10.0)

@@ -6,6 +6,7 @@
     <Project Path="backend/src/Inspection.Host/Inspection.Host.csproj" />
   </Folder>
   <Folder Name="/tests/">
+    <Project Path="backend/tests/Inspection.Application.Tests/Inspection.Application.Tests.csproj" />
     <Project Path="backend/tests/Inspection.Infrastructure.Tests/Inspection.Infrastructure.Tests.csproj" />
     <Project Path="backend/tests/Inspection.Domain.Tests/Inspection.Domain.Tests.csproj" />
     <Project Path="backend/tests/Inspection.Host.Tests/Inspection.Host.Tests.csproj" />

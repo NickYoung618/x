@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="824973cf-0f4e-4fd7-85f4-aeb982ea03e5" name="@VM-0-12-ubuntu 2026-09-17 11:45:48" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-17T11:45:48.4751746+08:00" queuing="2026-09-17T11:45:48.4751747+08:00" start="2026-09-17T11:45:46.5411621+08:00" finish="2026-09-17T11:45:49.4510430+08:00" />
+  <TestSettings name="default" id="e06e969c-4be3-4da3-9a40-26292d38a363">
+    <Deployment runDeploymentRoot="_VM-0-12-ubuntu_2026-09-17_11_45_48" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="b086e360-3165-4023-87c5-2735e7395070" testId="60ab4128-0842-8361-7791-50dec1411ebf" testName="Inspection.Application.Tests.TrayWorkflowTests.Motion_acceptance_is_not_completion_and_unknown_never_retries" computerName="VM-0-12-ubuntu" duration="00:00:00.0748603" startTime="2026-09-17T11:45:47.8868841+08:00" endTime="2026-09-17T11:45:47.9806518+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b086e360-3165-4023-87c5-2735e7395070" />
+    <UnitTestResult executionId="e26977dc-69ad-4d8d-b29b-faf203b5bdc1" testId="89699f93-7b7d-1478-eaeb-64879945495d" testName="Inspection.Application.Tests.MotionExecutionLaneTests.Single_lane_runs_only_one_device_action_and_unknown_blocks_queued_action" computerName="VM-0-12-ubuntu" duration="00:00:00.0148511" startTime="2026-09-17T11:45:49.2297806+08:00" endTime="2026-09-17T11:45:49.2484885+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e26977dc-69ad-4d8d-b29b-faf203b5bdc1" />
+    <UnitTestResult executionId="760c234f-408f-437d-a3a1-dd43177164f3" testId="aac43464-20b7-afa9-4a52-a456e1f2b613" testName="Inspection.Application.Tests.TrayWorkflowTests.Mixed_missing_frame_and_algorithm_failure_finish_as_technical_facts" computerName="VM-0-12-ubuntu" duration="00:00:00.0228486" startTime="2026-09-17T11:45:48.0396670+08:00" endTime="2026-09-17T11:45:48.0597278+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="760c234f-408f-437d-a3a1-dd43177164f3" />
+    <UnitTestResult executionId="44f7198e-4c5e-4787-a047-f0d72efdf088" testId="1b09d7ab-b19d-6e54-75a9-c87188a48f88" testName="Inspection.Application.Tests.MotionExecutionLaneTests.Motion_deadline_marks_unknown_without_replaying_device_command" computerName="VM-0-12-ubuntu" duration="00:00:00.9375674" startTime="2026-09-17T11:45:48.3081139+08:00" endTime="2026-09-17T11:45:49.2293474+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="44f7198e-4c5e-4787-a047-f0d72efdf088" />
+    <UnitTestResult executionId="6c4d12c2-386d-4a35-8937-61d86535aa6f" testId="2631571b-f4a5-a7e9-674c-ef62523eb36d" testName="Inspection.Application.Tests.MotionExecutionLaneTests.Two_completed_actions_are_serial_and_report_acceptance_before_completion" computerName="VM-0-12-ubuntu" duration="00:00:00.0292051" startTime="2026-09-17T11:45:48.3074057+08:00" endTime="2026-09-17T11:45:48.3077042+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6c4d12c2-386d-4a35-8937-61d86535aa6f" />
+    <UnitTestResult executionId="25c2a9d7-94d0-4c99-9494-79c3fd3aeb49" testId="0f9858e2-5f49-cc2a-dacd-447f9692b775" testName="Inspection.Application.Tests.TrayWorkflowTests.Rescan_missing_original_slot_stops_before_next_face_motion" computerName="VM-0-12-ubuntu" duration="00:00:00.0326557" startTime="2026-09-17T11:45:48.0313511+08:00" endTime="2026-09-17T11:45:48.0315264+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="25c2a9d7-94d0-4c99-9494-79c3fd3aeb49" />
+    <UnitTestResult executionId="8d6a6817-e58e-4ac7-8365-d6106685682e" testId="87295e7e-6907-9497-82e2-2da81b5af718" testName="Inspection.Application.Tests.MotionExecutionLaneTests.Lost_event_sink_stops_admitting_motion_and_exposes_failure" computerName="VM-0-12-ubuntu" duration="00:00:00.0855781" startTime="2026-09-17T11:45:48.1582070+08:00" endTime="2026-09-17T11:45:48.2535478+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8d6a6817-e58e-4ac7-8365-d6106685682e" />
+    <UnitTestResult executionId="923a62d1-c506-4e4d-9112-275dc9881e17" testId="9f7e0c76-a174-1a15-c890-e689cb5115b4" testName="Inspection.Application.Tests.TrayWorkflowTests.Full_framework_order_preserves_part_identity_and_blocks_old_coordinates" computerName="VM-0-12-ubuntu" duration="00:00:00.0726210" startTime="2026-09-17T11:45:48.0689664+08:00" endTime="2026-09-17T11:45:48.1418865+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="923a62d1-c506-4e4d-9112-275dc9881e17" />
+    <UnitTestResult executionId="c3f73e8b-5f9f-4fd1-9632-07dc22cad308" testId="70b406b4-de7b-c1b2-7ae3-2a708c4d62b3" testName="Inspection.Application.Tests.TrayWorkflowTests.Preparation_requires_fresh_3d_f_code_and_unique_recipe" computerName="VM-0-12-ubuntu" duration="00:00:00.0046851" startTime="2026-09-17T11:45:48.0356369+08:00" endTime="2026-09-17T11:45:48.0394357+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3f73e8b-5f9f-4fd1-9632-07dc22cad308" />
+    <UnitTestResult executionId="c1c78c58-1a8c-469a-96e3-9a4302cc8c98" testId="188ba48f-fdef-42a4-17a1-4f8078b364b5" testName="Inspection.Application.Tests.TrayWorkflowTests.Invalid_motion_outcome_cannot_be_treated_as_completion" computerName="VM-0-12-ubuntu" duration="00:00:00.0002595" startTime="2026-09-17T11:45:48.0349529+08:00" endTime="2026-09-17T11:45:48.0350606+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1c78c58-1a8c-469a-96e3-9a4302cc8c98" />
+    <UnitTestResult executionId="245b14de-916c-4b7e-8fa4-b788b72c0f99" testId="a7b6c916-12e9-aabb-43ee-a87909c17cde" testName="Inspection.Application.Tests.TrayWorkflowTests.Missing_frame_marks_dependency_failure_but_next_safe_capture_continues" computerName="VM-0-12-ubuntu" duration="00:00:00.0071905" startTime="2026-09-17T11:45:48.0602117+08:00" endTime="2026-09-17T11:45:48.0687169+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="245b14de-916c-4b7e-8fa4-b788b72c0f99" />
+    <UnitTestResult executionId="0c308e1b-b500-4916-b49d-4bd40c9de018" testId="80f8c926-da83-72e7-48b5-e424f1cd214a" testName="Inspection.Application.Tests.TrayWorkflowTests.Old_algorithm_can_finish_after_motion_failure_and_deadline_closes_rest" computerName="VM-0-12-ubuntu" duration="00:00:00.0188493" startTime="2026-09-17T11:45:48.0352794+08:00" endTime="2026-09-17T11:45:48.0354052+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c308e1b-b500-4916-b49d-4bd40c9de018" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Inspection.Application.Tests.MotionExecutionLaneTests.Single_lane_runs_only_one_device_action_and_unknown_blocks_queued_action" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.application.tests/bin/release/net10.0/inspection.application.tests.dll" id="89699f93-7b7d-1478-eaeb-64879945495d">
+      <Execution id="e26977dc-69ad-4d8d-b29b-faf203b5bdc1" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Application.Tests/bin/Release/net10.0/Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.MotionExecutionLaneTests" name="Single_lane_runs_only_one_device_action_and_unknown_blocks_queued_action" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Rescan_missing_original_slot_stops_before_next_face_motion" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.application.tests/bin/release/net10.0/inspection.application.tests.dll" id="0f9858e2-5f49-cc2a-dacd-447f9692b775">
+      <Execution id="25c2a9d7-94d0-4c99-9494-79c3fd3aeb49" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Application.Tests/bin/Release/net10.0/Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Rescan_missing_original_slot_stops_before_next_face_motion" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Old_algorithm_can_finish_after_motion_failure_and_deadline_closes_rest" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.application.tests/bin/release/net10.0/inspection.application.tests.dll" id="80f8c926-da83-72e7-48b5-e424f1cd214a">
+      <Execution id="0c308e1b-b500-4916-b49d-4bd40c9de018" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Application.Tests/bin/Release/net10.0/Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Old_algorithm_can_finish_after_motion_failure_and_deadline_closes_rest" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.MotionExecutionLaneTests.Two_completed_actions_are_serial_and_report_acceptance_before_completion" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.application.tests/bin/release/net10.0/inspection.application.tests.dll" id="2631571b-f4a5-a7e9-674c-ef62523eb36d">
+      <Execution id="6c4d12c2-386d-4a35-8937-61d86535aa6f" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Application.Tests/bin/Release/net10.0/Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.MotionExecutionLaneTests" name="Two_completed_actions_are_serial_and_report_acceptance_before_completion" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Invalid_motion_outcome_cannot_be_treated_as_completion" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.application.tests/bin/release/net10.0/inspection.application.tests.dll" id="188ba48f-fdef-42a4-17a1-4f8078b364b5">
+      <Execution id="c1c78c58-1a8c-469a-96e3-9a4302cc8c98" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Application.Tests/bin/Release/net10.0/Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Invalid_motion_outcome_cannot_be_treated_as_completion" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Preparation_requires_fresh_3d_f_code_and_unique_recipe" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.application.tests/bin/release/net10.0/inspection.application.tests.dll" id="70b406b4-de7b-c1b2-7ae3-2a708c4d62b3">
+      <Execution id="c3f73e8b-5f9f-4fd1-9632-07dc22cad308" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Application.Tests/bin/Release/net10.0/Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Preparation_requires_fresh_3d_f_code_and_unique_recipe" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Motion_acceptance_is_not_completion_and_unknown_never_retries" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.application.tests/bin/release/net10.0/inspection.application.tests.dll" id="60ab4128-0842-8361-7791-50dec1411ebf">
+      <Execution id="b086e360-3165-4023-87c5-2735e7395070" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Application.Tests/bin/Release/net10.0/Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Motion_acceptance_is_not_completion_and_unknown_never_retries" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.MotionExecutionLaneTests.Lost_event_sink_stops_admitting_motion_and_exposes_failure" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.application.tests/bin/release/net10.0/inspection.application.tests.dll" id="87295e7e-6907-9497-82e2-2da81b5af718">
+      <Execution id="8d6a6817-e58e-4ac7-8365-d6106685682e" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Application.Tests/bin/Release/net10.0/Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.MotionExecutionLaneTests" name="Lost_event_sink_stops_admitting_motion_and_exposes_failure" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Missing_frame_marks_dependency_failure_but_next_safe_capture_continues" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.application.tests/bin/release/net10.0/inspection.application.tests.dll" id="a7b6c916-12e9-aabb-43ee-a87909c17cde">
+      <Execution id="245b14de-916c-4b7e-8fa4-b788b72c0f99" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Application.Tests/bin/Release/net10.0/Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Missing_frame_marks_dependency_failure_but_next_safe_capture_continues" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Mixed_missing_frame_and_algorithm_failure_finish_as_technical_facts" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.application.tests/bin/release/net10.0/inspection.application.tests.dll" id="aac43464-20b7-afa9-4a52-a456e1f2b613">
+      <Execution id="760c234f-408f-437d-a3a1-dd43177164f3" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Application.Tests/bin/Release/net10.0/Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Mixed_missing_frame_and_algorithm_failure_finish_as_technical_facts" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.MotionExecutionLaneTests.Motion_deadline_marks_unknown_without_replaying_device_command" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.application.tests/bin/release/net10.0/inspection.application.tests.dll" id="1b09d7ab-b19d-6e54-75a9-c87188a48f88">
+      <Execution id="44f7198e-4c5e-4787-a047-f0d72efdf088" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Application.Tests/bin/Release/net10.0/Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.MotionExecutionLaneTests" name="Motion_deadline_marks_unknown_without_replaying_device_command" />
+    </UnitTest>
+    <UnitTest name="Inspection.Application.Tests.TrayWorkflowTests.Full_framework_order_preserves_part_identity_and_blocks_old_coordinates" storage="/home/ubuntu/dzk/gaode/repo/backend/tests/inspection.application.tests/bin/release/net10.0/inspection.application.tests.dll" id="9f7e0c76-a174-1a15-c890-e689cb5115b4">
+      <Execution id="923a62d1-c506-4e4d-9112-275dc9881e17" />
+      <TestMethod codeBase="/home/ubuntu/dzk/gaode/repo/backend/tests/Inspection.Application.Tests/bin/Release/net10.0/Inspection.Application.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Inspection.Application.Tests.TrayWorkflowTests" name="Full_framework_order_preserves_part_identity_and_blocks_old_coordinates" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="60ab4128-0842-8361-7791-50dec1411ebf" executionId="b086e360-3165-4023-87c5-2735e7395070" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89699f93-7b7d-1478-eaeb-64879945495d" executionId="e26977dc-69ad-4d8d-b29b-faf203b5bdc1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aac43464-20b7-afa9-4a52-a456e1f2b613" executionId="760c234f-408f-437d-a3a1-dd43177164f3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1b09d7ab-b19d-6e54-75a9-c87188a48f88" executionId="44f7198e-4c5e-4787-a047-f0d72efdf088" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2631571b-f4a5-a7e9-674c-ef62523eb36d" executionId="6c4d12c2-386d-4a35-8937-61d86535aa6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0f9858e2-5f49-cc2a-dacd-447f9692b775" executionId="25c2a9d7-94d0-4c99-9494-79c3fd3aeb49" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="87295e7e-6907-9497-82e2-2da81b5af718" executionId="8d6a6817-e58e-4ac7-8365-d6106685682e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f7e0c76-a174-1a15-c890-e689cb5115b4" executionId="923a62d1-c506-4e4d-9112-275dc9881e17" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="70b406b4-de7b-c1b2-7ae3-2a708c4d62b3" executionId="c3f73e8b-5f9f-4fd1-9632-07dc22cad308" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="188ba48f-fdef-42a4-17a1-4f8078b364b5" executionId="c1c78c58-1a8c-469a-96e3-9a4302cc8c98" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a7b6c916-12e9-aabb-43ee-a87909c17cde" executionId="245b14de-916c-4b7e-8fa4-b788b72c0f99" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="80f8c926-da83-72e7-48b5-e424f1cd214a" executionId="0c308e1b-b500-4916-b49d-4bd40c9de018" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="12" executed="12" passed="12" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 10.0.12)
+[xUnit.net 00:00:00.28]   Discovering: Inspection.Application.Tests
+[xUnit.net 00:00:00.42]   Discovered:  Inspection.Application.Tests
+[xUnit.net 00:00:00.51]   Starting:    Inspection.Application.Tests
+[xUnit.net 00:00:01.98]   Finished:    Inspection.Application.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
