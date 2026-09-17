@@ -8,12 +8,30 @@ public class TrayWorkflowTests
     private static readonly LocatedSlot[] InitialSlots = [new("s1", "epoch1-s1"), new("s2", "epoch1-s2")];
     private static readonly FaceDefinition[] TwoFaces = [new("front", CameraGroup.AB), new("back", CameraGroup.AB)];
 
+    private static DeviceReady Ready(string runId, bool clamped = true) =>
+        new(runId, true, clamped, true, DateTimeOffset.UtcNow, "synthetic");
+
+    private static RequestScan BeginScan(TrayWorkflow flow, string runId)
+    {
+        var move = Assert.IsType<RequestMotion>(Assert.Single(flow.Handle(Ready(runId))));
+        Assert.Equal(MotionKind.MoveTo3D, move.Kind);
+        Assert.Equal(TrayStage.MovingTo3D, flow.Snapshot().Stage);
+        Assert.Empty(flow.Handle(new MotionAccepted(move.OperationId)));
+        return Assert.IsType<RequestScan>(Assert.Single(flow.Handle(
+            new MotionFinished(move.OperationId, MotionOutcome.Completed))));
+    }
+
+    private static ScanCompleted ScanResult(RequestScan scan, IReadOnlyList<LocatedSlot> slots) =>
+        new(scan.RequestId, new PlacementScan(scan.RequestId,
+            new PlacementMetadata(scan.TrayRunId, scan.ProposedEpoch, scan.ExpectedSource,
+                "synthetic", "opaque", null, DateTimeOffset.UtcNow), slots));
+
     private static (TrayWorkflow Flow, RequestMotion Motion) Prepared()
     {
         var flow = new TrayWorkflow("run-1", "ordinary");
-        var scan = Assert.IsType<RequestScan>(Assert.Single(flow.Handle(new DeviceReady(true))));
+        var scan = BeginScan(flow, "run-1");
         Assert.True(scan.Initial);
-        var code = Assert.IsType<RequestTrayCode>(Assert.Single(flow.Handle(new ScanCompleted(scan.RequestId, InitialSlots))));
+        var code = Assert.IsType<RequestTrayCode>(Assert.Single(flow.Handle(ScanResult(scan, InitialSlots))));
         var resolve = Assert.IsType<ResolveRecipe>(Assert.Single(flow.Handle(new TrayCodeRead(code.RequestId, "tray-7"))));
         Assert.Equal("ordinary", resolve.ScenarioId);
         Assert.Equal("tray-7", resolve.TrayCode);
@@ -54,7 +72,7 @@ public class TrayWorkflowTests
                     Assert.False(scan.Initial);
                     Assert.Equal(2, scan.ProposedEpoch);
                     Assert.Equal(0, flow.Snapshot().CoordinateEpoch); // old epoch is invalid while scanning
-                    foreach (var effect in flow.Handle(new ScanCompleted(scan.RequestId,
+                    foreach (var effect in flow.Handle(ScanResult(scan,
                         [new LocatedSlot("s1", "epoch2-s1"), new LocatedSlot("s2", "epoch2-s2")]))) pending.Enqueue(effect);
                     break;
                 default: throw new InvalidOperationException("Unexpected workflow effect.");
@@ -83,17 +101,17 @@ public class TrayWorkflowTests
     public void Preparation_requires_fresh_3d_f_code_and_unique_recipe()
     {
         var unclamped = new TrayWorkflow("r", "scene");
-        Assert.Empty(unclamped.Handle(new DeviceReady(false)));
+        Assert.Empty(unclamped.Handle(Ready("r", clamped: false)));
         Assert.Equal(TrayStage.Failed, unclamped.Snapshot().Stage);
 
         var missing3d = new TrayWorkflow("r", "scene");
-        var scan = Assert.IsType<RequestScan>(Assert.Single(missing3d.Handle(new DeviceReady(true))));
+        var scan = BeginScan(missing3d, "r");
         Assert.Empty(missing3d.Handle(new ScanFailed(scan.RequestId, "camera unavailable")));
         Assert.Equal(TrayStage.Failed, missing3d.Snapshot().Stage);
 
         var codeFail = new TrayWorkflow("r", "scene");
-        scan = Assert.IsType<RequestScan>(Assert.Single(codeFail.Handle(new DeviceReady(true))));
-        var code = Assert.IsType<RequestTrayCode>(Assert.Single(codeFail.Handle(new ScanCompleted(scan.RequestId, InitialSlots))));
+        scan = BeginScan(codeFail, "r");
+        var code = Assert.IsType<RequestTrayCode>(Assert.Single(codeFail.Handle(ScanResult(scan, InitialSlots))));
         Assert.Empty(codeFail.Handle(new TrayCodeRead(code.RequestId, null)));
         Assert.Equal(TrayStage.Failed, codeFail.Snapshot().Stage);
 
@@ -101,8 +119,8 @@ public class TrayWorkflowTests
                      new RecipeSnapshot("one", "v1", TwoFaces), new RecipeSnapshot("two", "v2", TwoFaces) } })
         {
             var flow = new TrayWorkflow("r", "scene");
-            scan = Assert.IsType<RequestScan>(Assert.Single(flow.Handle(new DeviceReady(true))));
-            code = Assert.IsType<RequestTrayCode>(Assert.Single(flow.Handle(new ScanCompleted(scan.RequestId, InitialSlots))));
+            scan = BeginScan(flow, "r");
+            code = Assert.IsType<RequestTrayCode>(Assert.Single(flow.Handle(ScanResult(scan, InitialSlots))));
             var resolve = Assert.IsType<ResolveRecipe>(Assert.Single(flow.Handle(new TrayCodeRead(code.RequestId, "T"))));
             Assert.Empty(flow.Handle(new RecipeResolved(resolve.RequestId, candidates)));
             Assert.Equal(TrayStage.Failed, flow.Snapshot().Stage);
@@ -157,7 +175,7 @@ public class TrayWorkflowTests
             else if (current is RequestScan scan)
             {
                 Assert.Equal(0, flow.Snapshot().CoordinateEpoch);
-                Assert.Empty(flow.Handle(new ScanCompleted(scan.RequestId, [new LocatedSlot("s1", "p")] )));
+                Assert.Empty(flow.Handle(ScanResult(scan, [new LocatedSlot("s1", "p")])));
                 Assert.Equal(TrayStage.Failed, flow.Snapshot().Stage);
                 return;
             }
@@ -191,7 +209,7 @@ public class TrayWorkflowTests
                     // Other results remain pending until the decision deadline.
                     break;
                 case RequestScan scan:
-                    foreach (var effect in flow.Handle(new ScanCompleted(scan.RequestId,
+                    foreach (var effect in flow.Handle(ScanResult(scan,
                                  [new LocatedSlot("s1", "new-s1"), new LocatedSlot("s2", "new-s2")]))) pending.Enqueue(effect);
                     break;
             }
