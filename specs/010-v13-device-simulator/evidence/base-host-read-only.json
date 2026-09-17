@@ -1,0 +1,64 @@
+{
+  "source": "Virtual",
+  "contract": "plc-upper-20260911-hex1-f32",
+  "outcome": "ReadOnly",
+  "error": null,
+  "snapshot": {
+    "source": "Virtual",
+    "observedAtUtc": "2026-09-17T14:43:22.1999809+00:00",
+    "plcHeartbeat": false,
+    "plcReady": false,
+    "autoMode": true,
+    "fault": false,
+    "manualZoneOccupied": false,
+    "palletLocked": false,
+    "zoneConfigured": false,
+    "xyState": "Running",
+    "zState": "Idle",
+    "actualX": 0,
+    "actualY": 0,
+    "actualZ": 0,
+    "flipState": "Idle",
+    "currentFace": 0,
+    "sortState": "Idle",
+    "alarmBits": 0,
+    "alarmSeverity": 0,
+    "coordinateFrame": "synthetic-v13",
+    "unit": "synthetic-unit",
+    "pcReadyObserved": false,
+    "moveCommandCode": 0,
+    "flipTargetFaceCode": 0,
+    "xyStatusCode": 0,
+    "zStatusCode": 0,
+    "flipStatusCode": 0,
+    "sortStatusCode": 0,
+    "palletLockStatusCode": 0,
+    "zoneConfigAckCode": 0
+  },
+  "exchanges": [
+    {
+      "observedAtUtc": "2026-09-17T14:43:22.1863644+00:00",
+      "request": "000100000006010100000010",
+      "response": "0001000000050101021000",
+      "error": null
+    },
+    {
+      "observedAtUtc": "2026-09-17T14:43:22.1972222+00:00",
+      "request": "000200000006010300000017",
+      "response": "00020000003101032E00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "observedAtUtc": "2026-09-17T14:43:22.1990922+00:00",
+      "request": "0003000000060103001F0009",
+      "response": "000300000015010312000000000000000000000000000000000000",
+      "error": null
+    },
+    {
+      "observedAtUtc": "2026-09-17T14:43:22.1999081+00:00",
+      "request": "0004000000060103004F0002",
+      "response": "00040000000701030400000000",
+      "error": null
+    }
+  ]
+}

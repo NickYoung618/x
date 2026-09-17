@@ -8,7 +8,7 @@ public enum PlcArea
 
 public sealed record PcWriteEvent(PlcArea Area, int DocumentNumber, ushort Value);
 
-public sealed class PlcDataStore
+public sealed class PlcDataStore : IModbusDataStore
 {
     private readonly object _gate = new();
     private readonly bool[] _coils = CreateStorage<bool>(PlcAddressMap.CoilPoints);

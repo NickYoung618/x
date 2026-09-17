@@ -1,6 +1,22 @@
 {
   "version": 1,
   "dependencies": {
-    "net10.0": {}
+    "net10.0": {
+      "inspection.application": {
+        "type": "Project",
+        "dependencies": {
+          "Inspection.Domain": "[1.0.0, )"
+        }
+      },
+      "inspection.domain": {
+        "type": "Project"
+      },
+      "inspection.infrastructure": {
+        "type": "Project",
+        "dependencies": {
+          "Inspection.Application": "[1.0.0, )"
+        }
+      }
+    }
   }
 }

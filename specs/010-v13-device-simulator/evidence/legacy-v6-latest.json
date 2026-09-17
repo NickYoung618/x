@@ -1,0 +1,162 @@
+{
+  "startedAt": "2026-09-17T14:35:18.3328834+00:00",
+  "finishedAt": "2026-09-17T14:35:38.1816244+00:00",
+  "environment": {
+    "operatingSystem": "Unix 6.8.0.136",
+    "sdkVersion": "10.0.401",
+    "productionTarget": "net10.0",
+    "executionTarget": "net10.0",
+    "mode": "production"
+  },
+  "checks": [
+    {
+      "id": "HTTP-01",
+      "requirements": [
+        "FR-004"
+      ],
+      "name": "HTTP \u5065\u5EB7\u3001\u76D1\u63A7\u548C\u975E\u6CD5\u53C2\u6570",
+      "status": "PASS",
+      "durationMs": 75,
+      "detail": "health\u3001dashboard\u3001app.js\u3001styles.css \u53EF\u7528\uFF1B\u975E\u6CD5 fault/category \u8FD4\u56DE 400"
+    },
+    {
+      "id": "MAP-01",
+      "requirements": [
+        "FR-001"
+      ],
+      "name": "29 \u70B9 CSV/HTTP/state \u4E00\u81F4\u6027",
+      "status": "PASS",
+      "durationMs": 46,
+      "detail": "8 \u4E2A\u7EBF\u5708 \u002B 21 \u4E2A\u4FDD\u6301\u5BC4\u5B58\u5668\u4E09\u65B9\u4E00\u81F4\uFF1B65535 \u7684 signedValue \u4E3A -1"
+    },
+    {
+      "id": "MODBUS-01",
+      "requirements": [
+        "FR-002"
+      ],
+      "name": "\u516D\u4E2A Modbus \u529F\u80FD\u7801\u6210\u529F\u8DEF\u5F84",
+      "status": "PASS",
+      "durationMs": 79,
+      "detail": "FC01\u300103\u300105\u300106\u300115\u300116 \u5747\u5B8C\u6210\u771F\u5B9E TCP \u5F80\u8FD4\u548C\u56DE\u8BFB"
+    },
+    {
+      "id": "MODBUS-02",
+      "requirements": [
+        "FR-003"
+      ],
+      "name": "Modbus \u5F02\u5E38\u7801\u3001\u65B9\u5411\u548C\u591A\u5199\u539F\u5B50\u6027",
+      "status": "PASS",
+      "durationMs": 37,
+      "detail": "\u5F02\u5E38\u7801 01/02/03/0B\u3001PLC \u6240\u6709\u6743\u548C\u591A\u5199\u539F\u5B50\u62D2\u7EDD\u5747\u7B26\u5408\u5408\u540C"
+    },
+    {
+      "id": "FLOW-01",
+      "requirements": [
+        "FR-005"
+      ],
+      "name": "\u5FC3\u8DF3\u3001\u533A\u57DF\u914D\u7F6E\u548C\u6258\u76D8\u9501\u63E1\u624B",
+      "status": "PASS",
+      "durationMs": 1952,
+      "detail": "PLC \u5FC3\u8DF3\u7FFB\u8F6C\uFF1BPC \u5E94\u7B54\u3001\u533A\u57DF Ack\u3001\u6258\u76D8\u9501\u7D27/\u89E3\u9501\u95ED\u73AF\u901A\u8FC7"
+    },
+    {
+      "id": "ACTION-01",
+      "requirements": [
+        "FR-006"
+      ],
+      "name": "\u79FB\u52A8\u3001\u91CD\u89E6\u53D1\u548C Retry_Cmd",
+      "status": "PASS",
+      "durationMs": 3110,
+      "detail": "\u79FB\u52A8\u547D\u4EE4 1~5\u30010\u2192\u975E0 \u91CD\u89E6\u53D1\u3001\u5750\u6807\u53CD\u9988\u548C Retry_Cmd \u72B6\u6001\u590D\u4F4D\u901A\u8FC7"
+    },
+    {
+      "id": "ACTION-02",
+      "requirements": [
+        "FR-006"
+      ],
+      "name": "\u7FFB\u8F6C\u548C\u5206\u62E3\u6B63\u5E38\u6D41\u7A0B",
+      "status": "PASS",
+      "durationMs": 2067,
+      "detail": "90\u00B0/180\u00B0 \u7FFB\u8F6C\u3001\u5206\u62E3\u6210\u529F\u548C\u6EE1\u76D8\u547D\u4EE4\u72B6\u6001\u901A\u8FC7"
+    },
+    {
+      "id": "LOCK-01",
+      "requirements": [
+        "FR-007"
+      ],
+      "name": "\u5C31\u7EEA\u3001\u914D\u7F6E\u3001\u8F6F\u505C\u548C\u52A8\u4F5C\u4E92\u65A5",
+      "status": "PASS",
+      "durationMs": 1171,
+      "detail": "\u672A\u5C31\u7EEA\u3001\u672A\u914D\u7F6E\u3001\u975E\u6CD5\u547D\u4EE4\u3001\u8F6F\u505C\u3001\u52A8\u4F5C\u4E92\u65A5\u548C\u96F6\u69FD\u4F4D\u5747\u88AB\u62D2\u7EDD"
+    },
+    {
+      "id": "FAULT-01",
+      "requirements": [
+        "FR-008"
+      ],
+      "name": "\u516D\u79CD\u4E00\u6B21\u6027\u52A8\u4F5C\u6545\u969C",
+      "status": "PASS",
+      "durationMs": 6506,
+      "detail": "6 \u79CD\u52A8\u4F5C\u6545\u969C\u5747\u4EA7\u751F\u9884\u671F\u7EC8\u6001\uFF0C\u4E14\u4E0B\u4E00\u6B21\u52A8\u4F5C\u6062\u590D\u6B63\u5E38"
+    },
+    {
+      "id": "FAULT-02",
+      "requirements": [
+        "FR-008"
+      ],
+      "name": "\u6025\u505C\u3001\u4EBA\u5DE5\u4ECB\u5165\u548C\u5FC3\u8DF3\u8D85\u65F6",
+      "status": "PASS",
+      "durationMs": 4699,
+      "detail": "\u6025\u505C\u4E0E\u4EBA\u5DE5\u4ECB\u5165\u5207\u65AD\u52A8\u4F5C\uFF1B\u4EBA\u5DE5\u786E\u8BA4\u6062\u590D\uFF1B\u6682\u505C\u5FC3\u8DF3\u4E14\u505C\u6B62\u5E94\u7B54\u540E 3 \u79D2\u8D85\u65F6"
+    },
+    {
+      "id": "POLICY-01",
+      "requirements": [
+        "FR-009"
+      ],
+      "name": "\u5341\u4E00\u7C7B\u6D41\u7A0B\u51B3\u7B56",
+      "status": "PASS",
+      "durationMs": 15,
+      "detail": "11 \u7C7B\u6210\u529F\u7B56\u7565\u548C\u5931\u8D25\u7B56\u7565\u5168\u90E8\u901A\u8FC7\uFF1B\u968F\u673A decision \u9650\u5B9A\u4E3A OK/NG/Pending"
+    },
+    {
+      "id": "RESET-01",
+      "requirements": [
+        "FR-010"
+      ],
+      "name": "\u590D\u4F4D\u6E05\u9664\u6545\u969C\u3001PC \u503C\u548C\u52A8\u4F5C\u72B6\u6001",
+      "status": "PASS",
+      "durationMs": 66,
+      "detail": "reset \u6E05\u9664\u6545\u969C\u3001\u6D3B\u52A8\u52A8\u4F5C\u3001PC \u53EF\u5199\u91CF\u548C\u72B6\u6001\uFF0C\u5E76\u6062\u590D\u81EA\u52A8\u6A21\u5F0F"
+    },
+    {
+      "id": "EVIDENCE-01",
+      "requirements": [
+        "FR-011",
+        "FR-012",
+        "FR-013",
+        "FR-014"
+      ],
+      "name": "\u5355\u547D\u4EE4\u3001\u76EE\u5F55\u8FB9\u754C\u3001\u62A5\u544A\u5224\u5B9A\u548C\u751F\u4EA7\u76EE\u6807\u95E8\u7981",
+      "status": "PASS",
+      "durationMs": 0,
+      "detail": "validate.sh \u4E3A\u5355\u5165\u53E3\uFF1BJSON/Markdown \u4F4D\u4E8E pj1\uFF1B\u62A5\u544A\u533A\u5206\u95E8\u7981\u4E0E\u9650\u5236\uFF1B\u751F\u4EA7\u76EE\u6807\u4ECD\u4E3A net10.0"
+    }
+  ],
+  "gates": [
+    {
+      "name": "Production .NET 10 build",
+      "status": "PASS",
+      "reason": "Production project restored and built with an installed .NET 10 SDK."
+    }
+  ],
+  "limitations": [
+    "V6.0 \u70B9\u8868\u6CA1\u6709\u6545\u969C\u7801\u5BC4\u5B58\u5668\uFF0C\u53EA\u80FD\u901A\u8FC7 PLC_System_Fault \u548C\u7BA1\u7406 API \u8868\u8FBE\u8BE6\u7EC6\u6545\u969C\u3002",
+    "\u70B9\u8868\u6CA1\u6709\u5206\u62E3\u76EE\u6807\u533A\u57DF\u548C\u533A\u57DF\u5360\u7528\u91CF\uFF0C\u65E0\u6CD5\u81EA\u52A8\u95ED\u73AF NG/Pending \u6EE1\u76D8\u5224\u65AD\u3002",
+    "\u70B9\u8868\u6CA1\u6709\u5B9E\u9645\u6293\u53D6\u69FD\u4F4D\u53CD\u9988\uFF0C\u65E0\u6CD5\u9A8C\u8BC1\u547D\u4EE4\u69FD\u4F4D\u4E0E\u5B9E\u9645\u69FD\u4F4D\u51B2\u7A81\u3002",
+    "X/Y/Z \u5750\u6807\u7684\u5355\u4F4D\u3001\u6BD4\u4F8B\u3001\u7B26\u53F7\u548C\u6EA2\u51FA\u89C4\u5219\u5C1A\u672A\u5B9A\u4E49\u3002",
+    "Retry_Cmd \u7684\u53C2\u6570\u4FDD\u7559\u3001\u786E\u8BA4\u4E0E\u65AD\u7EBF\u5E42\u7B49\u89C4\u5219\u5C1A\u672A\u5B9A\u4E49\u3002",
+    "\u865A\u62DF\u8FDB\u7A0B\u4E0D\u80FD\u66FF\u4EE3\u771F\u5B9E\u7F16\u7801\u5668\u65AD\u7535\u4F4D\u7F6E\u4FDD\u6301\u9A8C\u6536\u3002"
+  ],
+  "verdict": "PASS"
+}
