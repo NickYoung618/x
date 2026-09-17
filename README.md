@@ -73,7 +73,7 @@ python3 scripts/validate-virtual-plc.py
 
 Windows可用`python`。统一入口无.NET8回退，输出唯一运行目录及summary.json。
 执行原13组旧协议检查、真实Host工程探针与独立PLC进程的最小联调。默认Host保持计划预览，不自动运动。
-新版点表由下位机同学后续确认；本轮先搭框架。这里不是整盘执行、V1.3完整协议或Windows FullSim包。
+新版接口来源已按用户指定固定为[2026-09-11 协议及逐点差异](docs/contracts/plc-upper-20260911.md)；另有 `python3 scripts/check-plc-20260911-host.py` 验证 Host 对隔离测试服务的**新点表只读** Modbus 报文。下位机同学仍须签认地址/字序并交付正式新版模拟器和缺失的机构命令。旧脚本通过、新协议只读通过都不是整盘执行或 Windows FullSim 包。
 
 ## 普通整盘中台流程框架（003）
 

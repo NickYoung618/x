@@ -413,7 +413,10 @@
         }
       },
       "inspection.infrastructure": {
-        "type": "Project"
+        "type": "Project",
+        "dependencies": {
+          "Inspection.Application": "[1.0.0, )"
+        }
       }
     }
   }

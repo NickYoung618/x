@@ -3,7 +3,8 @@ using System.Net.Sockets;
 
 namespace Inspection.Infrastructure.Plc;
 
-public sealed record ModbusExchange(string Request, string? Response, string? Error);
+public sealed record ModbusExchange(DateTimeOffset ObservedAtUtc, string Request,
+    string? Response, string? Error);
 
 /// <summary>One serialized TCP session. Addresses are zero-based PDU offsets. Never retries writes.</summary>
 public sealed class ModbusTcpClient(string host, int port, byte unit, TimeSpan ioTimeout) : IAsyncDisposable
@@ -11,10 +12,11 @@ public sealed class ModbusTcpClient(string host, int port, byte unit, TimeSpan i
     private readonly TcpClient socket = new() { NoDelay = true };
     private readonly SemaphoreSlim gate = new(1);
     private readonly List<ModbusExchange> exchanges = [];
+    private readonly object exchangeSync = new();
     private ushort transaction;
     private bool connected;
     private bool unusable;
-    public IReadOnlyList<ModbusExchange> Exchanges => exchanges;
+    public IReadOnlyList<ModbusExchange> Exchanges { get { lock (exchangeSync) return exchanges.ToArray(); } }
 
     public async Task<ushort[]> ReadRegistersAsync(ushort offset, ushort count, CancellationToken ct = default)
     {
@@ -88,14 +90,18 @@ public sealed class ModbusTcpClient(string host, int port, byte unit, TimeSpan i
                 if (body.Length != bytes + 2 || body[1] != bytes) throw new IOException("Invalid Modbus read byte count.");
             }
             else if (!body.SequenceEqual(pdu.Take(5))) throw new IOException("Invalid Modbus write acknowledgement.");
-            exchanges.Add(new(Convert.ToHexString(request), Convert.ToHexString(response), null));
+            lock (exchangeSync) exchanges.Add(new(DateTimeOffset.UtcNow,
+                Convert.ToHexString(request), Convert.ToHexString(response), null));
             return body;
         }
         catch (Exception e)
         {
             unusable = true;
             socket.Dispose();
-            exchanges.Add(new(request is null ? "" : Convert.ToHexString(request), response is null ? null : Convert.ToHexString(response), e.GetType().Name));
+            lock (exchangeSync) exchanges.Add(new(DateTimeOffset.UtcNow,
+                request is null ? "" : Convert.ToHexString(request),
+                response is null ? null : Convert.ToHexString(response),
+                $"{e.GetType().Name}: {e.Message}"));
             if (e is OperationCanceledException && !ct.IsCancellationRequested) throw new TimeoutException("Modbus I/O deadline exceeded; outcome may be unknown.", e);
             throw;
         }
