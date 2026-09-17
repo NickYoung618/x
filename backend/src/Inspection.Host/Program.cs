@@ -1,7 +1,9 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Inspection.Infrastructure.Plc;
+using Inspection.Application.Architecture;
 using Inspection.Application.Engineering;
+using Inspection.Contracts;
 using Inspection.Domain.Planning;
 
 var probeMode = args.Contains("--plc-probe", StringComparer.Ordinal);
@@ -39,13 +41,20 @@ builder.Services.AddSingleton(new DemoPlanService(demo.PartIds, demo.Faces));
 
 var app = builder.Build();
 app.MapGet("/health/live", () => new { Status = "alive" });
-app.MapGet("/api/system/status", () => new
-{
-    ArchitectureVersion = "1.3",
-    Stage = "EngineeringFoundation",
-    ProductionReady = false,
-    UnavailableCapabilities = new[] { "TrayExecution", "DeviceIntegration", "Algorithms", "Traceability", "Desktop" }
-});
+app.MapGet("/api/system/status", () => new SystemStatusDto(
+    V13Architecture.Version,
+    V13Architecture.Stage,
+    V13Architecture.ProductionReady,
+    V13Architecture.RuntimeMode.ToString(),
+    V13Architecture.Capabilities.Where(capability => !capability.Available).Select(capability => capability.Id).ToArray(),
+    V13Architecture.Modules.Select(module => new ModuleStatusDto(
+        module.Id, module.Layer, module.Owner, module.State.ToString())).ToArray(),
+    V13Architecture.Capabilities.Select(capability => new CapabilityStatusDto(
+        capability.Id, capability.Available, capability.EvidenceLevel, capability.Reason)).ToArray()));
+app.MapPost("/api/jobs/prepare", (HttpContext context) =>
+    Results.Json(new OperationProblemDto("CAPABILITY_NOT_IMPLEMENTED", "检测任务尚未接入，不能启动设备。",
+        context.TraceIdentifier), statusCode: StatusCodes.Status501NotImplemented,
+        contentType: "application/problem+json"));
 app.MapGet("/api/engineering/demo-plan", (DemoPlanService service) => service.GetPlan());
 app.Run();
 

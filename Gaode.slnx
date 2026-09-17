@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="backend/src/Inspection.Contracts/Inspection.Contracts.csproj" />
     <Project Path="backend/src/Inspection.Infrastructure/Inspection.Infrastructure.csproj" />
     <Project Path="backend/src/Inspection.Domain/Inspection.Domain.csproj" />
     <Project Path="backend/src/Inspection.Application/Inspection.Application.csproj" />

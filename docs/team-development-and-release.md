@@ -3,12 +3,14 @@
 更新：2026-09-17。本文是基于当前代码的执行方案；标为“建议”“待接入”的内容尚未实现。
 架构与测试以 [V1.3](architecture/architecture-v1.3.md) 为准。
 
+2026-09-17 顺序调整：先在独立 PR 建 [P0 整体框架](architecture/v13-framework-map.md)与[§18 验收映射](architecture/v13-acceptance-map.md)，再在首工位 Draft PR #4 及后续逐工位 PR 内实现具体功能。每阶段完成正常/故障/跨端口测试，保留失败和修正复测证据，评审合并后在 main 对同一提交回归。P0 不接设备动作、配方或算法；旧 V6 测试仅为回归基线。
+
 ## 1. 当前事实与下一条交付链
 
 | 事项 | 当前状态及证据 |
 | --- | --- |
 | 中台 | 只有工程基础、普通整盘计划预览，未实现检测执行链 |
-| 前端 | 用户确认仍是原来的 HTML 原型，尚无已接入仓库的 Vue/WPF 实现 |
+| 前端 | 原 HTML 原型仍是完整页面依据；本框架分支新增 Vue/TypeScript/Pinia 只读状态页，WPF 与完整业务页面未实现 |
 | 虚拟下位机 | 已从获授权服务器的 `/home/ubuntu/disk/pj1/VirtualPlc` 取得独立审查副本；为 .NET 10 + Modbus TCP 实现，按旧 V6.0 资料开发；与 V1.3 存在差异，见 [接入审查](reviews/virtual-plc-20260917/review.md) |
 | 接口资料 | 本地已有 2026-09-11《PLC与上位机通信接口协议.docx》；仓库已有 [虚拟设备 v0.1 草案](contracts/virtual-device-v0.1-draft.md)，无需重新起草整套协议 |
 | CI | [Core CI 34991611511](https://github.com/NickYoung618/x/actions/runs/34991611511) 成功；代码提交 `3e46d4e03fcfa201e55510e017a9aafed44ffea2`，每个平台 19 项基础测试 |

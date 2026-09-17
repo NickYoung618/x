@@ -36,11 +36,20 @@ try {
     if ($live.status -ne 'alive') { throw 'Host did not become live within 30 seconds.' }
     $status = Invoke-RestMethod "$baseUrl/api/system/status" -TimeoutSec 5
     $plan = Invoke-RestMethod "$baseUrl/api/engineering/demo-plan" -TimeoutSec 5
-    if ($status.productionReady -ne $false -or $status.architectureVersion -ne '1.3') { throw 'Unexpected foundation status.' }
+    if ($status.productionReady -ne $false -or $status.architectureVersion -ne '1.3' -or
+        $status.stage -ne 'V13FrameworkFoundation' -or $status.runtimeMode -ne 'Unconfigured' -or
+        $status.modules.Count -ne 15) { throw 'Unexpected V1.3 framework status.' }
+    if (@($status.modules | Where-Object { $_.state -eq 'Implemented' }).Count -ne 0) { throw 'A skeleton module claims to be implemented.' }
+    $prepareStatus = $null
+    $problem = Invoke-RestMethod "$baseUrl/api/jobs/prepare" -Method Post -Body '{}' -ContentType 'application/json' -SkipHttpErrorCheck -StatusCodeVariable prepareStatus -TimeoutSec 5
+    if ($prepareStatus -ne 501 -or $problem.code -ne 'CAPABILITY_NOT_IMPLEMENTED' -or
+        [string]::IsNullOrWhiteSpace($problem.correlationId)) {
+        throw "Unimplemented job command mismatch: status=$prepareStatus, code=$($problem.code), correlationIdPresent=$(-not [string]::IsNullOrWhiteSpace($problem.correlationId))"
+    }
     if ($plan.isTestFixture -ne $true -or $plan.executionEnabled -ne $false) { throw 'Plan must remain a nonexecuting fixture.' }
     $count = ($plan.plan.faces | ForEach-Object { $_.captures.Count } | Measure-Object -Sum).Sum
     if ($count -ne 8) { throw "Default published sample expected 8 captures, got $count." }
-    Write-Output "PASS: published Host process, architecture 1.3, productionReady=false, 8 planned captures."
+    Write-Output "PASS: published Host, V1.3 framework, 15 modules, command rejected, 8 nonexecuting planned captures."
 } finally {
     if ($started -and -not $process.HasExited) { $process.Kill($true); $process.WaitForExit(5000) | Out-Null }
     if ($null -ne $stdout) { $stdout.GetAwaiter().GetResult() | Set-Content (Join-Path $directory 'smoke-stdout.log') }
