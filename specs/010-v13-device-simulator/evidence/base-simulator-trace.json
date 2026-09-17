@@ -1,310 +1,597 @@
 [
   {
-    "observedAtUtc": "2026-09-17T14:37:43.7039984+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.1883411+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000100000006010100000010",
     "response": "0001000000050101021000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.7109271+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.1956946+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000200000006010300000017",
     "response": "00020000003101032E00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.7118683+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.1990451+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "0003000000060103001F0009",
     "response": "000300000015010312000000000000000000000000000000000000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.7118938+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.1993893+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "0004000000060103004F0002",
     "response": "00040000000701030400000000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.796139+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.3185302+00:00",
     "kind": "Ready",
     "detail": "PC_System_Ready=True.",
     "request": null,
     "response": null
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.7961981+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.3185815+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "00010000000601050002FF00",
     "response": "00010000000601050002FF00"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.8190068+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.351183+00:00",
     "kind": "Clamp",
     "detail": "Lock command=1; acceptance and physical completion are separate.",
     "request": null,
     "response": null
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.8190396+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.351276+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000200000006010600220001",
     "response": "000200000006010600220001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.8192223+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.3513006+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000300000006010300230001",
     "response": "0003000000050103020000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.8394218+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.3716516+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000400000006010300230001",
     "response": "0004000000050103020000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.8595727+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.3919329+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000500000006010300230001",
     "response": "0005000000050103020000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.8797559+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.4123885+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000600000006010300230001",
     "response": "0006000000050103020000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.8999462+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.4326294+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000700000006010300230001",
     "response": "0007000000050103020000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.9201698+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.452929+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000800000006010300230001",
     "response": "0008000000050103020000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.9404497+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.4732762+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000900000006010300230001",
     "response": "0009000000050103020000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.9606373+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.4935799+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000A00000006010300230001",
     "response": "000A000000050103020000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:43.9808273+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.5139386+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000B00000006010300230001",
     "response": "000B000000050103020000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.0011382+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.5353516+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000C00000006010300230001",
     "response": "000C000000050103020000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.0213667+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.5559419+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000D00000006010300230001",
     "response": "000D000000050103020000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.0424385+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.5762359+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000E00000006010300230001",
     "response": "000E000000050103020000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.062665+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.5965768+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "000F00000006010300230001",
     "response": "000F000000050103020000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.0756347+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.6015551+00:00",
     "kind": "Clamp",
     "detail": "Physical clamp status=1.",
     "request": null,
     "response": null
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.0828824+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.6168882+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001000000006010300230001",
     "response": "0010000000050103020001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.0834361+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.6186972+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "00110000000B01100002000204C1480000",
     "response": "001100000006011000020002"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.0835222+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.6188772+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001200000006010300020002",
     "response": "001200000007010304C1480000"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.0836757+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.6194024+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001300000006010600000002",
     "response": "001300000003018602"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.0902471+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.6281832+00:00",
     "kind": "Fault",
     "detail": "ManualZoneOccupied active=True.",
     "request": null,
     "response": null
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.0933689+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.6321789+00:00",
     "kind": "Clamp",
     "detail": "Lock command=1; acceptance and physical completion are separate.",
     "request": null,
     "response": null
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.0933918+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.6322626+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001400000006010600220001",
     "response": "001400000006010600220001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.0934672+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.6322973+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001500000006010300230001",
     "response": "0015000000050103020001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.113698+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.652579+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001600000006010300230001",
     "response": "0016000000050103020001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.1341301+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.6728101+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001700000006010300230001",
     "response": "0017000000050103020001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.1543534+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.6930952+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001800000006010300230001",
     "response": "0018000000050103020001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.1745693+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.7134438+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001900000006010300230001",
     "response": "0019000000050103020001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.1947748+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.7337999+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001A00000006010300230001",
     "response": "001A000000050103020001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.215012+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.754087+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001B00000006010300230001",
     "response": "001B000000050103020001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.2352192+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.7744135+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001C00000006010300230001",
     "response": "001C000000050103020001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.2553877+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.7946705+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001D00000006010300230001",
     "response": "001D000000050103020001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.2755884+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.8148987+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001E00000006010300230001",
     "response": "001E000000050103020001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.2958349+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.8353736+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "001F00000006010300230001",
     "response": "001F000000050103020001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.3161254+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.8557199+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "002000000006010300230001",
     "response": "0020000000050103020001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.3365199+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.8759707+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "002100000006010300230001",
     "response": "0021000000050103020001"
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.3503356+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.8871033+00:00",
     "kind": "Clamp",
     "detail": "Physical clamp status=2.",
     "request": null,
     "response": null
   },
   {
-    "observedAtUtc": "2026-09-17T14:37:44.3567505+00:00",
+    "observedAtUtc": "2026-09-17T14:43:22.8963018+00:00",
     "kind": "Modbus",
     "detail": "Request and response on independent simulator process.",
     "request": "002200000006010300230001",
     "response": "0022000000050103020002"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:22.8990544+00:00",
+    "kind": "Fault",
+    "detail": "ManualZoneOccupied active=False.",
+    "request": null,
+    "response": null
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:22.9031496+00:00",
+    "kind": "Fault",
+    "detail": "NotClamped active=True.",
+    "request": null,
+    "response": null
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:22.9044652+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "002300000006010300230001",
+    "response": "0023000000050103020000"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:22.9048333+00:00",
+    "kind": "Fault",
+    "detail": "NotClamped active=False.",
+    "request": null,
+    "response": null
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:22.9052775+00:00",
+    "kind": "Clamp",
+    "detail": "Lock command=1; acceptance and physical completion are separate.",
+    "request": null,
+    "response": null
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:22.9054074+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "002400000006010600220001",
+    "response": "002400000006010600220001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:22.9054551+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "002500000006010300230001",
+    "response": "0025000000050103020000"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:22.9262746+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "002600000006010300230001",
+    "response": "0026000000050103020000"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:22.9465781+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "002700000006010300230001",
+    "response": "0027000000050103020000"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:22.9669181+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "002800000006010300230001",
+    "response": "0028000000050103020000"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:22.9872573+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "002900000006010300230001",
+    "response": "0029000000050103020000"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.0075408+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "002A00000006010300230001",
+    "response": "002A000000050103020000"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.02787+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "002B00000006010300230001",
+    "response": "002B000000050103020000"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.0491613+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "002C00000006010300230001",
+    "response": "002C000000050103020000"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.0707764+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "002D00000006010300230001",
+    "response": "002D000000050103020000"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.0902461+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "002E00000006010300230001",
+    "response": "002E000000050103020000"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.1108883+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "002F00000006010300230001",
+    "response": "002F000000050103020000"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.1311966+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003000000006010300230001",
+    "response": "0030000000050103020000"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.1515142+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003100000006010300230001",
+    "response": "0031000000050103020000"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.1636515+00:00",
+    "kind": "Clamp",
+    "detail": "Physical clamp status=1.",
+    "request": null,
+    "response": null
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.1719502+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003200000006010300230001",
+    "response": "0032000000050103020001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.1734652+00:00",
+    "kind": "Fault",
+    "detail": "ButtonNotPressed active=True.",
+    "request": null,
+    "response": null
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.1750685+00:00",
+    "kind": "Clamp",
+    "detail": "Lock command=1; acceptance and physical completion are separate.",
+    "request": null,
+    "response": null
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.175092+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003300000006010600220001",
+    "response": "003300000006010600220001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.1767212+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003400000006010300230001",
+    "response": "0034000000050103020001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.19697+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003500000006010300230001",
+    "response": "0035000000050103020001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.2172064+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003600000006010300230001",
+    "response": "0036000000050103020001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.2374878+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003700000006010300230001",
+    "response": "0037000000050103020001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.2577323+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003800000006010300230001",
+    "response": "0038000000050103020001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.2779664+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003900000006010300230001",
+    "response": "0039000000050103020001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.2982158+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003A00000006010300230001",
+    "response": "003A000000050103020001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.3190169+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003B00000006010300230001",
+    "response": "003B000000050103020001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.3397238+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003C00000006010300230001",
+    "response": "003C000000050103020001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.3613883+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003D00000006010300230001",
+    "response": "003D000000050103020001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.3822174+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003E00000006010300230001",
+    "response": "003E000000050103020001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.4043973+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "003F00000006010300230001",
+    "response": "003F000000050103020001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.4246151+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "004000000006010300230001",
+    "response": "0040000000050103020001"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.4309125+00:00",
+    "kind": "Clamp",
+    "detail": "Physical clamp status=2.",
+    "request": null,
+    "response": null
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.444846+00:00",
+    "kind": "Modbus",
+    "detail": "Request and response on independent simulator process.",
+    "request": "004100000006010300230001",
+    "response": "0041000000050103020002"
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.4455952+00:00",
+    "kind": "Fault",
+    "detail": "ButtonNotPressed active=False.",
+    "request": null,
+    "response": null
+  },
+  {
+    "observedAtUtc": "2026-09-17T14:43:23.446475+00:00",
+    "kind": "Fault",
+    "detail": "Alarm active=True.",
+    "request": null,
+    "response": null
   }
 ]

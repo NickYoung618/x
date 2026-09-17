@@ -130,13 +130,28 @@ def main():
         assert not read_json(base + "/api/v13/state")["plcReady"]
         assert client.register(0x23, 1) == struct.pack(">BHH", 6, 0x22, 1)
         wait_until(lambda: client.registers(0x24, 1)[0] == 2)
+        read_json(base + "/api/v13/faults/ManualZoneOccupied?active=false", "POST")
+        wait_until(lambda: read_json(base + "/api/v13/state")["plcReady"])
+        read_json(base + "/api/v13/faults/NotClamped?active=true", "POST")
+        assert client.registers(0x24, 1)[0] == 0
+        read_json(base + "/api/v13/faults/NotClamped?active=false", "POST")
+        assert client.register(0x23, 1) == struct.pack(">BHH", 6, 0x22, 1)
+        wait_until(lambda: client.registers(0x24, 1)[0] == 1)
+        read_json(base + "/api/v13/faults/ButtonNotPressed?active=true", "POST")
+        assert client.register(0x23, 1) == struct.pack(">BHH", 6, 0x22, 1)
+        wait_until(lambda: client.registers(0x24, 1)[0] == 2)
+        read_json(base + "/api/v13/faults/ButtonNotPressed?active=false", "POST")
+        read_json(base + "/api/v13/faults/Alarm?active=true", "POST")
+        alarm_state = read_json(base + "/api/v13/state")
+        assert not alarm_state["plcReady"] and alarm_state["alarmBits"] == 1
+        assert alarm_state["alarmSeverity"] == 3
         state = read_json(base + "/api/v13/state")
         trace = read_json(base + "/api/v13/trace")
         assert any(entry["kind"] == "Modbus" and entry["request"] for entry in trace)
         assert any(entry["kind"] == "Clamp" for entry in trace)
         (EVIDENCE / "base-simulator-state.json").write_text(json.dumps(state, indent=2) + "\n")
         (EVIDENCE / "base-simulator-trace.json").write_text(json.dumps(trace, indent=2) + "\n")
-        print("PASS: separate Host read-only, Float32 words, clamp, unsafe fault, unknown command rejection")
+        print("PASS: separate Host read-only, Float32 words, clamp, four safety faults, unknown command rejection")
     finally:
         if client:
             client.close()

@@ -41,8 +41,11 @@ builder.Services.AddHostedService<ModbusTcpServer>();
 
 var app = builder.Build();
 
-app.UseDefaultFiles();
-app.UseStaticFiles();
+if (protocolProfile == "LegacyV6")
+{
+    app.UseDefaultFiles();
+    app.UseStaticFiles();
+}
 
 app.MapGet("/health", () => Results.Ok(new
 {

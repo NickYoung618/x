@@ -1,18 +1,18 @@
 {
   "contract": "plc-upper-20260911-hex1-f32",
-  "observedAtUtc": "2026-09-17T14:37:44.3576193+00:00",
+  "observedAtUtc": "2026-09-17T14:43:23.447759+00:00",
   "faults": [
-    "ManualZoneOccupied"
+    "Alarm"
   ],
   "pcReady": true,
   "plcReady": false,
   "physicalStartPressed": true,
   "palletLocked": false,
   "zoneConfigured": false,
-  "manualZoneOccupied": true,
-  "plcFault": false,
-  "alarmBits": 0,
-  "alarmSeverity": 0,
+  "manualZoneOccupied": false,
+  "plcFault": true,
+  "alarmBits": 1,
+  "alarmSeverity": 3,
   "currentX": [
     0,
     0
