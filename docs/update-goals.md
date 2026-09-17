@@ -1,5 +1,21 @@
 # 高德更新目标台账
 
+## 2026-09-17 / S01 服务器—GitHub—Windows 真机开发与测试方案
+
+- 唯一主要问题：首工位已有业务规格与故障矩阵，但缺从 Linux 开发、GitHub CI/候选包到 Windows 实际设备的分层执行方案；PR #4 已合并的只是开工准备，不能继续在同一 PR 补实现。
+- 原始证据：`specs/005-initial-3d-station/`、V1.3 §5.2、§11、§13–14、§18、`docs/windows-acceptance.md`、`docs/team-development-and-release.md`、`.github/workflows/{ci,windows-staging}.yml`、main=`1519cfc`；GitHub runner 列表当前为空，现有 staging 工作流校验旧阶段名 `EngineeringFoundation`。
+- 对照与范围：从干净的 main=`1519cfc` 建 `station-01-implementation` 分支。本轮只修订 Spec Kit 方案、合同、矩阵、运行指南及任务，不实现工位代码或发设备命令；旧协议回归、正式 V1.3、Windows 真机与整盘测试分别判定。
+- 预期改变：形成可执行的 Linux 本地门禁、GitHub PR/main 同提交候选包门禁、Windows 实机分步测试与证据/失败处理；明确软件合并与真机验收两个不同结论。
+- 失败条件：把准备 PR 或绿色旧协议 CI 当工位通过；Windows 托管 runner 当现场设备；未冻结点表/标定即发送真机动作；重新编译不同包冒充同一候选；无设备独立轨迹或失败报告仍写 PASS。
+- 前置与预算：已读 S01 规格/计划/矩阵、V1.3 指定章节、Windows 现有方案/工作流及章程；只做仓库文档/接口设计，无真实零件、外部模型调用或费用，预算 0 元。真实 Windows 机型、PLC/3D SDK、现场操作窗口和接口确认均作为现场准入，不以缺失阻断本轮方案。
+
+### 本次方案结项（仅文档）
+
+- 已确认：PR #4 已合并准备文档而未实现 S01；当前无仓库自有 Windows runner，现有 staging 工作流的旧阶段名与框架 CI manifest 不符。Windows 托管 runner 与用户实际 Windows 电脑/设备现场必须分开。
+- 实际修改：扩展 `specs/005-initial-3d-station/` 的规格、方案、研究、数据/对外合同、快速启动、任务和测试矩阵；新增现场规程与本轮方案核验；更新 V1.3 验收映射的框架已通过事实。软件可合并 G0–G3、main 同包 G4/G5、真机 G6 分开。
+- 已运行：Spec Kit 前置检查 PASS、文档相对链接检查 PASS、`git diff --check` PASS。此为文档变更，本地未重跑 .NET/前端/旧协议；PR CI 结果另以对应 SHA 的检查为准。首工位、V1.3、Windows 真机或整盘未执行，不把历史 CI 误作本轮实测。无付费调用，费用 0 元。
+- 未解决：点表/命令关联、公共 3D 位/到位、3D SDK/坐标/标定/样件、Windows 实际系统与现场操作窗口；缺这些不阻止服务器/CI 合成实现，但阻止 G6 真机验收。下一目标是在本分支建立 S01 实现 Draft PR，按 T004–T020 分层开发、修正和测试，真机输入晚到则另开 S01 设备对接 PR。
+
 ## 2026-09-17 / S01 开工准备：初始 3D 定位工位
 
 - 唯一主要问题：现有 `TrayWorkflow` 有内存 3D 请求/反馈，却在 `DeviceReady` 后直接请求扫描；Host 没有执行入口，也无“移至 3D 位 → 完成 → 扫描”的工位合同。按工位交付前须先冻结首阶段边界与可检查门槛。

@@ -12,3 +12,11 @@
 | StationDiagnostic | Code, Stage, TrayRunId, OperationId/RequestId, Source, UtcTime, Duration, Detail | 错误码稳定；保存失败不得默默变成功 |
 
 阶段：`WaitingReady → MovingTo3D → Scanning3D → WaitingTrayCode`；前置状态/定位明确失败转 `Failed`，运动结果未知转 `RecoveryRequired`。本阶段 `WaitingTrayCode` 是交付终点，不代表托盘业务完成。
+
+## 测试与交付证据实体
+
+| 对象 | 最少字段 | 校验规则 |
+| --- | --- | --- |
+| CandidateManifest | GitCommit, CiRunId, PackageSha256, Stage=S01, ArchitectureVersion=1.3, Mode, OS/RID, Components, BuiltAt | 现场记录必须与成功的 main 构建及下载包字节校验一致；没有包哈希不能声称“同一包” |
+| TestEnvironment | WindowsVersion/Architecture, Runtime, PLC/3D DeviceId/Firmware/SDK, CalibrationVersion, NetworkEndpoint, Operator, TestArea | 真实设备测试必填；模拟测试记录 simulator 版本与来源，不套用旧 Windows Server 信息 |
+| StationEvidence | CaseId, TrayRunId, OperationId, RequestId, Source, Expected/ObservedStage, Move/3D/F Counts, HostTrace, DeviceTrace, 3DTrace, FirstFailure, Retest | 三方轨迹/来源独立；`NOT RUN`、`BLOCKED`、`FAIL`、`PASS` 分开，失败和修正复测均保留 |

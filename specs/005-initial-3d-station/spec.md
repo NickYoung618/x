@@ -1,8 +1,8 @@
 # Feature Specification: 首工位——初始 3D 定位
 
-**Feature Branch**: `station-01-initial-3d`
+**Feature Branch**: 开工准备已由 `station-01-initial-3d` 的 PR #4 合并；实现续作分支为 `station-01-implementation`
 **Created**: 2026-09-17
-**Status**: Ready for implementation; preparation only, not a passed station
+**Status**: 实现方案待执行；PR #4 仅合并准备文档，首工位尚未通过
 **Input**: 用户要求按工位逐阶段 PR，先完成首工位开工准备；V1.3 §5.1–5.2、§7、§13–14、§18。
 
 ## User Scenarios & Testing
@@ -61,6 +61,8 @@
 - **FR-007**: 状态与诊断必须至少记录阶段、稳定错误码、TrayRunId、OperationId/RequestId、来源、时间和可定位原因；关键诊断无法可靠写入时不得声称生产可恢复。
 - **FR-008**: 必须提供可重复的合成场景和故障注入，通过正式应用端口走同一业务规则；每类反例应有独立期望值和设备轨迹。
 - **FR-009**: 验证报告必须分开列出旧 V6 协议回归、首工位合成联调、V1.3 正式协议对接、真实 3D SDK/标定及完整整盘测试。
+- **FR-010**: 同一提交的 Windows S01 候选包必须有可核对的来源、SHA-256、运行依赖与模式配置；现场测试不得在 Windows 电脑重新编译另一份代码充当同一包。
+- **FR-011**: Windows 真实 PLC/3D 测试必须先完成接口、标定和现场准入核对，再由现场人员分步执行并保留中台、PLC、3D 三方轨迹；缺任一前置时该层记 `BLOCKED/NOT RUN`，不影响已实测的软件层结论。
 
 ### Key Entities
 
@@ -76,6 +78,7 @@
 - **SC-002**: 前置状态、移位受理/完成、3D 结果校验、超时/迟到/断线等矩阵中的每个反例均有确定终态与零不安全后续动作。
 - **SC-003**: Linux 和 Windows 的 .NET 10 构建、核心测试及首工位合成联调在 CI 可复现，测试产物明确指出独立设备模拟与正式协议覆盖范围。
 - **SC-004**: 前端及下位机同学可依据同一合同独立构造输入、核对阶段、错误码与轨迹；未决硬件参数不会被默认为已确认。
+- **SC-005（独立现场验收）**: 在已核对的 Windows 电脑和真实设备上，以同一候选包完成 S01 正常与批准的故障场景，三方轨迹证明先到位再定位、一次动作/一次定位、来源和标定有效；未执行时不得标记真机通过。该条件与软件 PR 合并门槛分开报告。
 
 ## Assumptions and Open Interfaces
 
