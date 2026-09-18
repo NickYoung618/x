@@ -50,7 +50,10 @@ public sealed class MotionExecutionLane : IAsyncDisposable
     public Exception? EventDispatchFailure => eventDispatchFailure;
     public bool TrySubmit(RequestMotion request)
     {
-        if (request.OperationId == Guid.Empty || request.CoordinateEpoch < 1 || string.IsNullOrWhiteSpace(request.PositionRef))
+        if (request.OperationId == Guid.Empty || string.IsNullOrWhiteSpace(request.PositionRef) ||
+            (request.Kind == MotionKind.MoveTo3D
+                ? request.CoordinateEpoch != 0 || string.IsNullOrWhiteSpace(request.TrayRunId)
+                : request.CoordinateEpoch < 1))
             return false;
         lock (submitGate)
         {
@@ -72,23 +75,33 @@ public sealed class MotionExecutionLane : IAsyncDisposable
                     continue;
                 }
                 MotionOutcome outcome;
+                string? reason = null;
                 try
                 {
                     using var deadline = CancellationTokenSource.CreateLinkedTokenSource(stop.Token);
                     deadline.CancelAfter(actionTimeout);
                     var receipt = await device.SubmitAsync(request, deadline.Token).WaitAsync(deadline.Token);
-                    if (!receipt.Accepted) outcome = MotionOutcome.Failed;
+                    if (!receipt.Accepted)
+                    {
+                        outcome = MotionOutcome.Failed;
+                        reason = receipt.Reason;
+                    }
                     else
                     {
                         if (!await PublishSafelyAsync(new MotionAccepted(request.OperationId))) break;
                         var completed = await device.WaitForCompletionAsync(request.OperationId, deadline.Token).WaitAsync(deadline.Token);
                         outcome = completed.Outcome;
+                        reason = completed.Reason;
                     }
                 }
                 catch (OperationCanceledException) when (stop.IsCancellationRequested) { break; }
-                catch (Exception) { outcome = MotionOutcome.Unknown; }
+                catch (Exception error)
+                {
+                    outcome = MotionOutcome.Unknown;
+                    reason = error.GetType().Name;
+                }
                 if (outcome == MotionOutcome.Unknown) recoveryRequired = true;
-                if (!await PublishSafelyAsync(new MotionFinished(request.OperationId, outcome))) break;
+                if (!await PublishSafelyAsync(new MotionFinished(request.OperationId, outcome, reason))) break;
             }
         }
         catch (OperationCanceledException) when (stop.IsCancellationRequested) { }
