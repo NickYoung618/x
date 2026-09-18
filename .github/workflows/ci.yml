@@ -26,7 +26,8 @@ jobs:
       - name: Generate required evidence list
         env:
           TEST_BASE_SHA: ${{ github.event.pull_request.base.sha }}
-        run: python3 scripts/test_impact.py plan --base "$TEST_BASE_SHA" --head HEAD --output artifacts/test-impact.json
+          TEST_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: python3 scripts/test_impact.py plan --base "$TEST_BASE_SHA" --head "$TEST_HEAD_SHA" --output artifacts/test-impact.json
       - name: Upload scope plan (not a test PASS)
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
