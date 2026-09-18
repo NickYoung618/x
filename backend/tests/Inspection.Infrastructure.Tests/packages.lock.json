@@ -87,8 +87,20 @@
           "xunit.extensibility.core": "[2.9.3]"
         }
       },
-      "inspection.infrastructure": {
+      "inspection.application": {
+        "type": "Project",
+        "dependencies": {
+          "Inspection.Domain": "[1.0.0, )"
+        }
+      },
+      "inspection.domain": {
         "type": "Project"
+      },
+      "inspection.infrastructure": {
+        "type": "Project",
+        "dependencies": {
+          "Inspection.Application": "[1.0.0, )"
+        }
       }
     }
   }

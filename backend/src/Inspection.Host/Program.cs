@@ -3,11 +3,14 @@ using System.Text.Json.Serialization;
 using Inspection.Infrastructure.Plc;
 using Inspection.Application.Architecture;
 using Inspection.Application.Engineering;
+using Inspection.Application.Plc;
 using Inspection.Contracts;
 using Inspection.Domain.Planning;
 
 var probeMode = args.Contains("--plc-probe", StringComparer.Ordinal);
-var builder = WebApplication.CreateBuilder(args.Where(a => a != "--plc-probe").ToArray());
+var deviceCheckMode = args.Contains("--plc-device-check", StringComparer.Ordinal);
+if (probeMode && deviceCheckMode) throw new ArgumentException("Choose one PLC engineering command.");
+var builder = WebApplication.CreateBuilder(args.Where(a => a is not ("--plc-probe" or "--plc-device-check")).ToArray());
 if (probeMode)
 {
     var config = builder.Configuration;
@@ -31,6 +34,43 @@ if (probeMode)
     Environment.ExitCode = result.Outcome == "Completed" ? 0 : 2;
     return;
 }
+if (deviceCheckMode)
+{
+    var config = builder.Configuration;
+    var options = config.GetSection("Plc").Get<PlcConnectionOptions>() ?? new PlcConnectionOptions();
+    if (config.GetValue("Plc:EngineeringActionEnabled", false) ||
+        !string.IsNullOrWhiteSpace(config["Plc:TestSequence"]))
+        throw new ArgumentException("The 2026-09-11 engineering check is read-only until a complete motion contract is signed.");
+    var reportPath = config["Plc:Report"] ?? throw new ArgumentException("Plc:Report is required.");
+    await using var device = PlcDeviceFactory.Create(options);
+    PlcSnapshot? snapshot = null;
+    string outcome;
+    string? error = null;
+    try
+    {
+        snapshot = await device.ReadSnapshotAsync();
+        outcome = "ReadOnly";
+    }
+    catch (Exception exception) when (exception is IOException or TimeoutException or OperationCanceledException or InvalidOperationException)
+    {
+        outcome = "Unknown";
+        error = $"{exception.GetType().Name}: {exception.Message}";
+    }
+    var result = new
+    {
+        device.Source, device.Contract, Outcome = outcome, Error = error, Snapshot = snapshot,
+        Exchanges = (device as Protocol20260911PlcDevice)?.Exchanges
+    };
+    Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(reportPath))!);
+    await File.WriteAllTextAsync(reportPath, JsonSerializer.Serialize(result, new JsonSerializerOptions
+    {
+        WriteIndented = true, PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        Converters = { new JsonStringEnumConverter() }
+    }));
+    Console.WriteLine($"PLC device check ({device.Source}): {outcome}. Report: {reportPath}");
+    Environment.ExitCode = outcome == "ReadOnly" ? 0 : 2;
+    return;
+}
 if (string.IsNullOrWhiteSpace(builder.Configuration["urls"]))
     builder.WebHost.UseUrls("http://127.0.0.1:5000");
 builder.Services.ConfigureHttpJsonOptions(options =>
@@ -38,8 +78,11 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 var demo = builder.Configuration.GetRequiredSection("DemoTray").Get<DemoTrayConfiguration>()
     ?? throw new InvalidOperationException("DemoTray configuration is required.");
 builder.Services.AddSingleton(new DemoPlanService(demo.PartIds, demo.Faces));
+builder.Services.AddSingleton<IPlcDevice>(_ => PlcDeviceFactory.Create(
+    builder.Configuration.GetSection("Plc").Get<PlcConnectionOptions>() ?? new PlcConnectionOptions()));
 
 var app = builder.Build();
+_ = app.Services.GetRequiredService<IPlcDevice>(); // validate the selected profile without connecting
 app.MapGet("/health/live", () => new { Status = "alive" });
 app.MapGet("/api/system/status", () => new SystemStatusDto(
     V13Architecture.Version,
