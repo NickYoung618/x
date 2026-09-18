@@ -26,6 +26,12 @@ class TestImpactTests(unittest.TestCase):
         self.assertEqual(["new-device/Controller.cs"], plan["unclassifiedFiles"])
         self.assertIn("manual_classification", plan["prRequired"])
 
+    def test_pr_template_is_classified_as_review_and_test_gate(self):
+        plan = module.make_plan([".github/pull_request_template.md"], None, "abc")
+        self.assertEqual([], plan["unclassifiedFiles"])
+        self.assertIn("contract_review", plan["prRequired"])
+        self.assertIn("test_gate", plan["prRequired"])
+
     def test_no_change_is_error(self):
         with self.assertRaises(ValueError):
             module.make_plan([], "S01", "abc")

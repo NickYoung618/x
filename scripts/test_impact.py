@@ -57,6 +57,8 @@ def classify(path: str) -> set[str]:
         return {"algorithm", "recovery"}
     if p.startswith("backend/tests/") or p.startswith("scripts/") or p.startswith(".github/workflows/"):
         return {"test_gate"}
+    if p == ".github/pull_request_template.md":
+        return {"contract_review", "test_gate"}
     if p.startswith("docs/") or p.startswith("specs/") or p in {"README.md", "Gaode.slnx", "global.json"}:
         return {"contract_review"}
     return {"manual_classification"}
