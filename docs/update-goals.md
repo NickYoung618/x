@@ -1,5 +1,25 @@
 # 高德更新目标台账
 
+## 2026-09-19 / Windows 主工作区迁移
+
+- 唯一主要问题：用户决定后续只使用 Windows 服务器，当前 Linux 将停用；GitHub clone 不能保存仓库外权威原件、`pj` 的 008 stash/备份和本机 VirtualPlc 快照，也缺 Windows 首次恢复与复测入口。
+- 原始证据与对照：`origin/main=ad8f670`；V1.3 原文 SHA-256 `37479578…`，11 图外层/内层来源及逐 SVG 哈希，2026-09-11 PLC 协议 SHA-256 `a896faf…`；当前开放 PR #7/#9/#10 均已推送，`pj/HousingInspection` 工作区干净但 `stash@{0}` 和备份目录仅存本机。
+- 预期改变：仓库自身携带三类权威资料、Windows 环境检查/离线恢复脚本和迁移规则；生成一次性带 Git bundle、连续性材料、逐文件 SHA-256 的 Windows 开发迁移 ZIP，并在 Windows 验证完成前保持 Linux 原数据。
+- 失败条件：把旧 V6、`pj` 的不同哈希架构副本或候选配方当权威；把迁移包写成 FullSim/整盘通过；漏掉开放分支或本机 008 恢复材料；在 Windows 未复测前删除 Linux 源；把 GitHub Ubuntu 托管作业误写为依赖本机 Linux。
+- 前置/案例/预算：已读 Windows 验收、团队发包、测试流程、三份来源 manifest、当前 worktree/分支/stash 状态；本轮仅整理代码、文档和离线恢复材料，不发真实设备命令，不调用付费模型，预算 0 元。
+
+### 本次进度
+
+- 已确认：仓库内 V1.3 快照与 `/home/ubuntu/disk/yyh` 原文哈希一致；`pj/资料` 的同名架构文件哈希不同，不能纳入权威目录。11 份 SVG 已按原 ZIP 逐字节保存；9 月 11 日 PLC 原件此前只在仓库外及 Draft PR #9，本轮将相同字节纳入 Windows 主线迁移。
+- 已修改：新增权威来源索引、Windows 主工作区迁移/停机门槛、Windows 恢复和工具版本检查、跨平台迁移包生成器；更新 README、决策、测试、Windows 验收和团队协作文档。构建、包校验、PR/合并与 Windows 实机复测结果待本节结项补充。
+
+### 本次结项
+
+- 本地验证：权威架构与 PLC 原件哈希一致，11 份 SVG 与来源 manifest 一致；文档相对链接 0 缺失，Python 语法和 `git diff --check` PASS。迁移生成器完成 ZIP、包内逐文件校验、Git bundle verify、离线 clone 和 `git fsck`；并能保存远端分支、本地分支、开放 PR 状态和可选连续性材料。
+- Windows 验证：PR #12 迁移实现提交 `3701deb` 的 [CI 运行 35419515907](https://github.com/NickYoung618/x/actions/runs/35419515907) 八项作业全部 PASS。新增 Windows 作业实际观察 Windows Server 2022 x64、PowerShell 7.6.6、Git 2.55.0、.NET SDK 10.0.401、Node 24.12.0、npm 11.6.2、Python 3.12.10；随后生成迁移 ZIP、解压、逐文件校验、从 bundle 恢复指定提交并执行 `git fsck`。
+- 失败与修正：首轮在 runner 准备阶段因不存在的 `setup-python` 提交固定值失败，改用官方 v7.0.0 提交；后续先后暴露 Windows checkout 换行导致工作树哈希变化、系统 cp1252 无法解码 Git 中文路径、PR 临时合并提交不在远端分支 bundle 对象中。分别改为校验 Git 对象原字节、显式 UTF-8 解码、显式抓取所选提交；每次失败保留在 Actions 历史，最终完整重跑通过。
+- 边界与下一步：最终带 `pj` 008/资料及 VirtualPlc 快照的交付 ZIP只在 PR 合并后的 main 提交生成并另存 SHA-256。新 Windows 服务器必须按 `windows-primary-migration.md` 实际恢复和重跑，完成前不删除 Linux 源。S01 三进程、FullSim、真机和整盘仍为 `NOT RUN/BLOCKED`。本轮付费调用 0 次，费用 0 元。
+
 ## 2026-09-17 / 全工位下位机并行先行
 
 - 唯一主要问题：逐工位等待下位机交接口会串行拖慢开发；按用户最新要求，将设备侧全流程合同、虚拟 PLC 和独立接口模拟前置，让中台保持逐工位 PR 开发。

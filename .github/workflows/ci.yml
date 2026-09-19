@@ -14,6 +14,50 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  windows-development-environment:
+    name: Windows development environment contract
+    runs-on: windows-2022
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24.12.0'
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Verify fixed Windows development tools
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path artifacts -Force | Out-Null
+          ./scripts/Test-WindowsDevelopmentEnvironment.ps1 | Tee-Object artifacts/windows-development-environment.json
+      - name: Build and restore a Windows migration smoke package
+        shell: pwsh
+        run: |
+          python scripts/new-windows-migration-package.py --output-dir artifacts/migration-smoke --main-ref HEAD
+          $package = Get-ChildItem artifacts/migration-smoke -Filter '*.zip' | Select-Object -First 1
+          if (-not $package) { throw 'Migration ZIP was not generated.' }
+          $extract = Join-Path $env:RUNNER_TEMP 'gaode-migration-package'
+          Expand-Archive -Path $package.FullName -DestinationPath $extract
+          $root = Get-ChildItem $extract -Directory | Select-Object -First 1
+          if (-not $root) { throw 'Migration ZIP has no package root.' }
+          $restore = Join-Path $env:RUNNER_TEMP 'gaode-migration-restored'
+          & (Join-Path $root.FullName 'scripts\Restore-GaodeWorkspace.ps1') -PackageRoot $root.FullName -Destination $restore
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Upload Windows migration evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: windows-development-environment
+          path: |
+            artifacts/windows-development-environment.json
+            artifacts/migration-smoke/*.zip.sha256
+          if-no-files-found: error
+          retention-days: 14
+
   test-impact:
     name: Test impact plan (PR scope only)
     if: github.event_name == 'pull_request'

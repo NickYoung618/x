@@ -36,6 +36,8 @@ dotnet run --project backend/src/Inspection.Host --no-launch-profile
 [CI 与完整测试矩阵](docs/testing.md) · [实际 Windows 部署/流程验收](docs/windows-acceptance.md)
 
 最新协作入口：[三人协作、Spec Kit、CI 与 Windows 部署包](docs/team-development-and-release.md)。
+2026-09-19 起主工作区迁移到 Windows；一次性迁移、权威资料和 Linux 停用门槛见
+[Windows 主工作区迁移](docs/windows-primary-migration.md)与[权威资料索引](docs/authoritative-sources.md)。
 同服务器新对话从 [项目交接](docs/handover-20260917.md) 和 [可复制提示词](docs/prompts/next-codex-session.md) 开始。
 2026-09-17 已取得并审查同学的虚拟下位机副本，完整前端仍以 HTML 原型为依据；
 旧协议兼容联调已加入工程测试，正式 V1.3 接入差异见 [审查记录](docs/reviews/virtual-plc-20260917/review.md)。
