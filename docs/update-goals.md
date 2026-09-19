@@ -13,6 +13,13 @@
 - 已确认：仓库内 V1.3 快照与 `/home/ubuntu/disk/yyh` 原文哈希一致；`pj/资料` 的同名架构文件哈希不同，不能纳入权威目录。11 份 SVG 已按原 ZIP 逐字节保存；9 月 11 日 PLC 原件此前只在仓库外及 Draft PR #9，本轮将相同字节纳入 Windows 主线迁移。
 - 已修改：新增权威来源索引、Windows 主工作区迁移/停机门槛、Windows 恢复和工具版本检查、跨平台迁移包生成器；更新 README、决策、测试、Windows 验收和团队协作文档。构建、包校验、PR/合并与 Windows 实机复测结果待本节结项补充。
 
+### 本次结项
+
+- 本地验证：权威架构与 PLC 原件哈希一致，11 份 SVG 与来源 manifest 一致；文档相对链接 0 缺失，Python 语法和 `git diff --check` PASS。迁移生成器完成 ZIP、包内逐文件校验、Git bundle verify、离线 clone 和 `git fsck`；并能保存远端分支、本地分支、开放 PR 状态和可选连续性材料。
+- Windows 验证：PR #12 迁移实现提交 `3701deb` 的 [CI 运行 35419515907](https://github.com/NickYoung618/x/actions/runs/35419515907) 八项作业全部 PASS。新增 Windows 作业实际观察 Windows Server 2022 x64、PowerShell 7.6.6、Git 2.55.0、.NET SDK 10.0.401、Node 24.12.0、npm 11.6.2、Python 3.12.10；随后生成迁移 ZIP、解压、逐文件校验、从 bundle 恢复指定提交并执行 `git fsck`。
+- 失败与修正：首轮在 runner 准备阶段因不存在的 `setup-python` 提交固定值失败，改用官方 v7.0.0 提交；后续先后暴露 Windows checkout 换行导致工作树哈希变化、系统 cp1252 无法解码 Git 中文路径、PR 临时合并提交不在远端分支 bundle 对象中。分别改为校验 Git 对象原字节、显式 UTF-8 解码、显式抓取所选提交；每次失败保留在 Actions 历史，最终完整重跑通过。
+- 边界与下一步：最终带 `pj` 008/资料及 VirtualPlc 快照的交付 ZIP只在 PR 合并后的 main 提交生成并另存 SHA-256。新 Windows 服务器必须按 `windows-primary-migration.md` 实际恢复和重跑，完成前不删除 Linux 源。S01 三进程、FullSim、真机和整盘仍为 `NOT RUN/BLOCKED`。本轮付费调用 0 次，费用 0 元。
+
 ## 2026-09-17 / 全工位下位机并行先行
 
 - 唯一主要问题：逐工位等待下位机交接口会串行拖慢开发；按用户最新要求，将设备侧全流程合同、虚拟 PLC 和独立接口模拟前置，让中台保持逐工位 PR 开发。
