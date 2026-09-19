@@ -55,6 +55,10 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def sha256_bytes(value: bytes) -> str:
+    return hashlib.sha256(value).hexdigest()
+
+
 def files_at_ref(ref: str, relative: str) -> list[str]:
     result = run("git", "-c", "core.quotePath=false", "ls-tree", "-r", "--name-only", ref, "--", relative)
     return result.splitlines() if result else []
@@ -158,11 +162,11 @@ def main() -> int:
     args = parser.parse_args()
 
     main_commit = run("git", "rev-parse", args.main_ref)
-    protocol = ROOT / "docs/contracts/source/PLC与上位机通信接口协议-20260911.docx"
-    if sha256(protocol) != "a896faf063b5042bd43e0406ed011cb4f233fca37e64ebe1d5cdea11016b6d16":
+    protocol_bytes = run("git", "show", f"{args.main_ref}:docs/contracts/source/PLC与上位机通信接口协议-20260911.docx", text=False)
+    if sha256_bytes(protocol_bytes) != "a896faf063b5042bd43e0406ed011cb4f233fca37e64ebe1d5cdea11016b6d16":
         raise ValueError("Authoritative 2026-09-11 PLC protocol hash mismatch")
-    architecture = ROOT / "docs/architecture/architecture-v1.3.md"
-    if sha256(architecture) != "37479578dffac8f1832ff40883a1e452aff54f7e1f42b5ae1d8e26a104bfca2e":
+    architecture_bytes = run("git", "show", f"{args.main_ref}:docs/architecture/architecture-v1.3.md", text=False)
+    if sha256_bytes(architecture_bytes) != "37479578dffac8f1832ff40883a1e452aff54f7e1f42b5ae1d8e26a104bfca2e":
         raise ValueError("Authoritative V1.3 architecture hash mismatch")
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
