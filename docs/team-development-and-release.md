@@ -3,6 +3,10 @@
 更新：2026-09-17。本文是基于当前代码的执行方案；标为“建议”“待接入”的内容尚未实现。
 架构与测试以 [V1.3](architecture/architecture-v1.3.md) 为准。
 
+2026-09-19 起开发、联调和最终运行的主工作区改为 Windows；当前 Linux 服务器不再是后续依赖。
+一次性迁移包、固定工具版本和停用门槛见[Windows 主工作区迁移](windows-primary-migration.md)。
+GitHub 托管 Ubuntu CI 可以继续作为额外检查，但发布和设备验收必须在 Windows 完成。
+
 最新协作顺序：用户指定[《上下位机对接》11 组图](process-diagrams/upper-lower-v13/README.md)为真实流程首要依据。下位机同学按[全工位并行先行派任书](assignments/plc-all-stations-parallel-work-order-20260917.md)一次规划并提前开发全部 PLC/运动侧能力及已分派的独立 3D 接口模拟；中台仍按工位独立 PR 开发和验收。共享合同先评审，双方随后并行，不等中台做完一站才给下位机派这一站。
 
 2026-09-17 顺序调整：先在独立 PR 建 [P0 整体框架](architecture/v13-framework-map.md)与[§18 验收映射](architecture/v13-acceptance-map.md)，再在首工位 Draft PR #4 及后续逐工位 PR 内实现具体功能。每阶段完成正常/故障/跨端口测试，保留失败和修正复测证据，评审合并后在 main 对同一提交回归。P0 不接设备动作、配方或算法；旧 V6 测试仅为回归基线。
@@ -170,8 +174,8 @@ Spec Kit 帮助把需求转成开发任务，CI 则自动运行提交的测试�
 依据：[官方工作流说明](https://github.github.com/spec-kit/reference/agentic-sdd.html)。
 
 在每个 clone/worktree 明确 `.specify/feature.json` 指向自己的规格，该文件已被忽略，不提交到仓库。
-不同人不要共用同一工作目录运行不同功能。此安装采用 Bash 脚本；Windows 开发者运行 Spec Kit 前
-需验证 Git Bash 可用且技能脚本可执行。Windows 的 WPF 构建与运行仍使用 Windows 工具链。
+不同人不要共用同一工作目录运行不同功能。当前 `.specify/scripts` 是 Bash 入口；Windows 工作区运行 Spec Kit 前
+安装 Git for Windows 并验证 Git Bash 可执行这些脚本，或后续补等价 PowerShell 入口。WPF 构建与运行使用 Windows 工具链。
 不要通过重新初始化覆盖团队的技能和模板。
 
 ## 5. CI 分层接入与合并门槛

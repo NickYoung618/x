@@ -2,6 +2,9 @@
 
 ## 1. 两种“真实”分别检查
 
+2026-09-19 起 Windows 同时是团队主开发环境和最终运行环境；迁移及旧 Linux 停用前置见
+[Windows 主工作区迁移](windows-primary-migration.md)。本文件仍负责候选软件在 Windows 的部署和业务验收，不能用“已迁移工作区”替代以下测试。
+
 **真实 Windows + 虚拟设备**：真实运行发布后的 WPF/WebView2、ASP.NET Core Host、Worker、SQLite、文件系统，
 设备动作由独立模拟器承担。这是当前最先要做到的完整软件验收。
 
