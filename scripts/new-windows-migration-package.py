@@ -43,7 +43,8 @@ SCRIPT_FILES = [
 
 
 def run(*args: str, cwd: Path = ROOT, text: bool = True) -> str | bytes:
-    result = subprocess.check_output(args, cwd=cwd, text=text)
+    result = subprocess.check_output(args, cwd=cwd, text=text,
+                                     encoding="utf-8" if text else None)
     return result.strip() if text else result
 
 
