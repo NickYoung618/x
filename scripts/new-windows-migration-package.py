@@ -100,6 +100,8 @@ def make_git_bundle(stage: Path, main_commit: str) -> list[dict[str, str]]:
                         "+refs/remotes/origin/*:refs/heads/*"], check=True, capture_output=True)
         subprocess.run(["git", "-C", str(mirror), "fetch", str(ROOT),
                         "+refs/heads/*:refs/heads/archive-local/*"], check=True, capture_output=True)
+        subprocess.run(["git", "-C", str(mirror), "fetch", str(ROOT), main_commit],
+                       check=True, capture_output=True)
         subprocess.run(["git", "-C", str(mirror), "update-ref", "refs/heads/main", main_commit], check=True)
         for line in refs_text.splitlines():
             ref, oid = line.split()
