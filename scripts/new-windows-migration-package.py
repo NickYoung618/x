@@ -93,6 +93,8 @@ def make_git_bundle(stage: Path, main_commit: str) -> list[dict[str, str]]:
         subprocess.run(["git", "init", "--bare", str(mirror)], check=True, capture_output=True)
         subprocess.run(["git", "-C", str(mirror), "fetch", str(ROOT),
                         "+refs/remotes/origin/*:refs/heads/*"], check=True, capture_output=True)
+        subprocess.run(["git", "-C", str(mirror), "fetch", str(ROOT),
+                        "+refs/heads/*:refs/heads/archive-local/*"], check=True, capture_output=True)
         subprocess.run(["git", "-C", str(mirror), "update-ref", "refs/heads/main", main_commit], check=True)
         for line in refs_text.splitlines():
             ref, oid = line.split()
@@ -100,6 +102,10 @@ def make_git_bundle(stage: Path, main_commit: str) -> list[dict[str, str]]:
             if name == "HEAD":
                 continue
             refs.append({"branch": name, "commit": oid})
+        local_text = run("git", "for-each-ref", "--format=%(refname) %(objectname)", "refs/heads")
+        for line in local_text.splitlines():
+            ref, oid = line.split()
+            refs.append({"branch": f"archive-local/{ref.removeprefix('refs/heads/')}", "commit": oid})
         subprocess.run(["git", "-C", str(mirror), "symbolic-ref", "HEAD", "refs/heads/main"], check=True)
         bundle = stage / "repository" / "gaode-repository.bundle"
         bundle.parent.mkdir(parents=True, exist_ok=True)
@@ -177,6 +183,14 @@ def main() -> int:
             (stage / "continuity" / "008-stash.patch").write_bytes(stash)
         archive_directory(args.pj_reference_dir,
                           stage / "archive-not-authoritative" / "pj-reference-documents.tar.gz", True)
+        if shutil.which("gh"):
+            pull_requests = subprocess.run(
+                ["gh", "pr", "list", "--state", "open", "--limit", "100", "--json",
+                 "number,title,isDraft,baseRefName,headRefName,headRefOid,url"],
+                cwd=ROOT, capture_output=True, check=False)
+            if pull_requests.returncode == 0:
+                (stage / "continuity").mkdir(parents=True, exist_ok=True)
+                (stage / "continuity" / "open-pr-status.json").write_bytes(pull_requests.stdout)
 
         manifest = {
             "schema": "gaode-windows-development-migration-v1",
