@@ -56,7 +56,7 @@ def sha256(path: Path) -> str:
 
 
 def files_at_ref(ref: str, relative: str) -> list[str]:
-    result = run("git", "ls-tree", "-r", "--name-only", ref, "--", relative)
+    result = run("git", "-c", "core.quotePath=false", "ls-tree", "-r", "--name-only", ref, "--", relative)
     return result.splitlines() if result else []
 
 
@@ -93,6 +93,7 @@ def make_git_bundle(stage: Path, main_commit: str) -> list[dict[str, str]]:
         subprocess.run(["git", "init", "--bare", str(mirror)], check=True, capture_output=True)
         subprocess.run(["git", "-C", str(mirror), "fetch", str(ROOT),
                         "+refs/remotes/origin/*:refs/heads/*"], check=True, capture_output=True)
+        subprocess.run(["git", "-C", str(mirror), "update-ref", "refs/heads/main", main_commit], check=True)
         for line in refs_text.splitlines():
             ref, oid = line.split()
             name = ref.removeprefix("refs/remotes/origin/")
